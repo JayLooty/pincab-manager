@@ -1,0 +1,19 @@
+@echo off
+
+REM Launch DofLinx
+start "" "C:\vPinball\doflinx\DOFLinx32"
+
+REM Wait for DofLinx and X360ce
+timeout /t 5 /nobreak > nul
+
+SET ALTPARAM=
+if "[ALTMODE]"=="classic"  (SET ALTPARAM=-class )
+if "[ALTMODE]"=="hotseat2" (SET ALTPARAM=-hotseat_2 )
+if "[ALTMODE]"=="hotseat3" (SET ALTPARAM=-hotseat_3 )
+if "[ALTMODE]"=="hotseat4" (SET ALTPARAM=-hotseat_4 )
+
+START "" "[STARTDIR]Launch\VPXSTARTER.exe" 5 5 20 "Pinball FX3"
+
+START "" "[DIREMU]\Steam.exe" -applaunch 442120 %ALTPARAM% -table_[GAMENAME]
+timeout 7
+START /min "" "[STARTDIR]Launch\SendFXNewGame.exe"

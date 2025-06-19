@@ -1,0 +1,5 @@
+"[STARTDIR]LAUNCH\PUPCLOSER.EXE" WINTIT "PinballM" 4 1
+timeout 1
+
+REM Stop DofLinx
+taskkill /f /im "DofLinx.exe"

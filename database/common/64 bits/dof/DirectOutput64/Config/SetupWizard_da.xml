@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config version="2.3.8" language="Danish">
+	<section name="Welcome to the PinballX Setup Wizard" translation="Velkommen til PinballX installationsguiden" mode="All" description="PinballX skrevet af Tom Speirs.">
+		<setting name="Notice" translation="Varsel" type="Label" description="Dette program skal medvirke til at gøre PinballX enkelt. Det vil guide dig gennem de vigtige funktioner i PinballX og tillade dig at tilpasse hovedfunktionaliteten. Du kan køre dette program til enhver tid, og det vil ikke forstyrre dine nuværende indstillinger. Så du kan komme tilbage på et senere tidspunkt, og du behøver ikke konfigurere alt nu." />
+		<setting name="WizardMode" translation="WizardMode" default="Basic" type="WizardMode" description="Vælg venligst din tilstand:">
+			<option name="Basic" translation="Grundlæggende" />
+			<option name="Advanced" translation="Fremskreden" />
+			<option name="Custom" translation="Brugerdefinerede" />
+			<option name="Search" translation="Søg" />
+		</setting>
+		<setting name="PinballX Links" translation="PinballX Links" type="Links" description="Relevante Links">
+			<option name="PinballX Main Site" translation="PinballX Hovedsted" url="http://www.pinballx.net" />
+			<option name="PinballX Forum" translation="PinballX Forum" url="http://gameex.info/" />
+			<option name="Donate" translation="Doner" url="http://www.pinballx.net/donate.aspx" />
+		</setting>
+	</section>
+	<section name="Custom Select" translation="Brugerdefineret Vælg" type="Custom" mode="Custom" description="Dette afsnit giver dig mulighed for at vælge de muligheder, du ønsker at konfigurere." />
+	<section name="Search Select" translation="Søg Vælg" type="Search" mode="Search" description="Dette afsnit giver dig mulighed for at søge efter de muligheder, du ønsker at konfigurere." />
+	<section name="General Settings" translation="Generelle indstillinger" description="Her kan du indstille forskellige interface og generelle indstillinger af PinballX.">
+		<setting name="Desktop Mode" translation="Skrivebordstilstand" type="Title" description="Desktop mode indstiller PinballX til brug af ikke-kabinet. Når indstillet, vil skrivebordets billed- og video mapper blive brugt, og PinballX vil køre Landscape." />
+		<setting name="Enable Desktop Mode" translation="Aktivér skrivebordstilstand" default="No" type="ComboBox" inisection="Interface" ininame="DesktopModeEnabled" description="Aktivér skrivebordstilstand">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="File Matching" translation="Filtilpasning" type="Title" description="PinballX kan udføre yderligere fil matching og søgning efter illustrationer, medier og tabeller." />
+		<setting name="Enable File Matching" translation="Aktivér filtilpasning" default="Yes" type="ComboBox" inisection="FileSystem" ininame="EnableFileMatching" description="Udfør yderligere søgning efter filer.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Wheel overlay images" translation="Hjuloverlejringsbilleder" type="Title" description="Du kan overlejre hjulbilleder med system eller firmalogo, hvis du vælger." />
+		<setting name="Mode" translation="Mode" default="Disabled" type="ComboBox" inisection="Interface" ininame="WheelOverlay" description="Vælg om billeder skal overlejres på hjulbilledet.">
+			<option name="Disabled" translation="handicappet" ininame="0" />
+			<option name="Overlay System Logo" translation="Overlay System Logo" ininame="1" />
+			<option name="Overlay Company Logo" translation="Overlay Company Logo" ininame="2" />
+			<option name="Overlay Company and System" translation="Overlay Company og System" ininame="3" />
+		</setting>
+		<setting name="Systems list" translation="Systemliste" type="Title" description="Aktivér en systemliste i PinballX for at liste alle systemer." />
+		<setting name="Enable" translation="Aktiver" default="Enabled" type="ComboBox" inisection="Interface" ininame="EnableSystemsList" description="Aktivér systemlisten.">
+			<option name="Enabled" translation="Aktiveret" ininame="True" />
+			<option name="Disabled" translation="handicappet" ininame="False" />
+		</setting>
+		<setting name="Show on startup" translation="Vis ved opstart" default="Disabled" type="ComboBox" inisection="Interface" ininame="SystemsListShowFirst" description="Vis altid systemlisten først ved opstart.">
+			<option name="Enabled" translation="Aktiveret" ininame="True" />
+			<option name="Disabled" translation="handicappet" ininame="False" />
+		</setting>
+		<setting name="Show additional detail" translation="Vis yderligere detaljer" type="Title" description="Når du gennemsøger tabeller, kan yderligere oplysninger vises, herunder system, ratings, producentlogoer og år." />
+		<setting name="Enable" translation="Aktiver" default="Yes" type="ComboBox" inisection="Interface" ininame="EnableAdditionalDetail" description="Vis spillets navn, producentens logo og år.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Show System" translation="Vis system" default="Yes" type="ComboBox" inisection="Interface" ininame="ShowSystem" description="Vis systemnavn eller logo.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Show Ratings" translation="Vis bedømmelser" default="Yes" type="ComboBox" inisection="Interface" ininame="ShowRatings" description="Vis kampagner, når de er tilgængelige.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="One click launch Table" translation="Et klik lanceringstabel" type="Title" description="Denne indstilling giver dig mulighed for straks at starte et bord, når det er valgt, og ikke vise menulinjen. Bemærk: Dette deaktiverer adgangen til spilinformationsmenuen, hvor du kan få adgang til medier og indstille spiloplysninger." />
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="Interface" ininame="OneClickLaunch" description="Hvis det er aktiveret, skal du straks starte bordet, når det er valgt, og ikke vise start / info-menuen.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Add missing tables" translation="Tilføj manglende tabeller" type="Title" description="Tilføj automatisk nye og manglende tabeller og aktiver dem i game manager." />
+		<setting name="In Game Manager" translation="I Game Manager" default="Yes" type="ComboBox" inisection="GameManager" ininame="AutoAddTables" description="Tilføj automatisk nye og manglende tabeller og aktiver dem i game manager.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="In Front End" translation="I frontend" default="No" type="ComboBox" inisection="GameManager" ininame="AutoAddTablesFrontEnd" description="Tilføj automatisk nye og manglende tabeller og aktiver dem i PinballX.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="Interface" ininame="EnableDefaultFilters" description="Aktivér standardsøgefiltre i PinballX, inklusive populære årtier og producenter. Deaktivering af denne funktion giver mere plads i menuen til dine brugerdefinerede databaser, men deaktiverer naturligvis funktionaliteten.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Basic menu mode" translation="Grundlæggende menutilstand" type="Title" description="Aktivering af grundlæggende menutilstand deaktiverer alle filtre og underlister inklusive favoritter og lister blot tilgængelige medier i menuen og muligheden for at starte spillet." />
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="Interface" ininame="EnableBasicMenuMode" description="Aktivér grundlæggende menutilstand.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Table loading media mode" translation="Tabel indlæsning af medietilstand" type="Title" description="Dette styrer, hvilket medie der bruges til indlæsning af billeder og videoer, når du starter en tabel. PinballX kan bruge playfield-billedet, eller du kan bruge indlæsningsbilledet og videomapperne." />
+		<setting name="Loading media" translation="Indlæser medier" default="Use loading folders" type="ComboBox" inisection="Interface" ininame="UseTableLoadingMedia" description="Brug tabelfeltbilleder eller indlæsning af mapper.">
+			<option name="Use playfield images" translation="Brug playfield-billeder" ininame="True" />
+			<option name="Use loading folders" translation="Brug indlæsning af mapper" ininame="False" />
+		</setting>
+		<setting name="GIF background color" translation="GIF-baggrundsfarve" default="00000000" type="Color" inisection="Interface" ininame="GIFbackgroundcolor" description="Når du bruger indlæsning af mapper og en animeret GIF, baggrundsfarve, der skal bruges." />
+	</section>
+	<section name="Display Settings" translation="Skærmindstillinger" description="Her kan du indstille forskellige displayindstillinger af PinballX.">
+		<setting name="Main Display" translation="Hovedskærm" default="Display 1" type="ComboBox" inisection="Display" ininame="Monitor" description="">
+			<option name="Display 1" translation="Display 1" ininame="0" />
+			<option name="Display 2" translation="Skærm 2" ininame="1" />
+			<option name="Display 3" translation="Skærm 3" ininame="2" />
+			<option name="Display 4" translation="Skærm 4" ininame="3" />
+			<option name="Display 5" translation="Skærm 5" ininame="4" />
+		</setting>
+		<setting name="Main Display Rotation" translation="Hoveddisplayrotation" default="270 Degrees" type="ComboBox" inisection="Display" ininame="Rotate" description="">
+			<option name="270 Degrees" translation="270 grader" ininame="270" />
+			<option name="90 Degrees" translation="90 grader" ininame="90" />
+			<option name="Horizontal" translation="Vandret" ininame="0" />
+		</setting>
+		<setting name="Back Glass Display" translation="Tilbage glasskærm" default="Display 2" type="ComboBox" inisection="BackGlass" ininame="Monitor" description="">
+			<option name="Display 1" translation="Display 1" ininame="0" />
+			<option name="Display 2" translation="Skærm 2" ininame="1" />
+			<option name="Display 3" translation="Skærm 3" ininame="2" />
+			<option name="Display 4" translation="Skærm 4" ininame="3" />
+			<option name="Display 5" translation="Skærm 5" ininame="4" />
+		</setting>
+		<setting name="Use DirectB2S in Front End" translation="Brug DirectB2S i Front End" default="No" type="ComboBox" inisection="Backglass" ininame="UseB2S" description="Faktisk brug Direct2BS filen og vis den på din Backglass skærm i PinballX. Hvis der findes en matchende direct2bs-fil, og serveren er installeret, vises filen.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Auto Position DirectB2S" translation="Auto Position DirectB2S" default="Yes" type="ComboBox" inisection="Backglass" ininame="AutoPositionB2S" description="Placer direkte Direct B2S-vinduet automatisk på din Backglass-monitor, når du kører Visual Pinball.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="DMD Enabled" translation="DMD Aktiveret" default="No" type="ComboBox" inisection="DMD" ininame="Enabled" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="DMD Display" translation="DMD Display" default="Display 3" type="ComboBox" inisection="DMD" ininame="Monitor" description="">
+			<option name="Display 1" translation="Display 1" ininame="0" />
+			<option name="Display 2" translation="Skærm 2" ininame="1" />
+			<option name="Display 3" translation="Skærm 3" ininame="2" />
+			<option name="Display 4" translation="Skærm 4" ininame="3" />
+			<option name="Display 5" translation="Skærm 5" ininame="4" />
+		</setting>
+		<setting name="Auto show DMD media" translation="Vis automatisk DMD-medier" default="Yes - All systems" type="ComboBox" inisection="DMD" ininame="AutoShowMedia" description="Vis automatisk DMD-billede eller -video i et spil, hvis der ikke registreres nogen DMD, og spil er indstillet til at skjule DMD.">
+			<option name="Yes - All systems" translation="Ja - Alle systemer" ininame="True" />
+			<option name="Yes - Just Visual Pinball" translation="Ja - Bare visuel flipper" ininame="1" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Auto position DMD" translation="Auto position DMD" default="No" type="ComboBox" inisection="DMD" ininame="AutoPositionPinMAME" description="Placer automatisk PinMAME-vinduet på din DMD-skærm, når du kører Visual Pinball, og placer automatisk DMD-vinduet i PinballFX 2 og fjern dets grænser.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Hide PinMAME" translation="Skjul PinMAME" default="No" type="ComboBox" inisection="DMD" ininame="HidePinMAME" description="Skjul automatisk PinMAME-vinduet, når du kører Visual Pinball eller ved hjælp af nedenstående indstilling. Denne indstilling er til kabinetter, der bruger ægte DMD-skærme og kan automatisk stoppe PinMAME-vinduet, der vises på afspilningsfeltet.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Use PinMAME in Front End" translation="Brug PinMAME i Front End" default="No" type="ComboBox" inisection="DMD" ininame="UsePinMAME" description="Faktisk brug PinMAME ROM'en og vis den på din DMD-skærm eller DMD-enhed, når du er i PinballX.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Window/Full Screen" translation="Vindue / fuld skærm" default="Full Screen" type="ComboBox" inisection="Display" ininame="Windowed" description="Kør PinballX i vinduet eller fuldskærmstilstand.">
+			<option name="Full Screen" translation="Fuld skærm" ininame="False" />
+			<option name="Windowed" translation="windowed" ininame="True" />
+		</setting>
+		<setting name="Full Screen windowed" translation="Fuld skærm vindue" default="Yes" type="ComboBox" inisection="Display" ininame="FullScreenWindowedNew" description="Når du kører på fuld skærm, skal du køre i ikke-eksklusiv tilstand i vinduet.">
+			<option name="No" translation="Ingen" ininame="False" />
+			<option name="Yes" translation="Ja" ininame="True" />
+		</setting>
+		<setting name="Crop Wheel Images" translation="Beskær hjulbilleder" default="Yes" type="ComboBox" inisection="Display" ininame="WheelAutoCrop" description="Beskær automatisk hjulbilleder (fjern transparente områder) og vis dem fuld størrelse.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Play Field Brightness" translation="Afspilningsfeltets lysstyrke" default="230" type="ComboBox" inisection="Display" ininame="PlayFieldBrightness" description="Afspil feltfelt Billed- og videoens lysstyrke.">
+			<option name="250" translation="250" ininame="250" />
+			<option name="240" translation="240" ininame="240" />
+			<option name="230" translation="230" ininame="230" />
+			<option name="220" translation="220" ininame="220" />
+			<option name="210" translation="210" ininame="210" />
+			<option name="200" translation="200" ininame="200" />
+			<option name="190" translation="190" ininame="190" />
+			<option name="180" translation="180" ininame="180" />
+			<option name="170" translation="170" ininame="170" />
+			<option name="160" translation="160" ininame="160" />
+			<option name="150" translation="150" ininame="150" />
+		</setting>
+		<setting name="Enable game exit images" translation="Aktivér spilafslutningsbilleder" default="No" type="ComboBox" inisection="Display" ininame="ShowExitImage" description="Vis exitbilleder, når du vender tilbage til PinballX.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Show exit image for" translation="Vis afslut billede for" default="3 Seconds" type="ComboBox" inisection="Display" ininame="ShowExitImageFor" description="Antal sekunder for at vise exitbilledet til.">
+			<option name="2 Seconds" translation="2 sekunder" ininame="2" />
+			<option name="3 Seconds" translation="3 sekunder" ininame="3" />
+			<option name="4 Seconds" translation="4 sekunder" ininame="4" />
+			<option name="5 Seconds" translation="5 sekunder" ininame="5" />
+			<option name="6 Seconds" translation="6 sekunder" ininame="6" />
+			<option name="7 Seconds" translation="7 sekunder" ininame="7" />
+			<option name="8 Seconds" translation="8 sekunder" ininame="8" />
+			<option name="9 Seconds" translation="9 sekunder" ininame="9" />
+			<option name="10 Seconds" translation="10 sekunder" ininame="10" />
+		</setting>
+		<setting name="Show date and time" translation="Vis dato og klokkeslæt" default="No" type="ComboBox" inisection="Display" ininame="ShowDateAndTime" description="Vis den aktuelle dato og tid øverst til venstre i det primære display.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Underlay image type" translation="Underlay-billedtype" default="Original" type="ComboBox" inisection="Display" ininame="StretchUnderlay" description="Original skaleret format eller stræk underlagsbilleder for at udfylde skærmen.">
+			<option name="Original" translation="Original" ininame="False" />
+			<option name="Fill screen" translation="Fyld skærm" ininame="True" />
+		</setting>
+		<setting name="Wheel Text Color" translation="Hjultekstfarve" default="fffffff" type="Color" inisection="Display" ininame="WheelTextColor" description="Farve på hjultekst." />
+		<setting name="Wheel Text Outline Color" translation="Wheel Text Outline Color" default="ff000000" type="Color" inisection="Display" ininame="WheelTextOutlineColor" description="Farve på hjultekst." />
+		<setting name="Info Text Color" translation="Info tekst farve" default="ffffffff" type="Color" inisection="Display" ininame="InfoTextColor" description="Farve af Info Tekst." />
+		<setting name="Info Text Outline Color" translation="Info Text Outline Color" default="ff000000" type="Color" inisection="Display" ininame="InfoTextOutlineColor" description="Farve af Info Tekst." />
+		<setting name="Filter Text Color" translation="Filtrer tekstfarve" default="ffffffff" type="Color" inisection="Display" ininame="FilterTextColor" description="Farve på filter / titeltekst." />
+		<setting name="Filter Text Outline Color" translation="Filtrer tekstoversigt Farve" default="ff000000" type="Color" inisection="Display" ininame="FilterTextOutlineColor" description="Farve på filter / titeltekst." />
+		<setting name="Menu Color" translation="Menu Farve" default="ffffa500" type="Color" inisection="Display" ininame="MenuColor" description="Farve på udvalgte menupunkter og informationslinje." />
+		<setting name="Backglass" translation="Backglass" type="Title" description="Du kan angive bagglasspositionering her." />
+		<setting name="X" translation="x" default="0" type="TextBox" inisection="BackGlass" ininame="x" description="" />
+		<setting name="Y" translation="Y" default="0" type="TextBox" inisection="BackGlass" ininame="y" description="" />
+		<setting name="Width" translation="Bredde" default="1280" type="TextBox" inisection="BackGlass" ininame="width" description="" />
+		<setting name="Height" translation="Højde" default="1024" type="TextBox" inisection="BackGlass" ininame="height" description="" />
+		<setting name="Real DMD" translation="Real DMD" type="Title" description="Indstillinger for rigtige Pinball DMD-skærme" />
+		<setting name="Enable Color" translation="Aktivér farve" default="No" type="ComboBox" inisection="RealDMD" ininame="EnableColor" description="Hvis du har en PinDMD3 eller Pin2DMD tilsluttet, kan du aktivere RGB-tilstand">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="DMD Color" translation="DMD Farve" default="ffff1414" type="Color" inisection="RealDMD" ininame="Color" description="Hvis du har en PinDMD3 eller Pin2DMD tilsluttet, og beslutter ikke at bruge RGB-farvemodus, kan du angive monofarven på dmd-skærmen" />
+		<setting name="DMD" translation="DMD" type="Title" description="Du kan angive DMD-positioneringen her." />
+		<setting name="X" translation="x" default="0" type="TextBox" inisection="DMD" ininame="x" description="" />
+		<setting name="Y" translation="Y" default="0" type="TextBox" inisection="DMD" ininame="y" description="" />
+		<setting name="Width" translation="Bredde" default="900" type="TextBox" inisection="DMD" ininame="width" description="" />
+		<setting name="Height" translation="Højde" default="300" type="TextBox" inisection="DMD" ininame="height" description="" />
+		<setting name="Topper" translation="Topper" type="Title" description="Du kan angive toppositioneringen her." />
+		<setting name="Topper Enabled" translation="Topper aktiveret" default="No" type="ComboBox" inisection="Topper" ininame="Enabled" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Topper Display" translation="Topper Display" default="Display 4" type="ComboBox" inisection="Topper" ininame="Monitor" description="">
+			<option name="Display 1" translation="Display 1" ininame="0" />
+			<option name="Display 2" translation="Skærm 2" ininame="1" />
+			<option name="Display 3" translation="Skærm 3" ininame="2" />
+			<option name="Display 4" translation="Skærm 4" ininame="3" />
+			<option name="Display 5" translation="Skærm 5" ininame="4" />
+		</setting>
+		<setting name="X" translation="x" default="0" type="TextBox" inisection="Topper" ininame="x" description="" />
+		<setting name="Y" translation="Y" default="0" type="TextBox" inisection="Topper" ininame="y" description="" />
+		<setting name="Width" translation="Bredde" default="1920" type="TextBox" inisection="Topper" ininame="width" description="" />
+		<setting name="Height" translation="Højde" default="1080" type="TextBox" inisection="Topper" ininame="height" description="" />
+		<setting name="Apron" translation="Forklæde" type="Title" description="Du kan angive forklart positionering her." />
+		<setting name="Apron Enabled" translation="Forklæde aktiveret" default="No" type="ComboBox" inisection="Apron" ininame="Enabled" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Apron Display" translation="Forklæde Vis" default="Display 5" type="ComboBox" inisection="Apron" ininame="Monitor" description="">
+			<option name="Display 1" translation="Display 1" ininame="0" />
+			<option name="Display 2" translation="Display 2" ininame="1" />
+			<option name="Display 3" translation="Skærm 3" ininame="2" />
+			<option name="Display 4" translation="Skærm 4" ininame="3" />
+			<option name="Display 5" translation="Skærm 5" ininame="4" />
+		</setting>
+		<setting name="X" translation="x" default="0" type="TextBox" inisection="Apron" ininame="x" description="" />
+		<setting name="Y" translation="Y" default="0" type="TextBox" inisection="Apron" ininame="y" description="" />
+		<setting name="Width" translation="Bredde" default="1920" type="TextBox" inisection="Apron" ininame="width" description="" />
+		<setting name="Height" translation="Højde" default="1080" type="TextBox" inisection="Apron" ininame="height" description="" />
+	</section>
+	<section name="Audio Settings" translation="Lydindstillinger" description="Her kan du indstille forskellige lydindstillinger af PinballX.">
+		<setting name="Stream Volume" translation="Stream Volume" default="90%" type="ComboBox" inisection="Audio" ininame="StreamVolume" description="Ambiance og start lyd lydstyrke.">
+			<option name="100%" translation="100%" ininame="100" />
+			<option name="90%" translation="90%" ininame="90" />
+			<option name="80%" translation="80%" ininame="80" />
+			<option name="70%" translation="70%" ininame="70" />
+			<option name="60%" translation="60%" ininame="60" />
+			<option name="50%" translation="50%" ininame="50" />
+			<option name="40%" translation="40%" ininame="40" />
+			<option name="30%" translation="30%" ininame="30" />
+			<option name="20%" translation="20%" ininame="20" />
+			<option name="10%" translation="10%" ininame="10" />
+			<option name="0%" translation="0%" ininame="0" />
+		</setting>
+		<setting name="Sample Volume" translation="Prøvevolumen" default="90%" type="ComboBox" inisection="Audio" ininame="SampleVolume" description="Navigation og lyd fx volumen.">
+			<option name="100%" translation="100%" ininame="100" />
+			<option name="90%" translation="90%" ininame="90" />
+			<option name="80%" translation="80%" ininame="80" />
+			<option name="70%" translation="70%" ininame="70" />
+			<option name="60%" translation="60%" ininame="60" />
+			<option name="50%" translation="50%" ininame="50" />
+			<option name="40%" translation="40%" ininame="40" />
+			<option name="30%" translation="30%" ininame="30" />
+			<option name="20%" translation="20%" ininame="20" />
+			<option name="10%" translation="10%" ininame="10" />
+			<option name="0%" translation="0%" ininame="0" />
+		</setting>
+		<setting name="Sound in Videos" translation="Lyd i videoer" default="Yes" type="ComboBox" inisection="Audio" ininame="PlaySoundInVideos" description="Afspil lyd, hvis du er i videoer. Ellers demper lyden i videoer.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="GameEx Online" translation="GameEx Online" description="GameEx Online giver dig mulighed for at få adgang til din spilsamling online og fjernstyret PinballX fra enhver webaktiveret enhed. Denne funktion muliggør også PinballX download service og muliggør søgning og download af medier i spillelisten.">
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="Login" ininame="Enabled" description="Aktivér GameEx Online.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Stream quality" translation="Stream kvalitet" default="0 - Lowest" type="ComboBox" inisection="Login" ininame="StreamQuality" description="Indstil kvaliteten til streaming audio og video. Højere indstillinger bruger mere båndbredde.">
+			<option name="0 - Lowest" translation="0 - Laveste" ininame="0" />
+			<option name="1" translation="1" ininame="1" />
+			<option name="2" translation="2" ininame="2" />
+			<option name="3" translation="3" ininame="3" />
+			<option name="4" translation="4" ininame="4" />
+			<option name="5" translation="5" ininame="5" />
+			<option name="6" translation="6" ininame="6" />
+			<option name="7" translation="7" ininame="7" />
+			<option name="8" translation="8" ininame="8" />
+			<option name="9" translation="9" ininame="9" />
+			<option name="10 - Highest" translation="10 - Højeste" ininame="10" />
+		</setting>
+		<setting name="Use Lite Media" translation="Brug Lite Media" default="No" type="ComboBox" inisection="Login" ininame="UseLiteMedia" description="Søg efter Lite medier online, når du bruger Game Manager.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="User ID" translation="bruger ID" default="" type="CurrentUser" inisection="Software\\PinballX" ininame="U" description="" />
+		<setting name="Password" translation="Adgangskode" default="" type="CurrentUser" inisection="Software\\PinballX" ininame="pass" description="" />
+		<setting name="Links" translation="Links" type="Links" description="Relevante Links">
+			<option name="Privacy Policy" translation="Fortrolighedspolitik" url="https://www.gameex.info/forums/privacy/" />
+			<option name="GameEx Online" translation="GameEx Online" url="http://online.gameex.com" />
+			<option name="Create an account" translation="Opret en konto" url="http://online.gameex.com/signup.aspx" />
+		</setting>
+	</section>
+	<section name="Startup Settings" translation="Opstart indstillinger" description="Her kan du indstille forskellige start-indstillinger af PinballX.">
+		<setting name="Enable Startup Sound" translation="Aktivér start lyd" default="Yes" type="ComboBox" inisection="Startup" ininame="PlaySound" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Enable Startup Video" translation="Aktivér startup video" default="Yes" type="ComboBox" inisection="Startup" ininame="PlayVideo" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Run PinballX when Windows starts" translation="Kør PinballX, når Windows starter" type="Title" description="Denne indstilling indstiller automatisk PinballX, når Windows starter." />
+		<setting name="Start with Windows" translation="Start med Windows" type="LaunchFile" inisection="Startup" ininame="StartWithWindows" description="Indstil PinballX for at starte, når Windows starter.">
+			<option name="FileName" translation="Filnavn" description="[APP] \ ToggleStartWithWindows.exe" />
+		</setting>
+		<setting name="Run program on startup" translation="Kør program ved opstart" type="Title" description="Start et program ved opstart af PinballX" />
+		<setting name="Startup Program Enabled" translation="Opstartsprogram aktiveret" default="No" type="ComboBox" inisection="StartupProgram" ininame="Enabled" description="Start applikation ved opstart">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="" type="Folder" inisection="StartupProgram" ininame="WorkingPath" description="Arbejdsstien for programmet, der starter ved opstart." />
+		<setting name="Executable" translation="eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="StartupProgram" ininame="Executable" description="Den eksekverbare fil, der skal startes ved opstart" />
+		<setting name="Parameters" translation="Parametre" default="" type="TextBox" inisection="StartupProgram" ininame="Parameters" description="Parametrene." />
+		<setting name="Wait For Exit" translation="Vent til udgang" default="Yes" type="ComboBox" inisection="StartupProgram" ininame="WaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Hide Window" translation="Skjul vindue" default="Yes" type="ComboBox" inisection="StartupProgram" ininame="HideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Keyboard Input Settings" translation="Indstillinger for tastaturindgang" description="Her kan du indstille forskellige indstillinger for PinballX.">
+		<setting name="Quit" translation="Afslut" default="27" type="VKKey" inisection="KeyCodes" ininame="Quit" description="Afslut nøgle" />
+		<setting name="Left" translation="Venstre" default="37" type="VKKey" inisection="KeyCodes" ininame="Left" description="Venstre nøgle" />
+		<setting name="Right" translation="Højre" default="39" type="VKKey" inisection="KeyCodes" ininame="Right" description="Højre nøgle" />
+		<setting name="Select/Start" translation="Vælg / Start" default="13" type="VKKey" inisection="KeyCodes" ininame="Select" description="Vælg Nøgle" />
+		<setting name="Rotate" translation="Rotere" default="82" type="VKKey" inisection="KeyCodes" ininame="Rotate" description="Drej nøgle" />
+		<setting name="Page/Nudge Left" translation="Side / Nudge til venstre" default="33" type="VKKey" inisection="KeyCodes" ininame="PageLeft" description="PageLeft-nøgle" />
+		<setting name="Page/Nudge Right" translation="Side / Nudge Right" default="34" type="VKKey" inisection="KeyCodes" ininame="PageRight" description="PageRight-nøgle" />
+		<setting name="Exit Emulator" translation="Exit Emulator" default="81" type="VKKey" inisection="KeyCodes" ininame="ExitEmulator" description="ExitEmulator Key" />
+		<setting name="Grab Screenshots" translation="Grib skærmbilleder" default="83" type="VKKey" inisection="KeyCodes" ininame="Screenshot" description="Capture Screenshots Key" />
+		<setting name="Grab Videos" translation="Grib videoer" default="86" type="VKKey" inisection="KeyCodes" ininame="CaptureVideos" description="Capture Videos Key" />
+		<setting name="Pause/In Game" translation="Pause / i spil" default="80" type="VKKey" inisection="KeyCodes" ininame="InGame" description="Pause tast" />
+		<setting name="Instructions" translation="Instruktioner" default="73" type="VKKey" inisection="KeyCodes" ininame="Instructions" description="Instruktioner Nøgle" />
+		<setting name="Volume Down" translation="Skrue ned" default="109" type="VKKey" inisection="KeyCodes" ininame="VolumeDown" description="Volume Down Key" />
+		<setting name="Volume Up" translation="Lydstyrke op" default="107" type="VKKey" inisection="KeyCodes" ininame="VolumeUp" description="Volume Up Key" />
+		<setting name="Credit" translation="Kredit" default="53" type="VKKey" inisection="KeyCodes" ininame="Credit" description="Visuel Pinball-kreditnøgle" />
+		<setting name="Plunger" translation="Svupper" default="164" type="VKKey" inisection="KeyCodes" ininame="Plunger" description="Visuel Pinball stempelnøgle" />
+		<setting name="Launch" translation="Lancering" default="50" type="VKKey" inisection="KeyCodes" ininame="Launch" description="Start nøgle. Ombyder info side" />
+	</section>
+	<section name="Joystick Input Settings" translation="Joystick Input Settings" description="Her kan du indstille forskellige indstillinger for PinballX.">
+		<setting name="Quit" translation="Afslut" default="10" type="JoyButton" inisection="JoyCodes" ininame="Quit" description="Afslut knap" />
+		<setting name="Left" translation="Venstre" default="0" type="JoyButton" inisection="JoyCodes" ininame="Left" description="Venstre knap" />
+		<setting name="Right" translation="Højre" default="1" type="JoyButton" inisection="JoyCodes" ininame="Right" description="Højre knap" />
+		<setting name="Select/Start" translation="Vælg / Start" default="2" type="JoyButton" inisection="JoyCodes" ininame="Select" description="Vælg knap" />
+		<setting name="Rotate" translation="Rotere" default="11" type="JoyButton" inisection="JoyCodes" ininame="Rotate" description="Rotate Button" />
+		<setting name="Page/Nudge Left" translation="Side / Nudge til venstre" default="3" type="JoyButton" inisection="JoyCodes" ininame="PageLeft" description="PageLeft-knap" />
+		<setting name="Page/Nudge Right" translation="Side / Nudge Right" default="4" type="JoyButton" inisection="JoyCodes" ininame="PageRight" description="PageRight-knap" />
+		<setting name="Exit Emulator" translation="Exit Emulator" default="12" type="JoyButton" inisection="JoyCodes" ininame="ExitEmulator" description="ExitEmulator Button" />
+		<setting name="Pause/In Game" translation="Pause / i spil" default="13" type="JoyButton" inisection="JoyCodes" ininame="InGame" description="Pause-knap" />
+		<setting name="Instructions" translation="Instruktioner" default="14" type="JoyButton" inisection="JoyCodes" ininame="Instructions" description="Instruktioner Button" />
+		<setting name="Credit" translation="Kredit" default="15" type="JoyButton" inisection="JoyCodes" ininame="Credit" description="Visuel Pinball-kreditnøgle" />
+		<setting name="Plunger" translation="Svupper" default="16" type="JoyButton" inisection="JoyCodes" ininame="Plunger" description="Visuel Pinball stempelnøgle" />
+		<setting name="Launch" translation="Lancering" default="17" type="JoyButton" inisection="JoyCodes" ininame="Launch" description="Startknappen. Bypasser forside" />
+	</section>
+	<section name="Text" translation="Tekst" description="Her kan du indstille forskellige tekstindstillinger af PinballX.">
+		<setting name="Line 1" translation="Linje 1" default="Free Play" type="TextBox" inisection="Text" ininame="Line1" description="" />
+		<setting name="Line 2" translation="Linje 2" default="Press Start" type="TextBox" inisection="Text" ininame="Line2" description="" />
+		<setting name="Featuring" translation="med" default="Featuring" type="TextBox" inisection="Text" ininame="Featuring" description="" />
+		<setting name="Tables" translation="Borde" default="Tables" type="TextBox" inisection="Text" ininame="Tables" description="" />
+		<setting name="All" translation="Alle" default="All" type="TextBox" inisection="Text" ininame="All" description="" />
+		<setting name="Play Game" translation="Spille spil" default="Play Game" type="TextBox" inisection="Text" ininame="PlayGame" description="" />
+		<setting name="Instructions" translation="Instruktioner" default="Instructions" type="TextBox" inisection="Text" ininame="Instructions" description="" />
+		<setting name="Information" translation="Information" default="Information" type="TextBox" inisection="Text" ininame="Information" description="" />
+		<setting name="Flyer" translation="Flyer" default="Flyer" type="TextBox" inisection="Text" ininame="Flyer" description="" />
+		<setting name="Gameplay" translation="Gameplay" default="Gameplay" type="TextBox" inisection="Text" ininame="Gameplay" description="" />
+		<setting name="Tutorial" translation="tutorial" default="Tutorial" type="TextBox" inisection="Text" ininame="Tutorial" description="" />
+		<setting name="Promo" translation="Promo" default="Promo" type="TextBox" inisection="Text" ininame="Promo" description="" />
+		<setting name="Exit Game" translation="Afslut spil" default="Exit Game" type="TextBox" inisection="Text" ininame="ExitGame" description="" />
+		<setting name="Return to Game" translation="Tilbage til spillet" default="Return to Game" type="TextBox" inisection="Text" ininame="ReturnToGame" description="" />
+		<setting name="Return" translation="Vend tilbage" default="Return" type="TextBox" inisection="Text" ininame="Return" description="" />
+		<setting name="Exit" translation="Afslut" default="Exit" type="TextBox" inisection="Text" ininame="Exit" description="" />
+		<setting name="Shutdown" translation="Lukke ned" default="Shutdown" type="TextBox" inisection="Text" ininame="Shutdown" description="" />
+		<setting name="Restart" translation="Genstart" default="Restart" type="TextBox" inisection="Text" ininame="Restart" description="" />
+		<setting name="Favorite" translation="Favorit" default="Favorite" type="TextBox" inisection="Text" ininame="Favorite" description="" />
+		<setting name="Favorites" translation="foretrukne" default="Favorites" type="TextBox" inisection="Text" ininame="Favorites" description="" />
+		<setting name="Favorites Add" translation="Favoritter Tilføj" default="Add To Favorites" type="TextBox" inisection="Text" ininame="FavoritesAdd" description="" />
+		<setting name="Favorites Remove" translation="Favoritter Fjern" default="Remove From Favorites" type="TextBox" inisection="Text" ininame="FavoritesRemove" description="" />
+		<setting name="Most Played" translation="Mest afspillede" default="Most Played" type="TextBox" inisection="Text" ininame="MostPlayed" description="" />
+		<setting name="Last Played" translation="Sidste spillet" default="Last Played" type="TextBox" inisection="Text" ininame="LastPlayed" description="" />
+		<setting name="Lists" translation="Lister" default="Lists" type="TextBox" inisection="Text" ininame="Lists" description="" />
+		<setting name="Record Videos" translation="Optag videoer" default="Capturing videos. Please wait. This will take several minutes." type="TextBox" inisection="Text" ininame="CapturingVideos" description="" />
+		<setting name="Ratings" translation="Vurderinger" default="Ratings" type="TextBox" inisection="Text" ininame="Ratings" description="" />
+		<setting name="High Scores" translation="High Scores" default="High Scores" type="TextBox" inisection="Text" ininame="HighScores" description="" />
+		<setting name="Rate Table" translation="Rate Table" default="Rate Table" type="TextBox" inisection="Text" ininame="RateTable" description="" />
+		<setting name="Not Rated" translation="Ikke bedømt" default="Not Rated" type="TextBox" inisection="Text" ininame="NotRated" description="" />
+		<setting name="Systems" translation="Systemer" default="Systems" type="TextBox" inisection="Text" ininame="Systems" description="" />
+		<setting name="Recently Added" translation="Nylig tilføjet" default="Recently Added" type="TextBox" inisection="Text" ininame="RecentlyAdded" description="" />
+	</section>
+	<section name="Future Pinball" translation="Fremtidige Pinball" description="Her kan du indstille PinballX's forskellige Future Pinball-indstillinger.">
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="Enabled" description="Aktiver Future Pinball">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="C:\Pinball\FuturePinball" type="Folder" inisection="FuturePinball" ininame="WorkingPath" description="Fremtidens Pinballs arbejdssti." />
+		<setting name="Table Path" translation="Tabelsti" default="C:\Pinball\Tables" type="Folder" inisection="FuturePinball" ininame="TablePath" description="Bane stien til Future Pinball." />
+		<setting name="Executable" translation="eksekverbar" default="Future Pinball.exe" type="File" filter="Future Pinball Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="FuturePinball" ininame="Executable" description="Den fremtidige Pinball-eksekverbare fil. Normalt 'Future Pinball.exe'" />
+		<setting name="Parameters" translation="Parametre" default="/open &quot;[TABLEPATH]\[TABLEFILE]&quot; /play /exit /arcaderender" type="TextBox" inisection="FuturePinball" ininame="Parameters" description="Future Pinball parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="FPRAM Path" translation="FPRAM-sti" default="C:\Pinball\FuturePinball\fpram" type="Folder" inisection="FuturePinball" ininame="FPRAMPath" description="Future Pinball FPRAM-banen. Påkrævet for high score support." />
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program til at starte før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lanceringen før" default="No" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeEnabled" description="Start applikation inden emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start før arbejdsstien" default="" type="Folder" inisection="FuturePinball" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien for programmet, der skal lanceres før." />
+		<setting name="Launch Before Executable" translation="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="FuturePinball" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start inden parametre" default="" type="TextBox" inisection="FuturePinball" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid for udgang" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeWaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start før skjul vindue" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program til at starte efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterEnabled" description="Start applikation efter emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdsstien" default="" type="Folder" inisection="FuturePinball" ininame="LaunchAfterWorkingPath" description="Arbejdsbanen for programmet til at starte efter." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="FuturePinball" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes efter emulatoren" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="FuturePinball" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter ventetid for udgang" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af ​​applikationen fuldføres Efter fortsætningen">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter Skjul vindue" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Visual Pinball" translation="Visual Pinball" description="Her kan du indstille de forskellige Visual Pinball-indstillinger af PinballX.">
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="Enabled" description="Aktivér Visual Pinball">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="C:\Pinball\VisualPinball" type="Folder" inisection="VisualPinball" ininame="WorkingPath" description="Visual Pinball's arbejdssti." />
+		<setting name="Table Path" translation="Tabelsti" default="C:\Pinball\Tables" type="Folder" inisection="VisualPinball" ininame="TablePath" description="Bordstien til Visual Pinball." />
+		<setting name="Executable" translation="eksekverbar" default="VPinball_9_0_2.exe" type="File" filter="Visual Pinball Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="VisualPinball" ininame="Executable" description="Den visuelle Pinball eksekverbare fil. Normalt 'Future Pinball.exe'" />
+		<setting name="Parameters" translation="Parametre" default="/play -&quot;[TABLEPATH]\[TABLEFILE]&quot;" type="TextBox" inisection="VisualPinball" ininame="Parameters" description="Visual Pinball parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Bypass Disclaimers" translation="Bypass Disclaimers" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="Bypass" description="Bypass ROM ansvarsfraskrivelser ved at sende nøgler.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Auto Configure" translation="Automatisk konfiguration" default="No" type="ComboBox" inisection="VisualPinball" ininame="AutoConfigure" description="Auto konfigurer opløsningen og kontrollerne i Visual Pinball baseret på PinballX indstillinger.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Full Screen Exclusive Hack" translation="Full Screen Exclusive Hack" default="No" type="ComboBox" inisection="VisualPinball" ininame="EnableFullScreenExclusiveHack" description="Aktivér VP 10 vindue, når det kører eksklusivt i fuldskærm.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Extra wait for show desktop" translation="Ekstra vent på show desktop" default="None" type="ComboBox" inisection="VisualPinball" ininame="ExtraWaitHide" description="Ekstra ventetid, før du viser skrivebordet. Nødvendigt til fejltabeller på nogle systemer">
+			<option name="None" translation="Ingen" ininame="0" />
+			<option name="5 seconds" translation="5 sekunder" ininame="5" />
+			<option name="10 seconds" translation="10 sekunder" ininame="10" />
+			<option name="15 seconds" translation="15 sekunder" ininame="15" />
+			<option name="20 seconds" translation="20 sekunder" ininame="20" />
+			<option name="25 seconds" translation="25 sekunder" ininame="25" />
+			<option name="30 seconds" translation="30 sekunder" ininame="30" />
+		</setting>
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program til at starte før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lanceringen før" default="No" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeEnabled" description="Start applikation inden emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start før arbejdsstien" default="" type="Folder" inisection="VisualPinball" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien for programmet, der skal lanceres før." />
+		<setting name="Launch Before Executable" translation="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="VisualPinball" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start inden parametre" default="" type="TextBox" inisection="VisualPinball" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid for udgang" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeWaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start før skjul vindue" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program til at starte efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterEnabled" description="Start applikation efter emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdsstien" default="" type="Folder" inisection="VisualPinball" ininame="LaunchAfterWorkingPath" description="Arbejdsbanen for programmet til at starte efter." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="VisualPinball" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes efter emulatoren" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="VisualPinball" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter ventetid for udgang" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af ​​applikationen fuldføres Efter fortsætningen">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter Skjul vindue" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Zaccaria Pinball" translation="Zaccaria flipper" description="Her kan du indstille de forskellige Zaccaria Pinball-indstillinger for PinballX.">
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="Zaccaria" ininame="Enabled" description="Aktivér Zaccaria">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="C:\Program Files (x86)\Steam" type="Folder" inisection="Zaccaria" ininame="WorkingPath" description="Arbejdsstien til Steam eller Zaccaria." />
+		<setting name="Executable" translation="Eksekverbar" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="Zaccaria" ininame="Executable" description="Steam- eller Zaccaria-eksekverbare fil. Normalt 'Steam.exe'" />
+		<setting name="Parameters" translation="Parametre" default="-applaunch 444930" type="TextBox" inisection="Zaccaria" ininame="Parameters" description="Zaccaria- eller Steam-parametrene. Brug standard til Steam. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [BESKRIVELSE]." />
+		<setting name="Process to monitor" translation="Process til overvågning" default="ZaccariaPinball.exe" type="TextBox" inisection="Zaccaria" ininame="Process" description="Den eksekverbare Zaccaria-proces til overvågning. Normalt ZaccariaPinball.exe" />
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program, der skal startes før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lancering før" default="No" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeEnabled" description="Start applikation før emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start inden du arbejder sti" default="" type="Folder" inisection="Zaccaria" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien, som programmet skal starte før." />
+		<setting name="Launch Before Executable" translation="Start før eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="Zaccaria" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start før parametre" default="" type="TextBox" inisection="Zaccaria" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [BESKRIVELSE]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeWaitForExit" description="Vent på udførelse af applikationen, før du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start inden skjul vindue" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeHideWindow" description="Start applikationen med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program, der skal startes efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterEnabled" description="Start applikation efter emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdssti" default="" type="Folder" inisection="Zaccaria" ininame="LaunchAfterWorkingPath" description="Arbejdsstien for programmet, der skal starte After." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="Zaccaria" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes Efter emulatoren" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="Zaccaria" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [BESKRIVELSE]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter Vent på afslutning" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af applikationen er færdig efter at du er gået videre">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter skjul vindue" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterHideWindow" description="Start applikationen med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball FX2" translation="Pinball FX2" description="Her kan du indstille PinballX's forskellige Pinball FX2-indstillinger.">
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="PinballFX2" ininame="Enabled" description="Aktivér Pinball FX2">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballFX2" ininame="WorkingPath" description="Arbejdsstien til Steam eller Pinball FX2." />
+		<setting name="Executable" translation="eksekverbar" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballFX2" ininame="Executable" description="Den Steam eller Pinball FX2 eksekverbare fil. Normalt 'Steam.exe'" />
+		<setting name="Parameters" translation="Parametre" default="-applaunch 226980 &quot;[TABLEFILE]&quot;" type="TextBox" inisection="PinballFX2" ininame="Parameters" description="Pinball FX2 eller damp parametrene. Brug standard til damp. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" translation="Proces til overvågning" default="Pinball FX2.exe" type="TextBox" inisection="PinballFX2" ininame="Process" description="Pinball FX2 eksekverbar proces til overvågning. Normalt Pinball FX2.exe" />
+		<setting name="Wait For" translation="Vent på" default="20 Seconds" type="ComboBox" inisection="PinballFX2" ininame="WaitFor" description="Tiden i sekunder for at vente, før du kontrollerer Pinball FX2-processen og afsendelse af taster. På hurtige systemer kan du muligvis reducere denne værdi og på langsommere systemer må du måske øge det. Hvis du bruger kommandolinjestøtten med Pinball FX 2, skal du indstille dette til -1.">
+			<option name="11 Seconds" translation="11 sekunder" ininame="11" />
+			<option name="12 Seconds" translation="12 sekunder" ininame="12" />
+			<option name="13 Seconds" translation="13 sekunder" ininame="13" />
+			<option name="14 Seconds" translation="14 sekunder" ininame="14" />
+			<option name="15 Seconds" translation="15 sekunder" ininame="15" />
+			<option name="16 Seconds" translation="16 sekunder" ininame="16" />
+			<option name="17 Seconds" translation="17 sekunder" ininame="17" />
+			<option name="18 Seconds" translation="18 sekunder" ininame="18" />
+			<option name="19 Seconds" translation="19 sekunder" ininame="19" />
+			<option name="20 Seconds" translation="20 sekunder" ininame="20" />
+			<option name="21 Seconds" translation="21 sekunder" ininame="21" />
+			<option name="22 Seconds" translation="22 sekunder" ininame="22" />
+			<option name="23 Seconds" translation="23 sekunder" ininame="23" />
+			<option name="24 Seconds" translation="24 sekunder" ininame="24" />
+			<option name="25 Seconds" translation="25 sekunder" ininame="25" />
+			<option name="26 Seconds" translation="26 sekunder" ininame="26" />
+			<option name="27 Seconds" translation="27 sekunder" ininame="27" />
+			<option name="28 Seconds" translation="28 sekunder" ininame="28" />
+			<option name="29 Seconds" translation="29 sekunder" ininame="28" />
+		</setting>
+		<setting name="Rotate Display" translation="Rotér skærm" default="No" type="ComboBox" inisection="PinballFX2" ininame="Rotate" description="Muligheden for at rotere scren er ikke tilgængelig i alle versioner af Pinball FX2. Hvis du vil have PinballX til at gøre det i stedet, skal du vælge denne indstilling.">
+			<option name="No" translation="Ingen" ininame="False" />
+			<option name="Yes" translation="Ja" ininame="True" />
+		</setting>
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program til at starte før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lanceringen før" default="No" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeEnabled" description="Start applikation inden emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start før arbejdsstien" default="" type="Folder" inisection="PinballFX2" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien for programmet, der skal lanceres før." />
+		<setting name="Launch Before Executable" translation="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX2" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start inden parametre" default="" type="TextBox" inisection="PinballFX2" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid for udgang" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeWaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start før skjul vindue" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program til at starte efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterEnabled" description="Start applikation efter emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdsstien" default="" type="Folder" inisection="PinballFX2" ininame="LaunchAfterWorkingPath" description="Arbejdsbanen for programmet til at starte efter." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX2" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes efter emulatoren" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="PinballFX2" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter ventetid for udgang" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af ​​applikationen fuldføres Efter fortsætningen">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter Skjul vindue" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball FX3" translation="Pinball FX3" description="Her kan du indstille PinballX's forskellige Pinball FX3-indstillinger.">
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="PinballFX3" ininame="Enabled" description="Aktivér Pinball FX3">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballFX3" ininame="WorkingPath" description="Arbejdsstien til Steam eller Pinball FX3." />
+		<setting name="Executable" translation="eksekverbar" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballFX3" ininame="Executable" description="Den Steam eller Pinball FX3 eksekverbare fil. Normalt 'Steam.exe'" />
+		<setting name="Parameters" translation="Parametre" default="-applaunch 226980 &quot;-table_[TABLEFILE]&quot;" type="TextBox" inisection="PinballFX3" ininame="Parameters" description="Pinball FX3 eller damp parametrene. Brug standard til damp. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" translation="Proces til overvågning" default="Pinball FX3.exe" type="TextBox" inisection="PinballFX3" ininame="Process" description="Pinball FX3 eksekverbar proces til overvågning. Normalt Pinball FX3.exe" />
+		<setting name="Wait For" translation="Vent på" default="20 Seconds" type="ComboBox" inisection="PinballFX3" ininame="WaitFor" description="Tiden i sekunder for at vente, før du kontrollerer Pinball FX3-processen og afsendelse af taster. På hurtige systemer kan du muligvis reducere denne værdi og på langsommere systemer må du måske øge det. Hvis du bruger kommandolinjestøtten med Pinball FX 2, skal du indstille dette til -1.">
+			<option name="11 Seconds" translation="11 sekunder" ininame="11" />
+			<option name="12 Seconds" translation="12 sekunder" ininame="12" />
+			<option name="13 Seconds" translation="13 sekunder" ininame="13" />
+			<option name="14 Seconds" translation="14 sekunder" ininame="14" />
+			<option name="15 Seconds" translation="15 sekunder" ininame="15" />
+			<option name="16 Seconds" translation="16 sekunder" ininame="16" />
+			<option name="17 Seconds" translation="17 sekunder" ininame="17" />
+			<option name="18 Seconds" translation="18 sekunder" ininame="18" />
+			<option name="19 Seconds" translation="19 sekunder" ininame="19" />
+			<option name="20 Seconds" translation="20 sekunder" ininame="20" />
+			<option name="21 Seconds" translation="21 sekunder" ininame="21" />
+			<option name="22 Seconds" translation="22 sekunder" ininame="22" />
+			<option name="23 Seconds" translation="23 sekunder" ininame="23" />
+			<option name="24 Seconds" translation="24 sekunder" ininame="24" />
+			<option name="25 Seconds" translation="25 sekunder" ininame="25" />
+			<option name="26 Seconds" translation="26 sekunder" ininame="26" />
+			<option name="27 Seconds" translation="27 sekunder" ininame="27" />
+			<option name="28 Seconds" translation="28 sekunder" ininame="28" />
+			<option name="29 Seconds" translation="29 sekunder" ininame="28" />
+		</setting>
+		<setting name="Rotate Display" translation="Rotér skærm" default="No" type="ComboBox" inisection="PinballFX3" ininame="Rotate" description="Muligheden for at rotere scren er ikke tilgængelig i alle versioner af Pinball FX3. Hvis du vil have PinballX til at gøre det i stedet, skal du vælge denne indstilling.">
+			<option name="No" translation="Ingen" ininame="False" />
+			<option name="Yes" translation="Ja" ininame="True" />
+		</setting>
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program til at starte før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lanceringen før" default="No" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeEnabled" description="Start applikation inden emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start før arbejdsstien" default="" type="Folder" inisection="PinballFX3" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien for programmet, der skal lanceres før." />
+		<setting name="Launch Before Executable" translation="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX3" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start inden parametre" default="" type="TextBox" inisection="PinballFX3" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid for udgang" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeWaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start før skjul vindue" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program til at starte efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterEnabled" description="Start applikation efter emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdsstien" default="" type="Folder" inisection="PinballFX3" ininame="LaunchAfterWorkingPath" description="Arbejdsbanen for programmet til at starte efter." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX3" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes efter emulatoren" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="PinballFX3" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter ventetid for udgang" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af ​​applikationen fuldføres Efter fortsætningen">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter Skjul vindue" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball Arcade" translation="Pinball Arcade" description="Her kan du indstille de forskellige Pinball Arcade indstillinger af PinballX.">
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="PinballArcade" ininame="Enabled" description="Aktivér Pinball Arcade">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Interface Version" translation="Interface Version" default="V4 (Latest)" type="ComboBox" inisection="PinballArcade" ininame="InterfaceVersion" description="Pinball Arcade brugergrænsefladen. Dette kan ændres fra tid til anden, og det gjorde det i juni 2016. Medmindre du bruger en gammel version af Pinball Arcade, skal du vælge det seneste.">
+			<option name="V4 (Latest)" translation="V4 (nyeste)" ininame="4" />
+			<option name="V3" translation="V3" ininame="3" />
+			<option name="V2" translation="V2" ininame="2" />
+			<option name="V1" translation="V1" ininame="0" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballArcade" ininame="WorkingPath" description="Arbejdsstien til damp- eller pinball-arcade." />
+		<setting name="Executable" translation="eksekverbar" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballArcade" ininame="Executable" description="Steam eller Pinball Arcade eksekverbar fil. Normalt 'Steam.exe'" />
+		<setting name="Parameters" translation="Parametre" default="-applaunch 238260" type="TextBox" inisection="PinballArcade" ininame="Parameters" description="Pinball Arcade eller Steam parametrene. Brug standard til damp. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" translation="Proces til overvågning" default="PinballArcade.exe" type="TextBox" inisection="PinballArcade" ininame="Process" description="Pinball Arcade eksekverbar proces til overvågning. Normalt PinballArcade.exe" />
+		<setting name="Wait For" translation="Vent på" default="12 Seconds" type="ComboBox" inisection="PinballArcade" ininame="WaitFor" description="Tiden i sekunder for at vente, før du kontrollerer Pinball Arcade-processen og sender nøgler. På hurtige systemer kan du muligvis reducere denne værdi og på langsommere systemer må du måske øge det.">
+			<option name="5 Seconds" translation="5 sekunder" ininame="5" />
+			<option name="6 Seconds" translation="6 sekunder" ininame="6" />
+			<option name="7 Seconds" translation="7 sekunder" ininame="7" />
+			<option name="8 Seconds" translation="8 sekunder" ininame="8" />
+			<option name="9 Seconds" translation="9 sekunder" ininame="9" />
+			<option name="10 Seconds" translation="10 sekunder" ininame="10" />
+			<option name="11 Seconds" translation="11 sekunder" ininame="11" />
+			<option name="12 Seconds" translation="12 sekunder" ininame="12" />
+			<option name="13 Seconds" translation="13 sekunder" ininame="13" />
+			<option name="14 Seconds" translation="14 sekunder" ininame="14" />
+			<option name="15 Seconds" translation="15 sekunder" ininame="15" />
+			<option name="16 Seconds" translation="16 sekunder" ininame="16" />
+			<option name="17 Seconds" translation="17 sekunder" ininame="17" />
+			<option name="18 Seconds" translation="18 sekunder" ininame="18" />
+			<option name="19 Seconds" translation="19 sekunder" ininame="19" />
+			<option name="20 Seconds" translation="20 sekunder" ininame="20" />
+			<option name="21 Seconds" translation="21 sekunder" ininame="21" />
+			<option name="22 Seconds" translation="22 sekunder" ininame="22" />
+			<option name="23 Seconds" translation="23 sekunder" ininame="23" />
+			<option name="24 Seconds" translation="24 sekunder" ininame="24" />
+			<option name="25 Seconds" translation="25 sekunder" ininame="25" />
+			<option name="26 Seconds" translation="26 sekunder" ininame="26" />
+			<option name="27 Seconds" translation="27 sekunder" ininame="27" />
+			<option name="28 Seconds" translation="28 sekunder" ininame="28" />
+			<option name="29 Seconds" translation="29 sekunder" ininame="28" />
+		</setting>
+		<setting name="Table Select Delay" translation="Tabel Vælg Forsinkelse" default="Short" type="ComboBox" inisection="PinballArcade" ininame="WaitForSelect" description="Forsinkelsen til at vente efter at have sendt nede-tasten for at vælge tabellen. Gratis Cam Mod eller DirectX 11 med big back buffer sæt til Long eller Very Long.">
+			<option name="Short" translation="Kort" ininame="50" />
+			<option name="Medium" translation="Medium" ininame="100" />
+			<option name="Long" translation="Lang" ininame="150" />
+			<option name="Very Long" translation="Meget lang" ininame="200" />
+		</setting>
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program til at starte før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lanceringen før" default="No" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeEnabled" description="Start applikation inden emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start før arbejdsstien" default="" type="Folder" inisection="PinballArcade" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien for programmet, der skal lanceres før." />
+		<setting name="Launch Before Executable" translation="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballArcade" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start inden parametre" default="" type="TextBox" inisection="PinballArcade" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid for udgang" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeWaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start før skjul vindue" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program til at starte efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterEnabled" description="Start applikation efter emulator">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdsstien" default="" type="Folder" inisection="PinballArcade" ininame="LaunchAfterWorkingPath" description="Arbejdsbanen for programmet til at starte efter." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballArcade" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes efter emulatoren" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="PinballArcade" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter ventetid for udgang" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af ​​applikationen fuldføres Efter fortsætningen">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter Skjul vindue" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Other Systems" translation="Andre systemer" type="SystemSetup" description="Her kan du indstille de øvrige systemindstillinger af PinballX. Bemærk, at MAME kompatible spillelister kan oprettes med GameEx og er tilgængelige i mappen DATA \ PinballX efter opdatering af listen.">
+		<setting name="Select System" translation="Vælg System" type="SystemSetup" description="Vælg system." />
+		<setting name="Name/Folder" translation="Navn / mappe" type="TextBox" inisection="System_" ininame="Name" description="Navnet på systemet og den mappe, der skal bruges." />
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="System_" ininame="Enabled" description="Aktivér andet system">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="System Type" translation="Systemtype" default="Custom" type="ComboBox" inisection="System_" ininame="SystemType" description="Angiv en systemtype. Hvis andet end brugerdefineret, behandler PinballX det som det specificerede i det indbyggede system og tillader funktioner såsom support med høj score.">
+			<option name="Custom" translation="Brugerdefinerede" ininame="0" />
+			<option name="Visual Pinball" translation="Visuel flipper" ininame="1" />
+			<option name="Future Pinball" translation="Fremtidig flipper" ininame="2" />
+			<option name="Custom - EXE files" translation="Brugerdefineret - EXE filer" ininame="4" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="" type="Folder" inisection="System_" ininame="WorkingPath" description="Arbejdsstien til Andet System." />
+		<setting name="Table Path" translation="Tabelsti" default="" type="Folder" inisection="System_" ininame="TablePath" description="Bane stien til Andet System." />
+		<setting name="Executable" translation="eksekverbar" default="" type="File" filter="Other System Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="System_" ininame="Executable" description="Den anden systemkørbare fil. Normalt 'Future Pinball.exe'" />
+		<setting name="Parameters" translation="Parametre" default="" type="TextBox" inisection="System_" ininame="Parameters" description="De øvrige systemparametre. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" translation="Proces til overvågning" default="" type="TextBox" inisection="System_" ininame="WaitForProcess" description="En valgfri ekstra eksekverbar til monitor for exit og at dræbe ved exit." />
+		<setting name="Launch Before" translation="Start før" type="Title" description="Du kan angive et program til at starte før systemet." />
+		<setting name="Enable Launch Before" translation="Aktivér lanceringen før" default="No" type="ComboBox" inisection="System_" ininame="LaunchBeforeEnabled" description="Start programmet før systemet">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="Start før arbejdsstien" default="" type="Folder" inisection="System_" ininame="LaunchBeforeWorkingPath" description="Arbejdsstien for programmet, der skal lanceres før." />
+		<setting name="Launch Before Executable" translation="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="System_" ininame="LaunchBeforeExecutable" description="Den eksekverbare fil, der skal startes før emulatoren" />
+		<setting name="Launch Before Parameters" translation="Start inden parametre" default="" type="TextBox" inisection="System_" ininame="LaunchBeforeParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" translation="Start inden ventetid for udgang" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchBeforeWaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="Start før skjul vindue" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchBeforeHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="Start efter" type="Title" description="Du kan angive et program til at starte efter systemet." />
+		<setting name="Enable Launch After" translation="Aktivér lancering efter" default="No" type="ComboBox" inisection="System_" ininame="LaunchAfterEnabled" description="Start applikation efter system">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="Start efter arbejdsstien" default="" type="Folder" inisection="System_" ininame="LaunchAfterWorkingPath" description="Arbejdsbanen for programmet til at starte efter." />
+		<setting name="Launch After Executable" translation="Start efter eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="System_" ininame="LaunchAfterExecutable" description="Den eksekverbare fil, der skal startes efter systemet" />
+		<setting name="Launch After Parameters" translation="Start efter parametre" default="" type="TextBox" inisection="System_" ininame="LaunchAfterParameters" description="Parametrene. Følgende tags understøttes og erstattes med værdier - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" translation="Start efter ventetid for udgang" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchAfterWaitForExit" description="Vent til udførelsen af ​​applikationen fuldføres Efter fortsætningen">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="Start efter Skjul vindue" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchAfterHideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Links" translation="Links" type="Links" description="Relevante Links">
+			<option name="GameEx" translation="GameEx" url="https://www.gameex.com" />
+		</setting>
+	</section>
+	<section name="Video Recording" translation="Videooptagelse" description="Indstillinger til videooptagelse af spil til automatisk at oprette dit frontendmedie. Konfigurer genvejstasten under tastaturindgangen. For at kunne arbejde, kræver denne funktion, at ffmpeg.exe er til stede i PinballX-applikationsmappen.">
+		<setting name="Video Quality" translation="Videokvalitet" default="21" type="ComboBox" inisection="VideoCapture" ininame="crf" description="Videokvalitet (CRF).">
+			<option name="26 (Lowest)" translation="26 (Laveste)" ininame="26" />
+			<option name="25" translation="25" ininame="25" />
+			<option name="24" translation="24" ininame="24" />
+			<option name="23" translation="23" ininame="23" />
+			<option name="22" translation="22" ininame="22" />
+			<option name="21" translation="21" ininame="21" />
+			<option name="20" translation="20" ininame="20" />
+			<option name="19" translation="19" ininame="19" />
+			<option name="18 (Best)" translation="18 (Bedst)" ininame="18" />
+		</setting>
+		<setting name="Seconds to record" translation="Sekunder at optage" default="45 seconds" type="ComboBox" inisection="VideoCapture" ininame="Seconds" description="Længde i sekunder af hver optaget video">
+			<option name="20 seconds" translation="20 sekunder" ininame="20" />
+			<option name="25 seconds" translation="25 sekunder" ininame="25" />
+			<option name="30 seconds" translation="30 sekunder" ininame="30" />
+			<option name="45 seconds" translation="45 sekunder" ininame="45" />
+			<option name="1 minute" translation="1 minut" ininame="60" />
+			<option name="1 minute 30 seconds" translation="1 minut og 30 sekunder" ininame="90" />
+			<option name="2 minutes" translation="2 minutter" ininame="120" />
+			<option name="2 minutes 30 seconds" translation="2 minutter og 30 sekunder" ininame="150" />
+			<option name="3 minutes" translation="3 minutter" ininame="180" />
+			<option name="3 minutes 30 seconds" translation="3 minutter og 30 sekunder" ininame="210" />
+			<option name="4 minutes" translation="4 minutter" ininame="240" />
+		</setting>
+		<setting name="Use H265" translation="Brug H265" default="No" type="ComboBox" inisection="VideoCapture" ininame="UseH265" description="Brug HVEC h265-kodning i stedet for h264.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Use GPU driver capture" translation="Brug GPU driver capture" default="No" type="ComboBox" inisection="VideoCapture" ininame="UseGPU" description="Brug grafikkortdriverindfangning som Geforce-oplevelse.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Driver record start key" translation="Driver record start nøgle" default="164|120" type="MultiVKKey" inisection="VideoCapture" ininame="KeysStartRecord" description="Hvis GPU-driverens indspilning er aktiveret - den føreren (som f.eks. Tidligere erfaring) genvejstast for at starte optagelsen." />
+		<setting name="Driver record stop key" translation="Driver record stop-nøgle" default="164|120" type="MultiVKKey" inisection="VideoCapture" ininame="KeysEndRecord" description="Hvis GPU-driverens indspilning er aktiveret, er det en genvejstast, som driveren (f.eks." />
+		<setting name="Driver save path" translation="Driver gemme sti" default="C:\video recordings" type="Folder" inisection="VideoCapture" ininame="SavePath" description="Stien hvor føreren gemmer videoer. Denne sti vil blive scannet." />
+	</section>
+	<section name="Attract Mode" translation="Tiltræk tilstand" description="Her kan du indstille forskellige indstillinger for tiltræksindstilling af PinballX.">
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="AttractMode" ininame="Enabled" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Mute Audio" translation="Mute Audio" default="No" type="ComboBox" inisection="AttractMode" ininame="MuteAudio" description="Sluk lyd, når tiltrækkende tilstand kører.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Show high scores" translation="Vis highscores" default="Yes" type="ComboBox" inisection="AttractMode" ininame="EnableAttractModeHighScores" description="Hvis det er muligt, viser high scores på DMD.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Timer" translation="Timer" default="1 Minute" type="ComboBox" inisection="AttractMode" ininame="Timer" description="">
+			<option name="1 Minute" translation="1 minut" ininame="1" />
+			<option name="2 Minutes" translation="2 minutter" ininame="2" />
+			<option name="3 Minutes" translation="3 minutter" ininame="3" />
+			<option name="5 Minutes" translation="5 minutter" ininame="5" />
+			<option name="10 Minutes" translation="10 minutter" ininame="10" />
+			<option name="15 Minutes" translation="15 minutter" ininame="15" />
+			<option name="30 Minutes" translation="30 minutter" ininame="30" />
+			<option name="60 Minutes" translation="60 minutter" ininame="60" />
+		</setting>
+		<setting name="Show Game For" translation="Vis spil til" default="15 Seconds" type="ComboBox" inisection="AttractMode" ininame="ShowFor" description="">
+			<option name="5 Seconds" translation="5 sekunder" ininame="5" />
+			<option name="10 Seconds" translation="10 sekunder" ininame="10" />
+			<option name="15 Seconds" translation="15 sekunder" ininame="15" />
+			<option name="30 Seconds" translation="30 sekunder" ininame="30" />
+			<option name="45 Seconds" translation="45 sekunder" ininame="45" />
+			<option name="1 Minute" translation="1 minut" ininame="60" />
+			<option name="90 Seconds" translation="90 sekunder" ininame="90" />
+			<option name="2 Minutes" translation="2 minutter" ininame="120" />
+		</setting>
+	</section>
+	<section name="Auto Exit" translation="Automatisk afslutning" description="Du kan afslutte lancerede spil automatisk efter en periode med input inaktivitet. Hvis aktiveret og ingen knapper trykkes for den angivne tid, afslutter spillet og vender tilbage til hovedgrænsefladen.">
+		<setting name="Enabled" translation="Aktiveret" default="No" type="ComboBox" inisection="AutoExit" ininame="Enabled" description="">
+			<option name="No" translation="Ingen" ininame="False" />
+			<option name="Yes" translation="Ja" ininame="True" />
+		</setting>
+		<setting name="Exit After" translation="Afslut efter" default="10 Minutes" type="ComboBox" inisection="AutoExit" ininame="Minutes" description="">
+			<option name="5 Minutes" translation="5 minutter" ininame="5" />
+			<option name="10 Minutes" translation="10 minutter" ininame="10" />
+			<option name="15 Minutes" translation="15 minutter" ininame="15" />
+			<option name="30 Minutes" translation="30 minutter" ininame="30" />
+			<option name="45 Minutes" translation="45 minutter" ininame="45" />
+			<option name="60 Minutes" translation="60 minutter" ininame="60" />
+		</setting>
+	</section>
+	<section name="Exit Screen" translation="Afslut skærm" description="Her kan du indstille de forskellige exitskærmindstillinger for PinballX.">
+		<setting name="Enabled" translation="Aktiveret" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="Enabled" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Enable Exit" translation="Aktivér Exit" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableExit" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Enable Shutdown" translation="Aktivér Shutdown" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableShutdown" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Enable Restart" translation="Aktivér Genstart" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableRestart" description="">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Hold key to exit emulator" translation="Hold nøglen for at afslutte emulatoren" default="No" type="ComboBox" inisection="ExitScreen" ininame="ConfirmExitGameTimer" description="Kræver exit emulator nøgle skal holdes nede i 6 sekunder for at forlade spillet. En nedtællingstimer vises på skærmen.">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Exit Program" translation="Exit Program" description="Her kan du indstille et program til at starte på Exit.">
+		<setting name="Exit Program Enabled" translation="Afslut program aktiveret" default="No" type="ComboBox" inisection="ExitProgram" ininame="Enabled" description="Start applikation ved udgang">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="Arbejdssti" default="" type="Folder" inisection="ExitProgram" ininame="WorkingPath" description="Arbejdsvejen for programmet, der starter på Exit." />
+		<setting name="Executable" translation="eksekverbar" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="ExitProgram" ininame="Executable" description="Den eksekverbare fil, der skal startes ved Afslut" />
+		<setting name="Parameters" translation="Parametre" default="" type="TextBox" inisection="ExitProgram" ininame="Parameters" description="Parametrene." />
+		<setting name="Wait For Exit" translation="Vent til udgang" default="Yes" type="ComboBox" inisection="ExitProgram" ininame="WaitForExit" description="Vent til udførelsen af ​​programmet afsluttes, inden du fortsætter">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+		<setting name="Hide Window" translation="Skjul vindue" default="Yes" type="ComboBox" inisection="ExitProgram" ininame="HideWindow" description="Start programmet med et skjult vindue">
+			<option name="Yes" translation="Ja" ininame="True" />
+			<option name="No" translation="Ingen" ininame="False" />
+		</setting>
+	</section>
+	<section name="Verify Setup" translation="Bekræft opsætning" type="VerifySetup" mode="All" description="Denne del af opsætningen gør det muligt at kontrollere, at dine filstier er korrekte." />
+	<section name="Finished Setup Wizard" translation="Færdig installationsguiden" mode="All" description="Det er alt der er til det. Tak fordi du valgte PinballX!">
+		<setting name="Donate" translation="Doner" type="Label" description="For at understøtte fortsat udvikling og tilgængelighed af alle PinballX-websteder og fremtidige forbedringer, kan du gøre en meget velkommen donation ved at klikke nedenfor." />
+		<setting name="PinballX Links" translation="PinballX Links" type="Links" description="Relevante Links">
+			<option name="PinballX Main Site" translation="PinballX Hovedsted" url="http://www.pinballx.net" />
+			<option name="PinballX Forum" translation="PinballX Forum" url="http://gameex.info/" />
+			<option name="Donate" translation="Doner" url="http://www.pinballx.net/donate.aspx" />
+		</setting>
+	</section>
+</config>

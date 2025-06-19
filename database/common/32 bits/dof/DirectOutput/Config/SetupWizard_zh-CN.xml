@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config version="2.3.8" language="Chinese Simplified">
+	<section name="Welcome to the PinballX Setup Wizard" translation="欢迎来到PinballX安装向导" mode="All" description="由汤姆斯皮尔斯写的PinballX。">
+		<setting name="Notice" translation="注意" type="Label" description="这个程序应该有助于设置PinballX。它将引导您完成PinballX的重要功能，并允许您自定义主要功能。你可以随时运行这个程序，它不会干扰你当前的设置。因此，您可以稍后再回来，而不必现在就配置一切。" />
+		<setting name="WizardMode" translation="WizardMode" default="Basic" type="WizardMode" description="请选择你的模式：">
+			<option name="Basic" translation="基本" />
+			<option name="Advanced" translation="高级" />
+			<option name="Custom" translation="习惯" />
+			<option name="Search" translation="搜索" />
+		</setting>
+		<setting name="PinballX Links" translation="PinballX链接" type="Links" description="相关链接">
+			<option name="PinballX Main Site" translation="PinballX主站点" url="http://www.pinballx.net" />
+			<option name="PinballX Forum" translation="PinballX论坛" url="http://gameex.info/" />
+			<option name="Donate" translation="捐" url="http://www.pinballx.net/donate.aspx" />
+		</setting>
+	</section>
+	<section name="Custom Select" translation="自定义选择" type="Custom" mode="Custom" description="本部分允许您选择想要配置的选项。" />
+	<section name="Search Select" translation="搜索选择" type="Search" mode="Search" description="本部分允许您搜索想要配置的选项。" />
+	<section name="General Settings" translation="常规设置" description="在这里您可以设置PinballX的各种界面和常规设置。">
+		<setting name="Desktop Mode" translation="桌面模式" type="Title" description="桌面模式将PinballX设置为非柜体使用。设置桌面图像和视频文件夹时，PinballX将运行横向。" />
+		<setting name="Enable Desktop Mode" translation="启用桌面模式" default="No" type="ComboBox" inisection="Interface" ininame="DesktopModeEnabled" description="启用桌面模式">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="File Matching" translation="文件匹配" type="Title" description="PinballX可以执行额外的文件匹配和搜索艺术品，媒体和表格。" />
+		<setting name="Enable File Matching" translation="启用文件匹配" default="Yes" type="ComboBox" inisection="FileSystem" ininame="EnableFileMatching" description="执行额外的文件搜索。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Wheel overlay images" translation="车轮覆盖图像" type="Title" description="如果您选择，您可以使用系统或公司徽标覆盖车轮图像。" />
+		<setting name="Mode" translation="模式" default="Disabled" type="ComboBox" inisection="Interface" ininame="WheelOverlay" description="选择是否将图像叠加到滚轮图像上。">
+			<option name="Disabled" translation="残" ininame="0" />
+			<option name="Overlay System Logo" translation="覆盖系统标志" ininame="1" />
+			<option name="Overlay Company Logo" translation="覆盖公司徽标" ininame="2" />
+			<option name="Overlay Company and System" translation="覆盖公司和系统" ininame="3" />
+		</setting>
+		<setting name="Systems list" translation="系统清单" type="Title" description="在PinballX中启用系统列表以列出所有系统。" />
+		<setting name="Enable" translation="启用" default="Enabled" type="ComboBox" inisection="Interface" ininame="EnableSystemsList" description="启用系统列表。">
+			<option name="Enabled" translation="启用" ininame="True" />
+			<option name="Disabled" translation="残" ininame="False" />
+		</setting>
+		<setting name="Show on startup" translation="在启动时显示" default="Disabled" type="ComboBox" inisection="Interface" ininame="SystemsListShowFirst" description="始终在启动时首先显示系统列表。">
+			<option name="Enabled" translation="启用" ininame="True" />
+			<option name="Disabled" translation="残" ininame="False" />
+		</setting>
+		<setting name="Show additional detail" translation="显示更多细节" type="Title" description="当浏览表格时，可以显示附加信息，包括系统，评分，制造商标志和年份。" />
+		<setting name="Enable" translation="启用" default="Yes" type="ComboBox" inisection="Interface" ininame="EnableAdditionalDetail" description="显示游戏名称，制造商标志和年份。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Show System" translation="显示系统" default="Yes" type="ComboBox" inisection="Interface" ininame="ShowSystem" description="显示系统名称或徽标。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Show Ratings" translation="显示评分" default="Yes" type="ComboBox" inisection="Interface" ininame="ShowRatings" description="在可用时显示游戏评分。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="One click launch Table" translation="单击启动表" type="Title" description="此设置允许您在选择时立即启动表，而不显示菜单列表。注意：这会禁用对游戏信息菜单的访问，您可以在其中访问媒体并设置游戏详细信息。" />
+		<setting name="Enabled" translation="启用" default="No" type="ComboBox" inisection="Interface" ininame="OneClickLaunch" description="如果启用，则在选择时立即启动表格并不显示启动/信息菜单。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Add missing tables" translation="添加缺少的表" type="Title" description="自动添加新表和缺失表并在游戏管理器中启用它们。" />
+		<setting name="In Game Manager" translation="在游戏管理器中" default="Yes" type="ComboBox" inisection="GameManager" ininame="AutoAddTables" description="自动添加新表和缺失表并在游戏管理器中启用它们。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="In Front End" translation="在前端" default="No" type="ComboBox" inisection="GameManager" ininame="AutoAddTablesFrontEnd" description="自动添加新表和缺失表并在PinballX中启用它们。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="Interface" ininame="EnableDefaultFilters" description="在PinballX中启用默认搜索过滤器，包括流行的几十年和制造商。禁用此功能可以在自定义数据库的菜单上留出更多空间，但显然会禁用功能。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Basic menu mode" translation="基本菜单模式" type="Title" description="启用基本菜单模式会禁用所有过滤器和子列表，包括收藏夹，只列出菜单中的可用媒体以及启动游戏的功能。" />
+		<setting name="Enabled" translation="启用" default="No" type="ComboBox" inisection="Interface" ininame="EnableBasicMenuMode" description="启用基本菜单模式。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Table loading media mode" translation="表格加载媒体模式" type="Title" description="这可以控制启动表时使用哪种媒体加载图像和视频。 PinballX可以使用运动场图像，也可以使用加载图像和视频文件夹。" />
+		<setting name="Loading media" translation="载入媒体" default="Use loading folders" type="ComboBox" inisection="Interface" ininame="UseTableLoadingMedia" description="使用表游戏场图像或加载文件夹。">
+			<option name="Use playfield images" translation="使用运动场图像" ininame="True" />
+			<option name="Use loading folders" translation="使用加载文件夹" ininame="False" />
+		</setting>
+		<setting name="GIF background color" translation="GIF背景颜色" default="00000000" type="Color" inisection="Interface" ininame="GIFbackgroundcolor" description="使用加载文件夹和GIF动画时，要使用的背景色。" />
+	</section>
+	<section name="Display Settings" translation="显示设置" description="在这里您可以设置PinballX的各种显示设置。">
+		<setting name="Main Display" translation="主显示" default="Display 1" type="ComboBox" inisection="Display" ininame="Monitor" description="">
+			<option name="Display 1" translation="显示1" ininame="0" />
+			<option name="Display 2" translation="显示2" ininame="1" />
+			<option name="Display 3" translation="显示3" ininame="2" />
+			<option name="Display 4" translation="显示4" ininame="3" />
+			<option name="Display 5" translation="显示5" ininame="4" />
+		</setting>
+		<setting name="Main Display Rotation" translation="主显示旋转" default="270 Degrees" type="ComboBox" inisection="Display" ininame="Rotate" description="">
+			<option name="270 Degrees" translation="270度" ininame="270" />
+			<option name="90 Degrees" translation="90度" ininame="90" />
+			<option name="Horizontal" translation="横" ininame="0" />
+		</setting>
+		<setting name="Back Glass Display" translation="背面玻璃显示器" default="Display 2" type="ComboBox" inisection="BackGlass" ininame="Monitor" description="">
+			<option name="Display 1" translation="显示1" ininame="0" />
+			<option name="Display 2" translation="显示2" ininame="1" />
+			<option name="Display 3" translation="显示3" ininame="2" />
+			<option name="Display 4" translation="显示4" ininame="3" />
+			<option name="Display 5" translation="显示5" ininame="4" />
+		</setting>
+		<setting name="Use DirectB2S in Front End" translation="在前端使用DirectB2S" default="No" type="ComboBox" inisection="Backglass" ininame="UseB2S" description="实际上使用Direct2BS文件并将其显示在PinballX的Backglass监视器上。如果找到匹配的direct2bs文件并安装了服务器，则会显示文件。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Auto Position DirectB2S" translation="自动定位DirectB2S" default="Yes" type="ComboBox" inisection="Backglass" ininame="AutoPositionB2S" description="运行Visual Pinball时，自动将Direct B2S窗口放置在Backglass显示器上。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="DMD Enabled" translation="DMD已启用" default="No" type="ComboBox" inisection="DMD" ininame="Enabled" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="DMD Display" translation="DMD显示器" default="Display 3" type="ComboBox" inisection="DMD" ininame="Monitor" description="">
+			<option name="Display 1" translation="显示1" ininame="0" />
+			<option name="Display 2" translation="显示2" ininame="1" />
+			<option name="Display 3" translation="显示3" ininame="2" />
+			<option name="Display 4" translation="显示4" ininame="3" />
+			<option name="Display 5" translation="显示5" ininame="4" />
+		</setting>
+		<setting name="Auto show DMD media" translation="自动显示DMD媒体" default="Yes - All systems" type="ComboBox" inisection="DMD" ininame="AutoShowMedia" description="如果未检测到DMD且游戏设置为隐藏DMD，则在游戏中自动显示DMD图像或视频。">
+			<option name="Yes - All systems" translation="是-所有系统" ininame="True" />
+			<option name="Yes - Just Visual Pinball" translation="是的-只是视觉弹球" ininame="1" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Auto position DMD" translation="自动定位DMD" default="No" type="ComboBox" inisection="DMD" ininame="AutoPositionPinMAME" description="运行Visual Pinball时，自动将PinMAME窗口放置在DMD显示器上，并自动将DMD窗口放置在PinballFX 2中并移除其边框。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Hide PinMAME" translation="隐藏PinMAME" default="No" type="ComboBox" inisection="DMD" ininame="HidePinMAME" description="运行Visual Pinball或使用下面的设置时自动隐藏PinMAME窗口。此设置适用于使用真正的DMD显示屏的机柜，并可自动停止在Playfield上显示的PinMAME窗口。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Use PinMAME in Front End" translation="在前端使用PinMAME" default="No" type="ComboBox" inisection="DMD" ininame="UsePinMAME" description="实际上，在PinballX中使用PinMAME ROM并将其显示在DMD监视器或DMD单元上。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Window/Full Screen" translation="窗口/全屏幕" default="Full Screen" type="ComboBox" inisection="Display" ininame="Windowed" description="在窗口或全屏模式下运行PinballX。">
+			<option name="Full Screen" translation="全屏" ininame="False" />
+			<option name="Windowed" translation="窗" ininame="True" />
+		</setting>
+		<setting name="Full Screen windowed" translation="全屏窗口" default="Yes" type="ComboBox" inisection="Display" ininame="FullScreenWindowedNew" description="全屏运行时，以窗口非独占模式运行。">
+			<option name="No" translation="没有" ininame="False" />
+			<option name="Yes" translation="是" ininame="True" />
+		</setting>
+		<setting name="Crop Wheel Images" translation="裁剪轮图像" default="Yes" type="ComboBox" inisection="Display" ininame="WheelAutoCrop" description="自动裁剪车轮图像（去除透明区域）并将其显示为全尺寸。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Play Field Brightness" translation="玩场亮度" default="230" type="ComboBox" inisection="Display" ininame="PlayFieldBrightness" description="播放字段图像和视频亮度。">
+			<option name="250" translation="250" ininame="250" />
+			<option name="240" translation="240" ininame="240" />
+			<option name="230" translation="230" ininame="230" />
+			<option name="220" translation="220" ininame="220" />
+			<option name="210" translation="210" ininame="210" />
+			<option name="200" translation="200" ininame="200" />
+			<option name="190" translation="190" ininame="190" />
+			<option name="180" translation="180" ininame="180" />
+			<option name="170" translation="170" ininame="170" />
+			<option name="160" translation="160" ininame="160" />
+			<option name="150" translation="150" ininame="150" />
+		</setting>
+		<setting name="Enable game exit images" translation="启用游戏退出图像" default="No" type="ComboBox" inisection="Display" ininame="ShowExitImage" description="返回PinballX时显示退出图像。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Show exit image for" translation="显示退出图像" default="3 Seconds" type="ComboBox" inisection="Display" ininame="ShowExitImageFor" description="显示退出图像的秒数。">
+			<option name="2 Seconds" translation="2秒" ininame="2" />
+			<option name="3 Seconds" translation="3秒" ininame="3" />
+			<option name="4 Seconds" translation="4秒" ininame="4" />
+			<option name="5 Seconds" translation="5秒" ininame="5" />
+			<option name="6 Seconds" translation="6秒" ininame="6" />
+			<option name="7 Seconds" translation="7秒" ininame="7" />
+			<option name="8 Seconds" translation="8秒" ininame="8" />
+			<option name="9 Seconds" translation="9秒" ininame="9" />
+			<option name="10 Seconds" translation="10秒" ininame="10" />
+		</setting>
+		<setting name="Show date and time" translation="显示日期和时间" default="No" type="ComboBox" inisection="Display" ininame="ShowDateAndTime" description="在主显示屏的左上方显示当前日期和时间。">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Underlay image type" translation="底图类型" default="Original" type="ComboBox" inisection="Display" ininame="StretchUnderlay" description="原始缩放格式或拉伸参考底图以填充屏幕。">
+			<option name="Original" translation="原版的" ininame="False" />
+			<option name="Fill screen" translation="填满画面" ininame="True" />
+		</setting>
+		<setting name="Wheel Text Color" translation="车轮文字颜色" default="fffffff" type="Color" inisection="Display" ininame="WheelTextColor" description="车轮文本的颜色。" />
+		<setting name="Wheel Text Outline Color" translation="轮文字轮廓颜色" default="ff000000" type="Color" inisection="Display" ininame="WheelTextOutlineColor" description="车轮文本的颜色。" />
+		<setting name="Info Text Color" translation="信息文本颜色" default="ffffffff" type="Color" inisection="Display" ininame="InfoTextColor" description="信息文本的颜色。" />
+		<setting name="Info Text Outline Color" translation="信息文本轮廓颜色" default="ff000000" type="Color" inisection="Display" ininame="InfoTextOutlineColor" description="信息文本的颜色。" />
+		<setting name="Filter Text Color" translation="过滤文本颜色" default="ffffffff" type="Color" inisection="Display" ininame="FilterTextColor" description="过滤器/标题文本的颜色。" />
+		<setting name="Filter Text Outline Color" translation="过滤文本轮廓颜色" default="ff000000" type="Color" inisection="Display" ininame="FilterTextOutlineColor" description="过滤器/标题文本的颜色。" />
+		<setting name="Menu Color" translation="菜单颜色" default="ffffa500" type="Color" inisection="Display" ininame="MenuColor" description="所选菜单项和信息栏的颜色。" />
+		<setting name="Backglass" translation="Backglass" type="Title" description="你可以在这里指定背景定位。" />
+		<setting name="X" translation="X" default="0" type="TextBox" inisection="BackGlass" ininame="x" description="" />
+		<setting name="Y" translation="ÿ" default="0" type="TextBox" inisection="BackGlass" ininame="y" description="" />
+		<setting name="Width" translation="宽度" default="1280" type="TextBox" inisection="BackGlass" ininame="width" description="" />
+		<setting name="Height" translation="高度" default="1024" type="TextBox" inisection="BackGlass" ininame="height" description="" />
+		<setting name="Real DMD" translation="真正的DMD" type="Title" description="真实Pinball DMD显示器的设置" />
+		<setting name="Enable Color" translation="启用颜色" default="No" type="ComboBox" inisection="RealDMD" ininame="EnableColor" description="如果连接了PinDMD3或Pin2DMD，则可以启用RGB模式">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="DMD Color" translation="DMD颜色" default="ffff1414" type="Color" inisection="RealDMD" ininame="Color" description="如果连接了PinDMD3或Pin2DMD并决定不使用RGB颜色模式，则可以指定dmd显示器的单色" />
+		<setting name="DMD" translation="DMD" type="Title" description="您可以在此指定DMD定位。" />
+		<setting name="X" translation="X" default="0" type="TextBox" inisection="DMD" ininame="x" description="" />
+		<setting name="Y" translation="ÿ" default="0" type="TextBox" inisection="DMD" ininame="y" description="" />
+		<setting name="Width" translation="宽度" default="900" type="TextBox" inisection="DMD" ininame="width" description="" />
+		<setting name="Height" translation="高度" default="300" type="TextBox" inisection="DMD" ininame="height" description="" />
+		<setting name="Topper" translation="礼帽" type="Title" description="您可以在此处指定Topper定位。" />
+		<setting name="Topper Enabled" translation="Topper已启用" default="No" type="ComboBox" inisection="Topper" ininame="Enabled" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Topper Display" translation="礼帽显示" default="Display 4" type="ComboBox" inisection="Topper" ininame="Monitor" description="">
+			<option name="Display 1" translation="显示1" ininame="0" />
+			<option name="Display 2" translation="显示2" ininame="1" />
+			<option name="Display 3" translation="显示3" ininame="2" />
+			<option name="Display 4" translation="显示4" ininame="3" />
+			<option name="Display 5" translation="显示5" ininame="4" />
+		</setting>
+		<setting name="X" translation="X" default="0" type="TextBox" inisection="Topper" ininame="x" description="" />
+		<setting name="Y" translation="ÿ" default="0" type="TextBox" inisection="Topper" ininame="y" description="" />
+		<setting name="Width" translation="宽度" default="1920" type="TextBox" inisection="Topper" ininame="width" description="" />
+		<setting name="Height" translation="高度" default="1080" type="TextBox" inisection="Topper" ininame="height" description="" />
+		<setting name="Apron" translation="围裙" type="Title" description="您可以在此处指定围裙定位。" />
+		<setting name="Apron Enabled" translation="围裙启用" default="No" type="ComboBox" inisection="Apron" ininame="Enabled" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Apron Display" translation="围裙显示" default="Display 5" type="ComboBox" inisection="Apron" ininame="Monitor" description="">
+			<option name="Display 1" translation="显示1" ininame="0" />
+			<option name="Display 2" translation="显示2" ininame="1" />
+			<option name="Display 3" translation="显示3" ininame="2" />
+			<option name="Display 4" translation="显示4" ininame="3" />
+			<option name="Display 5" translation="显示5" ininame="4" />
+		</setting>
+		<setting name="X" translation="X" default="0" type="TextBox" inisection="Apron" ininame="x" description="" />
+		<setting name="Y" translation="ÿ" default="0" type="TextBox" inisection="Apron" ininame="y" description="" />
+		<setting name="Width" translation="宽度" default="1920" type="TextBox" inisection="Apron" ininame="width" description="" />
+		<setting name="Height" translation="高度" default="1080" type="TextBox" inisection="Apron" ininame="height" description="" />
+	</section>
+	<section name="Audio Settings" translation="音频设置" description="在这里您可以设置PinballX的各种音频设置。">
+		<setting name="Stream Volume" translation="流量" default="90%" type="ComboBox" inisection="Audio" ininame="StreamVolume" description="氛围和启动音量。">
+			<option name="100%" translation="100％" ininame="100" />
+			<option name="90%" translation="90％" ininame="90" />
+			<option name="80%" translation="80％" ininame="80" />
+			<option name="70%" translation="70％" ininame="70" />
+			<option name="60%" translation="60％" ininame="60" />
+			<option name="50%" translation="50％" ininame="50" />
+			<option name="40%" translation="40％" ininame="40" />
+			<option name="30%" translation="30％" ininame="30" />
+			<option name="20%" translation="20％" ininame="20" />
+			<option name="10%" translation="10％" ininame="10" />
+			<option name="0%" translation="0％" ininame="0" />
+		</setting>
+		<setting name="Sample Volume" translation="样本量" default="90%" type="ComboBox" inisection="Audio" ininame="SampleVolume" description="导航和声音音量。">
+			<option name="100%" translation="100％" ininame="100" />
+			<option name="90%" translation="90％" ininame="90" />
+			<option name="80%" translation="80％" ininame="80" />
+			<option name="70%" translation="70％" ininame="70" />
+			<option name="60%" translation="60％" ininame="60" />
+			<option name="50%" translation="50％" ininame="50" />
+			<option name="40%" translation="40％" ininame="40" />
+			<option name="30%" translation="30％" ininame="30" />
+			<option name="20%" translation="20％" ininame="20" />
+			<option name="10%" translation="10％" ininame="10" />
+			<option name="0%" translation="0％" ininame="0" />
+		</setting>
+		<setting name="Sound in Videos" translation="视频中的声音" default="Yes" type="ComboBox" inisection="Audio" ininame="PlaySoundInVideos" description="如果在视频中播放音频。否则，将视频中的任何声音静音。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="GameEx Online" translation="GameEx在线" description="GameEx Online允许您在线访问您的游戏集，并通过任何启用Web的设备远程控制PinballX。此功能还支持PinballX下载服务，并允许在游戏列表管理器中搜索和下载媒体。">
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="Login" ininame="Enabled" description="启用GameEx Online。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Stream quality" translation="流质量" default="0 - Lowest" type="ComboBox" inisection="Login" ininame="StreamQuality" description="设置流式音频和视频的质量。较高的设置使用更多带宽。">
+			<option name="0 - Lowest" translation="0  - 最低" ininame="0" />
+			<option name="1" translation="1" ininame="1" />
+			<option name="2" translation="2" ininame="2" />
+			<option name="3" translation="3" ininame="3" />
+			<option name="4" translation="4" ininame="4" />
+			<option name="5" translation="五" ininame="5" />
+			<option name="6" translation="6" ininame="6" />
+			<option name="7" translation="7" ininame="7" />
+			<option name="8" translation="8" ininame="8" />
+			<option name="9" translation="9" ininame="9" />
+			<option name="10 - Highest" translation="10  - 最高" ininame="10" />
+		</setting>
+		<setting name="Use Lite Media" translation="使用Lite Media" default="No" type="ComboBox" inisection="Login" ininame="UseLiteMedia" description="在使用游戏管理器时在线搜索Lite媒体。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="User ID" translation="用户名" default="" type="CurrentUser" inisection="Software\\PinballX" ininame="U" description="" />
+		<setting name="Password" translation="密码" default="" type="CurrentUser" inisection="Software\\PinballX" ininame="pass" description="" />
+		<setting name="Links" translation="链接" type="Links" description="相关链接">
+			<option name="Privacy Policy" translation="隐私政策" url="https://www.gameex.info/forums/privacy/" />
+			<option name="GameEx Online" translation="GameEx在线" url="http://online.gameex.com" />
+			<option name="Create an account" translation="创建一个帐户" url="http://online.gameex.com/signup.aspx" />
+		</setting>
+	</section>
+	<section name="Startup Settings" translation="启动设置" description="在这里你可以设置PinballX的各种启动设置。">
+		<setting name="Enable Startup Sound" translation="启用启动声音" default="Yes" type="ComboBox" inisection="Startup" ininame="PlaySound" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Enable Startup Video" translation="启用启动视频" default="Yes" type="ComboBox" inisection="Startup" ininame="PlayVideo" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Run PinballX when Windows starts" translation="Windows启动时运行PinballX" type="Title" description="当Windows启动时，此设置将自动设置PinballX启动。" />
+		<setting name="Start with Windows" translation="从Windows开始" type="LaunchFile" inisection="Startup" ininame="StartWithWindows" description="设置PinballX在Windows启动时启动。">
+			<option name="FileName" translation="文件名" description="[APP] \ ToggleStartWithWindows.exe" />
+		</setting>
+		<setting name="Run program on startup" translation="启动时运行程序" type="Title" description="启动PinballX启动程序" />
+		<setting name="Startup Program Enabled" translation="启动程序已启用" default="No" type="ComboBox" inisection="StartupProgram" ininame="Enabled" description="在启动时启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="" type="Folder" inisection="StartupProgram" ininame="WorkingPath" description="程序在启动时启动的工作路径。" />
+		<setting name="Executable" translation="可执行文件" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="StartupProgram" ininame="Executable" description="可执行文件在启动时启动" />
+		<setting name="Parameters" translation="参数" default="" type="TextBox" inisection="StartupProgram" ininame="Parameters" description="参数。" />
+		<setting name="Wait For Exit" translation="等待退出" default="Yes" type="ComboBox" inisection="StartupProgram" ininame="WaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Hide Window" translation="隐藏窗口" default="Yes" type="ComboBox" inisection="StartupProgram" ininame="HideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Keyboard Input Settings" translation="键盘输入设置" description="在这里您可以设置PinballX的各种输入设置。">
+		<setting name="Quit" translation="放弃" default="27" type="VKKey" inisection="KeyCodes" ininame="Quit" description="退出密钥" />
+		<setting name="Left" translation="剩下" default="37" type="VKKey" inisection="KeyCodes" ininame="Left" description="左键" />
+		<setting name="Right" translation="对" default="39" type="VKKey" inisection="KeyCodes" ininame="Right" description="右键" />
+		<setting name="Select/Start" translation="选择/启动" default="13" type="VKKey" inisection="KeyCodes" ininame="Select" description="选择密钥" />
+		<setting name="Rotate" translation="旋转" default="82" type="VKKey" inisection="KeyCodes" ininame="Rotate" description="旋转键" />
+		<setting name="Page/Nudge Left" translation="页面/向左移动" default="33" type="VKKey" inisection="KeyCodes" ininame="PageLeft" description="PageLeft键" />
+		<setting name="Page/Nudge Right" translation="页面/微调权利" default="34" type="VKKey" inisection="KeyCodes" ininame="PageRight" description="PageRight键" />
+		<setting name="Exit Emulator" translation="退出模拟器" default="81" type="VKKey" inisection="KeyCodes" ininame="ExitEmulator" description="ExitEmulator键" />
+		<setting name="Grab Screenshots" translation="抓住屏幕截图" default="83" type="VKKey" inisection="KeyCodes" ininame="Screenshot" description="捕获截图密钥" />
+		<setting name="Grab Videos" translation="抓取视频" default="86" type="VKKey" inisection="KeyCodes" ininame="CaptureVideos" description="捕获视频密钥" />
+		<setting name="Pause/In Game" translation="暂停/在游戏中" default="80" type="VKKey" inisection="KeyCodes" ininame="InGame" description="暂停键" />
+		<setting name="Instructions" translation="说明" default="73" type="VKKey" inisection="KeyCodes" ininame="Instructions" description="说明键" />
+		<setting name="Volume Down" translation="音量减小" default="109" type="VKKey" inisection="KeyCodes" ininame="VolumeDown" description="降低音量键" />
+		<setting name="Volume Up" translation="提高音量" default="107" type="VKKey" inisection="KeyCodes" ininame="VolumeUp" description="音量增加键" />
+		<setting name="Credit" translation="信用" default="53" type="VKKey" inisection="KeyCodes" ininame="Credit" description="视觉Pinball信用钥匙" />
+		<setting name="Plunger" translation="柱塞" default="164" type="VKKey" inisection="KeyCodes" ininame="Plunger" description="视觉弹珠柱塞键" />
+		<setting name="Launch" translation="发射" default="50" type="VKKey" inisection="KeyCodes" ininame="Launch" description="启动密钥。旁遮普信息页面" />
+	</section>
+	<section name="Joystick Input Settings" translation="游戏杆输入设置" description="在这里您可以设置PinballX的各种输入设置。">
+		<setting name="Quit" translation="放弃" default="10" type="JoyButton" inisection="JoyCodes" ininame="Quit" description="退出按钮" />
+		<setting name="Left" translation="剩下" default="0" type="JoyButton" inisection="JoyCodes" ininame="Left" description="左键" />
+		<setting name="Right" translation="对" default="1" type="JoyButton" inisection="JoyCodes" ininame="Right" description="正确的按钮" />
+		<setting name="Select/Start" translation="选择/启动" default="2" type="JoyButton" inisection="JoyCodes" ininame="Select" description="选择按钮" />
+		<setting name="Rotate" translation="旋转" default="11" type="JoyButton" inisection="JoyCodes" ininame="Rotate" description="旋转按钮" />
+		<setting name="Page/Nudge Left" translation="页面/向左移动" default="3" type="JoyButton" inisection="JoyCodes" ininame="PageLeft" description="PageLeft按钮" />
+		<setting name="Page/Nudge Right" translation="页面/微调权利" default="4" type="JoyButton" inisection="JoyCodes" ininame="PageRight" description="PageRight按钮" />
+		<setting name="Exit Emulator" translation="退出模拟器" default="12" type="JoyButton" inisection="JoyCodes" ininame="ExitEmulator" description="ExitEmulator按钮" />
+		<setting name="Pause/In Game" translation="暂停/在游戏中" default="13" type="JoyButton" inisection="JoyCodes" ininame="InGame" description="暂停按钮" />
+		<setting name="Instructions" translation="说明" default="14" type="JoyButton" inisection="JoyCodes" ininame="Instructions" description="说明按钮" />
+		<setting name="Credit" translation="信用" default="15" type="JoyButton" inisection="JoyCodes" ininame="Credit" description="视觉Pinball信用钥匙" />
+		<setting name="Plunger" translation="柱塞" default="16" type="JoyButton" inisection="JoyCodes" ininame="Plunger" description="视觉弹珠柱塞键" />
+		<setting name="Launch" translation="发射" default="17" type="JoyButton" inisection="JoyCodes" ininame="Launch" description="启动按钮。旁观者信息页面" />
+	</section>
+	<section name="Text" translation="文本" description="在这里你可以设置PinballX的各种文本设置。">
+		<setting name="Line 1" translation="1号线" default="Free Play" type="TextBox" inisection="Text" ininame="Line1" description="" />
+		<setting name="Line 2" translation="2号线" default="Press Start" type="TextBox" inisection="Text" ininame="Line2" description="" />
+		<setting name="Featuring" translation="特色" default="Featuring" type="TextBox" inisection="Text" ininame="Featuring" description="" />
+		<setting name="Tables" translation="表" default="Tables" type="TextBox" inisection="Text" ininame="Tables" description="" />
+		<setting name="All" translation="所有" default="All" type="TextBox" inisection="Text" ininame="All" description="" />
+		<setting name="Play Game" translation="玩游戏" default="Play Game" type="TextBox" inisection="Text" ininame="PlayGame" description="" />
+		<setting name="Instructions" translation="说明" default="Instructions" type="TextBox" inisection="Text" ininame="Instructions" description="" />
+		<setting name="Information" translation="信息" default="Information" type="TextBox" inisection="Text" ininame="Information" description="" />
+		<setting name="Flyer" translation="传单" default="Flyer" type="TextBox" inisection="Text" ininame="Flyer" description="" />
+		<setting name="Gameplay" translation="游戏" default="Gameplay" type="TextBox" inisection="Text" ininame="Gameplay" description="" />
+		<setting name="Tutorial" translation="教程" default="Tutorial" type="TextBox" inisection="Text" ininame="Tutorial" description="" />
+		<setting name="Promo" translation="促销" default="Promo" type="TextBox" inisection="Text" ininame="Promo" description="" />
+		<setting name="Exit Game" translation="退出游戏" default="Exit Game" type="TextBox" inisection="Text" ininame="ExitGame" description="" />
+		<setting name="Return to Game" translation="回到游戏" default="Return to Game" type="TextBox" inisection="Text" ininame="ReturnToGame" description="" />
+		<setting name="Return" translation="返回" default="Return" type="TextBox" inisection="Text" ininame="Return" description="" />
+		<setting name="Exit" translation="出口" default="Exit" type="TextBox" inisection="Text" ininame="Exit" description="" />
+		<setting name="Shutdown" translation="关掉" default="Shutdown" type="TextBox" inisection="Text" ininame="Shutdown" description="" />
+		<setting name="Restart" translation="重新开始" default="Restart" type="TextBox" inisection="Text" ininame="Restart" description="" />
+		<setting name="Favorite" translation="喜爱" default="Favorite" type="TextBox" inisection="Text" ininame="Favorite" description="" />
+		<setting name="Favorites" translation="最爱" default="Favorites" type="TextBox" inisection="Text" ininame="Favorites" description="" />
+		<setting name="Favorites Add" translation="收藏夹添加" default="Add To Favorites" type="TextBox" inisection="Text" ininame="FavoritesAdd" description="" />
+		<setting name="Favorites Remove" translation="收藏夹删除" default="Remove From Favorites" type="TextBox" inisection="Text" ininame="FavoritesRemove" description="" />
+		<setting name="Most Played" translation="玩得最多" default="Most Played" type="TextBox" inisection="Text" ininame="MostPlayed" description="" />
+		<setting name="Last Played" translation="上次播放" default="Last Played" type="TextBox" inisection="Text" ininame="LastPlayed" description="" />
+		<setting name="Lists" translation="清单" default="Lists" type="TextBox" inisection="Text" ininame="Lists" description="" />
+		<setting name="Record Videos" translation="录制视频" default="Capturing videos. Please wait. This will take several minutes." type="TextBox" inisection="Text" ininame="CapturingVideos" description="" />
+		<setting name="Ratings" translation="评级" default="Ratings" type="TextBox" inisection="Text" ininame="Ratings" description="" />
+		<setting name="High Scores" translation="高分数" default="High Scores" type="TextBox" inisection="Text" ininame="HighScores" description="" />
+		<setting name="Rate Table" translation="费率表" default="Rate Table" type="TextBox" inisection="Text" ininame="RateTable" description="" />
+		<setting name="Not Rated" translation="没有评分" default="Not Rated" type="TextBox" inisection="Text" ininame="NotRated" description="" />
+		<setting name="Systems" translation="系统" default="Systems" type="TextBox" inisection="Text" ininame="Systems" description="" />
+		<setting name="Recently Added" translation="最近添加的" default="Recently Added" type="TextBox" inisection="Text" ininame="RecentlyAdded" description="" />
+	</section>
+	<section name="Future Pinball" translation="未来的弹球" description="在这里，您可以设置PinballX的各种Future Pinball设置。">
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="Enabled" description="启用未来的弹球">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="C:\Pinball\FuturePinball" type="Folder" inisection="FuturePinball" ininame="WorkingPath" description="Future Pinball的工作路径。" />
+		<setting name="Table Path" translation="表路径" default="C:\Pinball\Tables" type="Folder" inisection="FuturePinball" ininame="TablePath" description="未来弹球桌的路径。" />
+		<setting name="Executable" translation="可执行文件" default="Future Pinball.exe" type="File" filter="Future Pinball Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="FuturePinball" ininame="Executable" description="未来的弹球可执行文件。通常'Future Pinball.exe'" />
+		<setting name="Parameters" translation="参数" default="/open &quot;[TABLEPATH]\[TABLEFILE]&quot; /play /exit /arcaderender" type="TextBox" inisection="FuturePinball" ininame="Parameters" description="未来弹球参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="FPRAM Path" translation="FPRAM路径" default="C:\Pinball\FuturePinball\fpram" type="Folder" inisection="FuturePinball" ininame="FPRAMPath" description="未来弹球FPRAM路径。高分支持需要。" />
+		<setting name="Launch Before" translation="启动之前" type="Title" description="您可以指定一个程序在系统之前启动。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeEnabled" description="在模拟器之前启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="FuturePinball" ininame="LaunchBeforeWorkingPath" description="程序之前启动的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="FuturePinball" ininame="LaunchBeforeExecutable" description="要在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="FuturePinball" ininame="LaunchBeforeParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeWaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="在隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="启动后" type="Title" description="您可以指定一个程序在系统后启动。" />
+		<setting name="Enable Launch After" translation="启用后启动" default="No" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterEnabled" description="在模拟器之后启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="在工作路径后启动" default="" type="Folder" inisection="FuturePinball" ininame="LaunchAfterWorkingPath" description="程序启动后的工作路径。" />
+		<setting name="Launch After Executable" translation="在可执行文件后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="FuturePinball" ininame="LaunchAfterExecutable" description="可执行文件启动后仿真器" />
+		<setting name="Launch After Parameters" translation="在参数后启动" default="" type="TextBox" inisection="FuturePinball" ininame="LaunchAfterParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="在隐藏窗口后启动" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Visual Pinball" translation="视觉弹球" description="在这里你可以设置PinballX的各种视觉弹球设置。">
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="Enabled" description="启用可视弹球">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="C:\Pinball\VisualPinball" type="Folder" inisection="VisualPinball" ininame="WorkingPath" description="Visual Pinball的工作路径。" />
+		<setting name="Table Path" translation="表路径" default="C:\Pinball\Tables" type="Folder" inisection="VisualPinball" ininame="TablePath" description="Visual Pinball的表格路径。" />
+		<setting name="Executable" translation="可执行文件" default="VPinball_9_0_2.exe" type="File" filter="Visual Pinball Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="VisualPinball" ininame="Executable" description="Visual Pinball可执行文件。通常'Future Pinball.exe'" />
+		<setting name="Parameters" translation="参数" default="/play -&quot;[TABLEPATH]\[TABLEFILE]&quot;" type="TextBox" inisection="VisualPinball" ininame="Parameters" description="视觉弹球参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Bypass Disclaimers" translation="绕过免责声明" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="Bypass" description="通过发送密钥来绕过ROM免责声明。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Auto Configure" translation="自动配置" default="No" type="ComboBox" inisection="VisualPinball" ininame="AutoConfigure" description="根据PinballX设置自动配置Visual Pinball中的分辨率和控件。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Full Screen Exclusive Hack" translation="全屏独家黑客" default="No" type="ComboBox" inisection="VisualPinball" ininame="EnableFullScreenExclusiveHack" description="在全屏独占运行时激活VP 10窗口。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Extra wait for show desktop" translation="额外等待显示桌面" default="None" type="ComboBox" inisection="VisualPinball" ininame="ExtraWaitHide" description="显示桌面前需要额外等待。在某些系统上需要错误表">
+			<option name="None" translation="没有" ininame="0" />
+			<option name="5 seconds" translation="5秒" ininame="5" />
+			<option name="10 seconds" translation="10秒" ininame="10" />
+			<option name="15 seconds" translation="15秒" ininame="15" />
+			<option name="20 seconds" translation="20秒" ininame="20" />
+			<option name="25 seconds" translation="25秒" ininame="25" />
+			<option name="30 seconds" translation="30秒" ininame="30" />
+		</setting>
+		<setting name="Launch Before" translation="启动之前" type="Title" description="您可以指定一个程序在系统之前启动。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeEnabled" description="在模拟器之前启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="VisualPinball" ininame="LaunchBeforeWorkingPath" description="程序之前启动的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="VisualPinball" ininame="LaunchBeforeExecutable" description="要在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="VisualPinball" ininame="LaunchBeforeParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeWaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="在隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="启动后" type="Title" description="您可以指定一个程序在系统后启动。" />
+		<setting name="Enable Launch After" translation="启用后启动" default="No" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterEnabled" description="在模拟器之后启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="在工作路径后启动" default="" type="Folder" inisection="VisualPinball" ininame="LaunchAfterWorkingPath" description="程序启动后的工作路径。" />
+		<setting name="Launch After Executable" translation="在可执行文件后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="VisualPinball" ininame="LaunchAfterExecutable" description="可执行文件启动后仿真器" />
+		<setting name="Launch After Parameters" translation="在参数后启动" default="" type="TextBox" inisection="VisualPinball" ininame="LaunchAfterParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="在隐藏窗口后启动" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Zaccaria Pinball" translation="扎卡里亚弹球" description="在这里，您可以设置PinballX的各种Zaccaria Pinball设置。">
+		<setting name="Enabled" translation="已启用" default="No" type="ComboBox" inisection="Zaccaria" ininame="Enabled" description="启用Zaccaria">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="C:\Program Files (x86)\Steam" type="Folder" inisection="Zaccaria" ininame="WorkingPath" description="Steam或Zaccaria的工作路径。" />
+		<setting name="Executable" translation="可执行的" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="Zaccaria" ininame="Executable" description="Steam或Zaccaria可执行文件。通常是“ Steam.exe”" />
+		<setting name="Parameters" translation="参数" default="-applaunch 444930" type="TextBox" inisection="Zaccaria" ininame="Parameters" description="Zaccaria或Steam参数。对Steam使用默认值。支持以下标记，并将其替换为值-[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Process to monitor" translation="监控流程" default="ZaccariaPinball.exe" type="TextBox" inisection="Zaccaria" ininame="Process" description="Zaccaria可执行进程进行监视。通常是ZaccariaPinball.exe" />
+		<setting name="Launch Before" translation="之前启动" type="Title" description="您可以指定要在系统之前启动的程序。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeEnabled" description="在模拟器之前启动应用程序">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="Zaccaria" ininame="LaunchBeforeWorkingPath" description="程序启动之前的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="Zaccaria" ininame="LaunchBeforeExecutable" description="在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="Zaccaria" ininame="LaunchBeforeParameters" description="参数。支持以下标记，并将其替换为值-[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeWaitForExit" description="等待应用程序执行完成，然后再继续">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeHideWindow" description="使用隐藏的窗口启动应用程序">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="之后启动" type="Title" description="您可以指定要在系统之后启动的程序。" />
+		<setting name="Enable Launch After" translation="启用之后启动" default="No" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterEnabled" description="在模拟器后启动应用程序">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="工作路径后启动" default="" type="Folder" inisection="Zaccaria" ininame="LaunchAfterWorkingPath" description="程序在After之后启动的工作路径。" />
+		<setting name="Launch After Executable" translation="可执行后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="Zaccaria" ininame="LaunchAfterExecutable" description="在模拟器之后启动的可执行文件" />
+		<setting name="Launch After Parameters" translation="参数启动后" default="" type="TextBox" inisection="Zaccaria" ininame="LaunchAfterParameters" description="参数。支持以下标记，并将其替换为值-[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="隐藏窗口后启动" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterHideWindow" description="使用隐藏的窗口启动应用程序">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball FX2" translation="弹球FX2" description="在这里您可以设置PinballX的各种Pinball FX2设置。">
+		<setting name="Enabled" translation="启用" default="No" type="ComboBox" inisection="PinballFX2" ininame="Enabled" description="启用Pinball FX2">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballFX2" ininame="WorkingPath" description="Steam或Pinball FX2的工作路径。" />
+		<setting name="Executable" translation="可执行文件" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballFX2" ininame="Executable" description="Steam或Pinball FX2可执行文件。通常'Steam.exe'" />
+		<setting name="Parameters" translation="参数" default="-applaunch 226980 &quot;[TABLEFILE]&quot;" type="TextBox" inisection="PinballFX2" ininame="Parameters" description="Pinball FX2或Steam参数。对Steam使用默认值。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Process to monitor" translation="要监视的进程" default="Pinball FX2.exe" type="TextBox" inisection="PinballFX2" ininame="Process" description="Pinball FX2可执行程序进行监控。通常Pinball FX2.exe" />
+		<setting name="Wait For" translation="等待" default="20 Seconds" type="ComboBox" inisection="PinballFX2" ininame="WaitFor" description="在检查Pinball FX2进程和发送密钥之前等待几秒钟的时间。在快速系统上，您可能会降低此值，而在较慢的系统上，您可能需要增加此值。如果使用Pinball FX 2的命令行支持，则将其设置为-1。">
+			<option name="11 Seconds" translation="11秒" ininame="11" />
+			<option name="12 Seconds" translation="12秒" ininame="12" />
+			<option name="13 Seconds" translation="13秒" ininame="13" />
+			<option name="14 Seconds" translation="14秒" ininame="14" />
+			<option name="15 Seconds" translation="15秒" ininame="15" />
+			<option name="16 Seconds" translation="16秒" ininame="16" />
+			<option name="17 Seconds" translation="17秒" ininame="17" />
+			<option name="18 Seconds" translation="18秒" ininame="18" />
+			<option name="19 Seconds" translation="19秒" ininame="19" />
+			<option name="20 Seconds" translation="20秒" ininame="20" />
+			<option name="21 Seconds" translation="21秒" ininame="21" />
+			<option name="22 Seconds" translation="22秒" ininame="22" />
+			<option name="23 Seconds" translation="23秒" ininame="23" />
+			<option name="24 Seconds" translation="24秒" ininame="24" />
+			<option name="25 Seconds" translation="25秒" ininame="25" />
+			<option name="26 Seconds" translation="26秒" ininame="26" />
+			<option name="27 Seconds" translation="27秒" ininame="27" />
+			<option name="28 Seconds" translation="28秒" ininame="28" />
+			<option name="29 Seconds" translation="29秒" ininame="28" />
+		</setting>
+		<setting name="Rotate Display" translation="旋转显示" default="No" type="ComboBox" inisection="PinballFX2" ininame="Rotate" description="Pinball FX2的所有版本都不提供旋转scren的选项。如果你想让PinballX代替它，请选择此选项。">
+			<option name="No" translation="没有" ininame="False" />
+			<option name="Yes" translation="是" ininame="True" />
+		</setting>
+		<setting name="Launch Before" translation="启动之前" type="Title" description="您可以指定一个程序在系统之前启动。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeEnabled" description="在模拟器之前启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="PinballFX2" ininame="LaunchBeforeWorkingPath" description="程序之前启动的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX2" ininame="LaunchBeforeExecutable" description="要在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="PinballFX2" ininame="LaunchBeforeParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeWaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="在隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="启动后" type="Title" description="您可以指定一个程序在系统后启动。" />
+		<setting name="Enable Launch After" translation="启用后启动" default="No" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterEnabled" description="在模拟器之后启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="在工作路径后启动" default="" type="Folder" inisection="PinballFX2" ininame="LaunchAfterWorkingPath" description="程序启动后的工作路径。" />
+		<setting name="Launch After Executable" translation="在可执行文件后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX2" ininame="LaunchAfterExecutable" description="可执行文件启动后仿真器" />
+		<setting name="Launch After Parameters" translation="在参数后启动" default="" type="TextBox" inisection="PinballFX2" ininame="LaunchAfterParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="在隐藏窗口后启动" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball FX3" translation="弹球FX3" description="在这里您可以设置PinballX的各种Pinball FX3设置。">
+		<setting name="Enabled" translation="启用" default="No" type="ComboBox" inisection="PinballFX3" ininame="Enabled" description="启用Pinball FX3">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballFX3" ininame="WorkingPath" description="Steam或Pinball FX3的工作路径。" />
+		<setting name="Executable" translation="可执行文件" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballFX3" ininame="Executable" description="Steam或Pinball FX3可执行文件。通常'Steam.exe'" />
+		<setting name="Parameters" translation="参数" default="-applaunch 226980 &quot;-table_[TABLEFILE]&quot;" type="TextBox" inisection="PinballFX3" ininame="Parameters" description="Pinball FX3或Steam参数。对Steam使用默认值。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Process to monitor" translation="要监视的进程" default="Pinball FX3.exe" type="TextBox" inisection="PinballFX3" ininame="Process" description="Pinball FX3可执行程序进行监控。通常Pinball FX3.exe" />
+		<setting name="Wait For" translation="等待" default="20 Seconds" type="ComboBox" inisection="PinballFX3" ininame="WaitFor" description="检查Pinball FX3进程并发送密钥之前等待的时间，以秒为单位。在快速系统上，您可能会降低此值，而在较慢的系统上，您可能需要增加此值。如果使用Pinball FX 2的命令行支持，则将其设置为-1。">
+			<option name="11 Seconds" translation="11秒" ininame="11" />
+			<option name="12 Seconds" translation="12秒" ininame="12" />
+			<option name="13 Seconds" translation="13秒" ininame="13" />
+			<option name="14 Seconds" translation="14秒" ininame="14" />
+			<option name="15 Seconds" translation="15秒" ininame="15" />
+			<option name="16 Seconds" translation="16秒" ininame="16" />
+			<option name="17 Seconds" translation="17秒" ininame="17" />
+			<option name="18 Seconds" translation="18秒" ininame="18" />
+			<option name="19 Seconds" translation="19秒" ininame="19" />
+			<option name="20 Seconds" translation="20秒" ininame="20" />
+			<option name="21 Seconds" translation="21秒" ininame="21" />
+			<option name="22 Seconds" translation="22秒" ininame="22" />
+			<option name="23 Seconds" translation="23秒" ininame="23" />
+			<option name="24 Seconds" translation="24秒" ininame="24" />
+			<option name="25 Seconds" translation="25秒" ininame="25" />
+			<option name="26 Seconds" translation="26秒" ininame="26" />
+			<option name="27 Seconds" translation="27秒" ininame="27" />
+			<option name="28 Seconds" translation="28秒" ininame="28" />
+			<option name="29 Seconds" translation="29秒" ininame="28" />
+		</setting>
+		<setting name="Rotate Display" translation="旋转显示" default="No" type="ComboBox" inisection="PinballFX3" ininame="Rotate" description="Pinball FX3的所有版本都不提供旋转scren的选项。如果你想让PinballX代替它，请选择此选项。">
+			<option name="No" translation="没有" ininame="False" />
+			<option name="Yes" translation="是" ininame="True" />
+		</setting>
+		<setting name="Launch Before" translation="启动之前" type="Title" description="您可以指定一个程序在系统之前启动。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeEnabled" description="在模拟器之前启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="PinballFX3" ininame="LaunchBeforeWorkingPath" description="程序之前启动的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX3" ininame="LaunchBeforeExecutable" description="要在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="PinballFX3" ininame="LaunchBeforeParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeWaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="在隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="启动后" type="Title" description="您可以指定一个程序在系统后启动。" />
+		<setting name="Enable Launch After" translation="启用后启动" default="No" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterEnabled" description="在模拟器之后启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="在工作路径后启动" default="" type="Folder" inisection="PinballFX3" ininame="LaunchAfterWorkingPath" description="程序启动后的工作路径。" />
+		<setting name="Launch After Executable" translation="在可执行文件后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX3" ininame="LaunchAfterExecutable" description="可执行文件启动后仿真器" />
+		<setting name="Launch After Parameters" translation="在参数后启动" default="" type="TextBox" inisection="PinballFX3" ininame="LaunchAfterParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="在隐藏窗口后启动" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball Arcade" translation="弹球游戏" description="在这里，您可以设置PinballX的各种弹球拱廊设置。">
+		<setting name="Enabled" translation="启用" default="No" type="ComboBox" inisection="PinballArcade" ininame="Enabled" description="启用弹珠台游戏">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Interface Version" translation="接口版本" default="V4 (Latest)" type="ComboBox" inisection="PinballArcade" ininame="InterfaceVersion" description="弹球拱廊用户界面。这可能会不时变化，并在2016年6月这样做。除非有些共鸣，否则您使用旧版本的弹球拱廊选择最新版本。">
+			<option name="V4 (Latest)" translation="V4（最新）" ininame="4" />
+			<option name="V3" translation="V3" ininame="3" />
+			<option name="V2" translation="V2" ininame="2" />
+			<option name="V1" translation="V1" ininame="0" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballArcade" ininame="WorkingPath" description="Steam或Pinball Arcade的工作路径。" />
+		<setting name="Executable" translation="可执行文件" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballArcade" ininame="Executable" description="Steam或Pinball Arcade可执行文件。通常'Steam.exe'" />
+		<setting name="Parameters" translation="参数" default="-applaunch 238260" type="TextBox" inisection="PinballArcade" ininame="Parameters" description="弹球游戏或Steam参数。对Steam使用默认值。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Process to monitor" translation="要监视的进程" default="PinballArcade.exe" type="TextBox" inisection="PinballArcade" ininame="Process" description="Pinball Arcade可执行程序进行监视。通常PinballArcade.exe" />
+		<setting name="Wait For" translation="等待" default="12 Seconds" type="ComboBox" inisection="PinballArcade" ininame="WaitFor" description="检查Pinball Arcade进程并发送密钥之前等待的时间。在快速系统上，您可能会降低此值，而在较慢的系统上，您可能需要增加此值。">
+			<option name="5 Seconds" translation="5秒" ininame="5" />
+			<option name="6 Seconds" translation="6秒" ininame="6" />
+			<option name="7 Seconds" translation="7秒" ininame="7" />
+			<option name="8 Seconds" translation="8秒" ininame="8" />
+			<option name="9 Seconds" translation="9秒" ininame="9" />
+			<option name="10 Seconds" translation="10秒" ininame="10" />
+			<option name="11 Seconds" translation="11秒" ininame="11" />
+			<option name="12 Seconds" translation="12秒" ininame="12" />
+			<option name="13 Seconds" translation="13秒" ininame="13" />
+			<option name="14 Seconds" translation="14秒" ininame="14" />
+			<option name="15 Seconds" translation="15秒" ininame="15" />
+			<option name="16 Seconds" translation="16秒" ininame="16" />
+			<option name="17 Seconds" translation="17秒" ininame="17" />
+			<option name="18 Seconds" translation="18秒" ininame="18" />
+			<option name="19 Seconds" translation="19秒" ininame="19" />
+			<option name="20 Seconds" translation="20秒" ininame="20" />
+			<option name="21 Seconds" translation="21秒" ininame="21" />
+			<option name="22 Seconds" translation="22秒" ininame="22" />
+			<option name="23 Seconds" translation="23秒" ininame="23" />
+			<option name="24 Seconds" translation="24秒" ininame="24" />
+			<option name="25 Seconds" translation="25秒" ininame="25" />
+			<option name="26 Seconds" translation="26秒" ininame="26" />
+			<option name="27 Seconds" translation="27秒" ininame="27" />
+			<option name="28 Seconds" translation="28秒" ininame="28" />
+			<option name="29 Seconds" translation="29秒" ininame="28" />
+		</setting>
+		<setting name="Table Select Delay" translation="表选择延迟" default="Short" type="ComboBox" inisection="PinballArcade" ininame="WaitForSelect" description="发送向下键选择表后等待的延迟。对于免费的Cam Mod或带有大后台缓存设置为Long或Very Long的DirectX 11。">
+			<option name="Short" translation="短" ininame="50" />
+			<option name="Medium" translation="中" ininame="100" />
+			<option name="Long" translation="长" ininame="150" />
+			<option name="Very Long" translation="很长" ininame="200" />
+		</setting>
+		<setting name="Launch Before" translation="启动之前" type="Title" description="您可以指定一个程序在系统之前启动。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeEnabled" description="在模拟器之前启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="PinballArcade" ininame="LaunchBeforeWorkingPath" description="程序之前启动的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballArcade" ininame="LaunchBeforeExecutable" description="要在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="PinballArcade" ininame="LaunchBeforeParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeWaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="在隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="启动后" type="Title" description="您可以指定一个程序在系统后启动。" />
+		<setting name="Enable Launch After" translation="启用后启动" default="No" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterEnabled" description="在模拟器之后启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="在工作路径后启动" default="" type="Folder" inisection="PinballArcade" ininame="LaunchAfterWorkingPath" description="程序启动后的工作路径。" />
+		<setting name="Launch After Executable" translation="在可执行文件后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballArcade" ininame="LaunchAfterExecutable" description="可执行文件启动后仿真器" />
+		<setting name="Launch After Parameters" translation="在参数后启动" default="" type="TextBox" inisection="PinballArcade" ininame="LaunchAfterParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="在隐藏窗口后启动" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Other Systems" translation="其他系统" type="SystemSetup" description="在这里你可以设置PinballX的其他系统设置。请注意，MAME兼容游戏列表可以使用GameEx创建，在更新列表后可在DATA \ PinballX文件夹中找到。">
+		<setting name="Select System" translation="选择系统" type="SystemSetup" description="选择系统。" />
+		<setting name="Name/Folder" translation="名称/文件夹" type="TextBox" inisection="System_" ininame="Name" description="系统的名称和要使用的文件夹。" />
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="System_" ininame="Enabled" description="启用其他系统">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="System Type" translation="系统类型" default="Custom" type="ComboBox" inisection="System_" ininame="SystemType" description="指定系统类型。如果不是Custom，PinballX会将其视为内置系统中指定的内容，并允许诸如高分支持等功能。">
+			<option name="Custom" translation="自订" ininame="0" />
+			<option name="Visual Pinball" translation="视觉弹球" ininame="1" />
+			<option name="Future Pinball" translation="未来弹球" ininame="2" />
+			<option name="Custom - EXE files" translation="自定义-EXE文件" ininame="4" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="" type="Folder" inisection="System_" ininame="WorkingPath" description="其他系统的工作路径。" />
+		<setting name="Table Path" translation="表路径" default="" type="Folder" inisection="System_" ininame="TablePath" description="其他系统的表格路径。" />
+		<setting name="Executable" translation="可执行文件" default="" type="File" filter="Other System Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="System_" ininame="Executable" description="其他系统可执行文件。通常'Future Pinball.exe'" />
+		<setting name="Parameters" translation="参数" default="" type="TextBox" inisection="System_" ininame="Parameters" description="其他系统参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Process to monitor" translation="要监视的进程" default="" type="TextBox" inisection="System_" ininame="WaitForProcess" description="一个可选的附加可执行文件，用于监视退出并在退出时进行kill。" />
+		<setting name="Launch Before" translation="启动之前" type="Title" description="您可以指定一个程序在系统之前启动。" />
+		<setting name="Enable Launch Before" translation="启用之前启动" default="No" type="ComboBox" inisection="System_" ininame="LaunchBeforeEnabled" description="系统启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" translation="在工作路径之前启动" default="" type="Folder" inisection="System_" ininame="LaunchBeforeWorkingPath" description="程序之前启动的工作路径。" />
+		<setting name="Launch Before Executable" translation="在可执行文件之前启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="System_" ininame="LaunchBeforeExecutable" description="要在模拟器之前启动的可执行文件" />
+		<setting name="Launch Before Parameters" translation="在参数之前启动" default="" type="TextBox" inisection="System_" ininame="LaunchBeforeParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch Before Wait For Exit" translation="在等待退出之前启动" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchBeforeWaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" translation="在隐藏窗口之前启动" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchBeforeHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After" translation="启动后" type="Title" description="您可以指定一个程序在系统后启动。" />
+		<setting name="Enable Launch After" translation="启用后启动" default="No" type="ComboBox" inisection="System_" ininame="LaunchAfterEnabled" description="系统启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" translation="在工作路径后启动" default="" type="Folder" inisection="System_" ininame="LaunchAfterWorkingPath" description="程序启动后的工作路径。" />
+		<setting name="Launch After Executable" translation="在可执行文件后启动" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="System_" ininame="LaunchAfterExecutable" description="系统启动后的可执行文件" />
+		<setting name="Launch After Parameters" translation="在参数后启动" default="" type="TextBox" inisection="System_" ininame="LaunchAfterParameters" description="参数。以下标记被支持并将被替换为值：[TABLEPATH]，[TABLEFILE]，[TABLEFILEWOEXT]，[MANUFACTURER]，[YEAR]，[SYSTEM]，[RATING]，[DESCRIPTION]。" />
+		<setting name="Launch After Wait For Exit" translation="等待退出后启动" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchAfterWaitForExit" description="等待应用程序执行完成后继续">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" translation="在隐藏窗口后启动" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchAfterHideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Links" translation="链接" type="Links" description="相关链接">
+			<option name="GameEx" translation="GameEx" url="https://www.gameex.com" />
+		</setting>
+	</section>
+	<section name="Video Recording" translation="视频录制" description="游戏录像设置可自动创建您的前端媒体。在键盘输入下配置热键。为了运行此功能，需要在PinballX应用程序文件夹中存在ffmpeg.exe。">
+		<setting name="Video Quality" translation="视频质量" default="21" type="ComboBox" inisection="VideoCapture" ininame="crf" description="视频质量（CRF）。">
+			<option name="26 (Lowest)" translation="26（最低）" ininame="26" />
+			<option name="25" translation="25" ininame="25" />
+			<option name="24" translation="24" ininame="24" />
+			<option name="23" translation="23" ininame="23" />
+			<option name="22" translation="22" ininame="22" />
+			<option name="21" translation="21" ininame="21" />
+			<option name="20" translation="20" ininame="20" />
+			<option name="19" translation="19" ininame="19" />
+			<option name="18 (Best)" translation="18（最佳）" ininame="18" />
+		</setting>
+		<setting name="Seconds to record" translation="记录秒数" default="45 seconds" type="ComboBox" inisection="VideoCapture" ininame="Seconds" description="每个录制视频的长度（以秒为单位）">
+			<option name="20 seconds" translation="20秒" ininame="20" />
+			<option name="25 seconds" translation="25秒" ininame="25" />
+			<option name="30 seconds" translation="30秒" ininame="30" />
+			<option name="45 seconds" translation="45秒" ininame="45" />
+			<option name="1 minute" translation="1分钟" ininame="60" />
+			<option name="1 minute 30 seconds" translation="1分30秒" ininame="90" />
+			<option name="2 minutes" translation="2分钟" ininame="120" />
+			<option name="2 minutes 30 seconds" translation="2分30秒" ininame="150" />
+			<option name="3 minutes" translation="3分钟" ininame="180" />
+			<option name="3 minutes 30 seconds" translation="3分30秒" ininame="210" />
+			<option name="4 minutes" translation="4分钟" ininame="240" />
+		</setting>
+		<setting name="Use H265" translation="使用H265" default="No" type="ComboBox" inisection="VideoCapture" ininame="UseH265" description="使用HVEC h265编码而不是h264。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Use GPU driver capture" translation="使用GPU驱动程序捕获" default="No" type="ComboBox" inisection="VideoCapture" ininame="UseGPU" description="使用显卡驱动程序捕获，例如Geforce体验。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Driver record start key" translation="驾驶员记录开始键" default="164|120" type="MultiVKKey" inisection="VideoCapture" ininame="KeysStartRecord" description="如果GPU驱动程序捕获启用 - 驱动程序（如gefore experience）热键开始记录。" />
+		<setting name="Driver record stop key" translation="驾驶员记录停止键" default="164|120" type="MultiVKKey" inisection="VideoCapture" ininame="KeysEndRecord" description="如果GPU驱动程序捕获启用 - 驱动程序（如gefore experience）热键停止记录。" />
+		<setting name="Driver save path" translation="司机保存路径" default="C:\video recordings" type="Folder" inisection="VideoCapture" ininame="SavePath" description="驱动程序保存视频的路径。该路径将被扫描。" />
+	</section>
+	<section name="Attract Mode" translation="吸引模式" description="在这里您可以设置PinballX的各种吸引模式设置。">
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="AttractMode" ininame="Enabled" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Mute Audio" translation="静音音频" default="No" type="ComboBox" inisection="AttractMode" ininame="MuteAudio" description="吸引模式运行时使音频静音。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Show high scores" translation="显示高分" default="Yes" type="ComboBox" inisection="AttractMode" ininame="EnableAttractModeHighScores" description="如果可用，则在DMD上显示高分。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Timer" translation="计时器" default="1 Minute" type="ComboBox" inisection="AttractMode" ininame="Timer" description="">
+			<option name="1 Minute" translation="1分钟" ininame="1" />
+			<option name="2 Minutes" translation="2分钟" ininame="2" />
+			<option name="3 Minutes" translation="3分钟" ininame="3" />
+			<option name="5 Minutes" translation="5分钟" ininame="5" />
+			<option name="10 Minutes" translation="10分钟" ininame="10" />
+			<option name="15 Minutes" translation="15分钟" ininame="15" />
+			<option name="30 Minutes" translation="30分钟" ininame="30" />
+			<option name="60 Minutes" translation="60分钟" ininame="60" />
+		</setting>
+		<setting name="Show Game For" translation="展示游戏" default="15 Seconds" type="ComboBox" inisection="AttractMode" ininame="ShowFor" description="">
+			<option name="5 Seconds" translation="5秒" ininame="5" />
+			<option name="10 Seconds" translation="10秒" ininame="10" />
+			<option name="15 Seconds" translation="15秒" ininame="15" />
+			<option name="30 Seconds" translation="30秒" ininame="30" />
+			<option name="45 Seconds" translation="45秒" ininame="45" />
+			<option name="1 Minute" translation="1分钟" ininame="60" />
+			<option name="90 Seconds" translation="90秒" ininame="90" />
+			<option name="2 Minutes" translation="2分钟" ininame="120" />
+		</setting>
+	</section>
+	<section name="Auto Exit" translation="自动退出" description="您可以在一段输入不活动后自动退出已启动的游戏。如果启用且在指定的时间内没有按下任何控件，游戏将退出并返回到主界面。">
+		<setting name="Enabled" translation="启用" default="No" type="ComboBox" inisection="AutoExit" ininame="Enabled" description="">
+			<option name="No" translation="没有" ininame="False" />
+			<option name="Yes" translation="是" ininame="True" />
+		</setting>
+		<setting name="Exit After" translation="退出后" default="10 Minutes" type="ComboBox" inisection="AutoExit" ininame="Minutes" description="">
+			<option name="5 Minutes" translation="5分钟" ininame="5" />
+			<option name="10 Minutes" translation="10分钟" ininame="10" />
+			<option name="15 Minutes" translation="15分钟" ininame="15" />
+			<option name="30 Minutes" translation="30分钟" ininame="30" />
+			<option name="45 Minutes" translation="45分钟" ininame="45" />
+			<option name="60 Minutes" translation="60分钟" ininame="60" />
+		</setting>
+	</section>
+	<section name="Exit Screen" translation="退出屏幕" description="在这里您可以设置PinballX的各种退出屏幕设置。">
+		<setting name="Enabled" translation="启用" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="Enabled" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Enable Exit" translation="启用退出" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableExit" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Enable Shutdown" translation="启用关机" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableShutdown" description="">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Enable Restart" translation="启用重启" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableRestart" description="">
+			<option name="Yes" translation="是的" ininame="True" />
+			<option name="No" translation="不" ininame="False" />
+		</setting>
+		<setting name="Hold key to exit emulator" translation="按住键退出模拟器" default="No" type="ComboBox" inisection="ExitScreen" ininame="ConfirmExitGameTimer" description="要求退出模拟器键按住6秒退出游戏。倒数计时器将显示在屏幕上。">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Exit Program" translation="退出程序" description="在这里你可以设置一个程序在Exit上启动。">
+		<setting name="Exit Program Enabled" translation="退出程序已启用" default="No" type="ComboBox" inisection="ExitProgram" ininame="Enabled" description="在退出时启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Working Path" translation="工作路径" default="" type="Folder" inisection="ExitProgram" ininame="WorkingPath" description="程序在Exit上启动的工作路径。" />
+		<setting name="Executable" translation="可执行文件" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="ExitProgram" ininame="Executable" description="要在Exit中启动的可执行文件" />
+		<setting name="Parameters" translation="参数" default="" type="TextBox" inisection="ExitProgram" ininame="Parameters" description="参数。" />
+		<setting name="Wait For Exit" translation="等待退出" default="Yes" type="ComboBox" inisection="ExitProgram" ininame="WaitForExit" description="在继续之前等待应用程序的执行完成">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+		<setting name="Hide Window" translation="隐藏窗口" default="Yes" type="ComboBox" inisection="ExitProgram" ininame="HideWindow" description="用隐藏窗口启动应用程序">
+			<option name="Yes" translation="是" ininame="True" />
+			<option name="No" translation="没有" ininame="False" />
+		</setting>
+	</section>
+	<section name="Verify Setup" translation="验证设置" type="VerifySetup" mode="All" description="这部分设置允许您验证您的文件路径是否正确。" />
+	<section name="Finished Setup Wizard" translation="完成安装向导" mode="All" description="这就是它的全部。感谢您选择PinballX！">
+		<setting name="Donate" translation="捐" type="Label" description="为了支持所有PinballX网站的持续开发和可用性，以及未来的增强功能，您可以点击下面的链接，进行最受欢迎的捐赠。" />
+		<setting name="PinballX Links" translation="PinballX链接" type="Links" description="相关链接">
+			<option name="PinballX Main Site" translation="PinballX主站点" url="http://www.pinballx.net" />
+			<option name="PinballX Forum" translation="PinballX论坛" url="http://gameex.info/" />
+			<option name="Donate" translation="捐" url="http://www.pinballx.net/donate.aspx" />
+		</setting>
+	</section>
+</config>

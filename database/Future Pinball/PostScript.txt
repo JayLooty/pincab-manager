@@ -1,0 +1,13 @@
+"[STARTDIR]LAUNCH\PUPCLOSER.EXE" WINTIT "Future Pinball" 2 1
+
+REG ADD "HKCU\Software\Future Pinball\GamePlayer" /v "ArcadeMode" /t REG_DWORD /d 1 /f
+REG ADD "HKCU\Software\Future Pinball\GamePlayer" /v "SecondMonitorEnable" /t REG_DWORD /d 1 /f
+
+REM Stop dmdext
+taskkill /f /im "dmdext.exe"
+
+REM Stop DofLinx
+taskkill /f /im "DofLinx.exe"
+
+REM Launch X360ce
+start /min "" "C:\vPinball\x360ce\x360ce.exe"

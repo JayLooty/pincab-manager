@@ -1,0 +1,2 @@
+PauseOnLoadPF=0
+useAltWheels=1

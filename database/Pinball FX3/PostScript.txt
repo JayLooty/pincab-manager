@@ -1,0 +1,9 @@
+"[STARTDIR]LAUNCH\PUPCLOSER.EXE" WINTIT "Pinball FX3" 4 1
+
+
+rem Remove "rem" on the next line to close DMDExt after exiting a table.
+rem taskkill /f /im "dmdext.exe"
+
+REM Stop DofLinx
+taskkill /f /im "DofLinx.exe"
+ 

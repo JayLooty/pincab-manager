@@ -1,0 +1,8 @@
+AVAILABLE,VERSION,NAME,ID,SQL
+YES,latest,Future Pinball,pl_Future Pinball,Select * from Games where EMUID=4 AND visible=1 Order BY GameDisplay
+YES,latest,Home,pl_home,None
+YES,latest,Pinball FX,pl_Pinball FX Steam,Select * from Games where EMUID=6 and visible=1 order by GameDisplay
+YES,latest,Pinball FX3,pl_Pinball FX3,Select * from Games where EMUID=3 and visible=1 order by GameDisplay
+YES,latest,Pinball M,pl_Pinball M,Select * from Games where EMUID=7 and visible=1 order by GameDisplay
+YES,2.0,StartUP,pl_StartUP,None
+YES,2.0,Visual Pinball X,pl_Visual Pinball X,Select * from Games where EMUID=1 AND visible=1 Order BY GameDisplay

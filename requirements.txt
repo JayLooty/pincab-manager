@@ -1,0 +1,4 @@
+screeninfo
+python-vlc
+selenium
+webdriver-manager

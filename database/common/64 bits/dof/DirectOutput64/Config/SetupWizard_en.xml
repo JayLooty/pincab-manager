@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config version="2.3.8" language="English">
+	<section name="Welcome to the PinballX Setup Wizard" mode="All" description="PinballX written by Tom Speirs.">
+		<setting name="Notice" type="Label" description="This program should help make setting up PinballX easy. It will guide you through the important features of PinballX and allow you to customise the main functionality. You can run this program at any time and it will not interfere with your current settings. So you can come back at a later date, and don't have to configure everything now." />
+		<setting name="WizardMode" default="Basic" type="WizardMode" description="Please select your mode:">
+			<option name="Basic" />
+			<option name="Advanced" />
+			<option name="Custom" />
+			<option name="Search" />
+		</setting>
+		<setting name="PinballX Links" type="Links" description="Relevant Links">
+			<option name="PinballX Main Site" url="http://www.pinballx.net" />
+			<option name="PinballX Forum" url="http://gameex.info/" />
+			<option name="Donate" url="http://www.pinballx.net/donate.aspx" />
+		</setting>
+	</section>
+	<section name="Custom Select" type="Custom" mode="Custom" description="This section allows you to select the options you wish to configure." />
+	<section name="Search Select" type="Search" mode="Search" description="This section allows you to search the options you wish to configure." />
+	<section name="General Settings" description="Here you can set various interface and general settings of PinballX.">
+		<setting name="Desktop Mode" type="Title" description="Desktop mode sets up PinballX for non cabinet usage. When set the Desktop image and video folders will be used and PinballX will run Landscape." />
+		<setting name="Enable Desktop Mode" default="No" type="ComboBox" inisection="Interface" ininame="DesktopModeEnabled" description="Enable Desktop Mode">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="File Matching" type="Title" description="PinballX can perform additional file matching and searching for artwork, media and tables." />
+		<setting name="Enable File Matching" default="Yes" type="ComboBox" inisection="FileSystem" ininame="EnableFileMatching" description="Perform additional searching for files.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Wheel overlay images" type="Title" description="You can overlay wheel images with the system or company logo if you choose." />
+		<setting name="Mode" default="Disabled" type="ComboBox" inisection="Interface" ininame="WheelOverlay" description="Choose whether to overlay images onto the wheel image.">
+			<option name="Disabled" ininame="0" />
+			<option name="Overlay System Logo" ininame="1" />
+			<option name="Overlay Company Logo" ininame="2" />
+			<option name="Overlay Company and System" ininame="3" />
+		</setting>
+		<setting name="Systems list" type="Title" description="Enable a systems list in PinballX to list all systems." />
+		<setting name="Enable" default="Enabled" type="ComboBox" inisection="Interface" ininame="EnableSystemsList" description="Enable the systems list.">
+			<option name="Enabled" ininame="True" />
+			<option name="Disabled" ininame="False" />
+		</setting>
+		<setting name="Show on startup" default="Disabled" type="ComboBox" inisection="Interface" ininame="SystemsListShowFirst" description="Always show the system list first at startup.">
+			<option name="Enabled" ininame="True" />
+			<option name="Disabled" ininame="False" />
+		</setting>
+		<setting name="Show additional detail" type="Title" description="When browsing tables additional information can be displayed including system, ratings, manufacturer logos and year." />
+		<setting name="Enable" default="Yes" type="ComboBox" inisection="Interface" ininame="EnableAdditionalDetail" description="Show the game name, manufacturer logo and year.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Show System" default="Yes" type="ComboBox" inisection="Interface" ininame="ShowSystem" description="Show the system name or logo.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Show Ratings" default="Yes" type="ComboBox" inisection="Interface" ininame="ShowRatings" description="Show game ratings when available.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="One click launch Table" type="Title" description="This setting allows you to immediately launch a table when selected and not show the menu list. Note: This disables access to the game information menu where you can access media and set game details." />
+		<setting name="Enabled" default="No" type="ComboBox" inisection="Interface" ininame="OneClickLaunch" description="If enabled then immediately launch the table when chosen and not show the launch/info menu.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Add missing tables" type="Title" description="Automatically add new and missing tables and enable them in the game manager." />
+		<setting name="In Game Manager" default="Yes" type="ComboBox" inisection="GameManager" ininame="AutoAddTables" description="Automatically add new and missing tables and enable them in the game manager.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="In Front End" default="No" type="ComboBox" inisection="GameManager" ininame="AutoAddTablesFrontEnd" description="Automatically add new and missing tables and enable them in PinballX.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="Interface" ininame="EnableDefaultFilters" description="Enable the default search filters in PinballX, including popular decades and manufacturers. Disabling this feature allows more room on the menu for your custom databases but obviously disables functionality.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Basic menu mode" type="Title" description="Enabling basic menu mode disables all filters and sub lists including favorites and just lists available media in the menu and the ability to launch the game. " />
+		<setting name="Enabled" default="No" type="ComboBox" inisection="Interface" ininame="EnableBasicMenuMode" description="Enable basic menu mode.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Table loading media mode" type="Title" description="This controls which media is used for loading images and videos when launching a table. PinballX can use the playfield image or you can use the loading image and video folders. " />
+		<setting name="Loading media" default="Use loading folders" type="ComboBox" inisection="Interface" ininame="UseTableLoadingMedia" description="Use table playfield images or loading folders.">
+			<option name="Use playfield images" ininame="True" />
+			<option name="Use loading folders" ininame="False" />
+		</setting>
+		<setting name="GIF background color" default="00000000" type="Color" inisection="Interface" ininame="GIFbackgroundcolor" description="When using loading folders and an animated GIF the background color to use." />
+	</section>
+	<section name="Display Settings" description="Here you can set various display settings of PinballX.">
+		<setting name="Main Display" default="Display 1" type="ComboBox" inisection="Display" ininame="Monitor" description="">
+			<option name="Display 1" ininame="0" />
+			<option name="Display 2" ininame="1" />
+			<option name="Display 3" ininame="2" />
+			<option name="Display 4" ininame="3" />
+			<option name="Display 5" ininame="4" />
+		</setting>
+		<setting name="Main Display Rotation" default="270 Degrees" type="ComboBox" inisection="Display" ininame="Rotate" description="">
+			<option name="270 Degrees" ininame="270" />
+			<option name="90 Degrees" ininame="90" />
+			<option name="Horizontal" ininame="0" />
+		</setting>
+		<setting name="Back Glass Display" default="Display 2" type="ComboBox" inisection="BackGlass" ininame="Monitor" description="">
+			<option name="Display 1" ininame="0" />
+			<option name="Display 2" ininame="1" />
+			<option name="Display 3" ininame="2" />
+			<option name="Display 4" ininame="3" />
+			<option name="Display 5" ininame="4" />
+		</setting>
+		<setting name="Use DirectB2S in Front End" default="No" type="ComboBox" inisection="Backglass" ininame="UseB2S" description="Actually use the Direct2BS file and display it on your Backglass monitor in PinballX. If a matching direct2bs file is found and the server is installed the file will be displayed.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Auto Position DirectB2S" default="Yes" type="ComboBox" inisection="Backglass" ininame="AutoPositionB2S" description="Automatically position the Direct B2S window on your Backglass monitor when running Visual Pinball.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="DMD Enabled" default="No" type="ComboBox" inisection="DMD" ininame="Enabled" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="DMD Display" default="Display 3" type="ComboBox" inisection="DMD" ininame="Monitor" description="">
+			<option name="Display 1" ininame="0" />
+			<option name="Display 2" ininame="1" />
+			<option name="Display 3" ininame="2" />
+			<option name="Display 4" ininame="3" />
+			<option name="Display 5" ininame="4" />
+		</setting>
+		<setting name="Auto show DMD media" default="Yes - All systems" type="ComboBox" inisection="DMD" ininame="AutoShowMedia" description="Automatically show DMD image or video in a game if no DMD detected and game set to hide DMD.">
+			<option name="Yes - All systems" ininame="True" />
+			<option name="Yes - Just Visual Pinball" ininame="1" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Auto position DMD" default="No" type="ComboBox" inisection="DMD" ininame="AutoPositionPinMAME" description="Automatically position the PinMAME window on your DMD monitor when running Visual Pinball and automatically position the DMD window in PinballFX 2 and remove its borders.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Hide PinMAME" default="No" type="ComboBox" inisection="DMD" ininame="HidePinMAME" description="Automatically hide the PinMAME window when running Visual Pinball or using the setting below. This setting is for cabinets using real DMD displays and can automatically stop the PinMAME window displaying on the playfield.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Use PinMAME in Front End" default="No" type="ComboBox" inisection="DMD" ininame="UsePinMAME" description="Actually use the PinMAME ROM and display it on your DMD monitor or DMD unit when in PinballX.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Window/Full Screen" default="Full Screen" type="ComboBox" inisection="Display" ininame="Windowed" description="Run PinballX in windowed or full screen mode.">
+			<option name="Full Screen" ininame="False" />
+			<option name="Windowed" ininame="True" />
+		</setting>
+		<setting name="Full Screen windowed" default="Yes" type="ComboBox" inisection="Display" ininame="FullScreenWindowedNew" description="When running full screen run in windowed non exclusive mode.">
+			<option name="No" ininame="False" />
+			<option name="Yes" ininame="True" />
+		</setting>
+		<setting name="Crop Wheel Images" default="Yes" type="ComboBox" inisection="Display" ininame="WheelAutoCrop" description="Automatically crop wheel images (remove transparent areas) and show them full size.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Play Field Brightness" default="230" type="ComboBox" inisection="Display" ininame="PlayFieldBrightness" description="Play Field Image and Video brightness.">
+			<option name="250" ininame="250" />
+			<option name="240" ininame="240" />
+			<option name="230" ininame="230" />
+			<option name="220" ininame="220" />
+			<option name="210" ininame="210" />
+			<option name="200" ininame="200" />
+			<option name="190" ininame="190" />
+			<option name="180" ininame="180" />
+			<option name="170" ininame="170" />
+			<option name="160" ininame="160" />
+			<option name="150" ininame="150" />
+		</setting>
+		<setting name="Enable game exit images" default="No" type="ComboBox" inisection="Display" ininame="ShowExitImage" description="Show exit images when returning to PinballX.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Show exit image for" default="3 Seconds" type="ComboBox" inisection="Display" ininame="ShowExitImageFor" description="Number of seconds to show the exit image for.">
+			<option name="2 Seconds" ininame="2" />
+			<option name="3 Seconds" ininame="3" />
+			<option name="4 Seconds" ininame="4" />
+			<option name="5 Seconds" ininame="5" />
+			<option name="6 Seconds" ininame="6" />
+			<option name="7 Seconds" ininame="7" />
+			<option name="8 Seconds" ininame="8" />
+			<option name="9 Seconds" ininame="9" />
+			<option name="10 Seconds" ininame="10" />
+		</setting>
+		<setting name="Show date and time" default="No" type="ComboBox" inisection="Display" ininame="ShowDateAndTime" description="Show the current date and time in the top left of the primary display.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Underlay image type" default="Original" type="ComboBox" inisection="Display" ininame="StretchUnderlay" description="Original scaled format or stretch underlay images to fill the screen.">
+			<option name="Original" ininame="False" />
+			<option name="Fill screen" ininame="True" />
+		</setting>
+		<setting name="Wheel Text Color" default="fffffff" type="Color" inisection="Display" ininame="WheelTextColor" description="Color of Wheel Text." />
+		<setting name="Wheel Text Outline Color" default="ff000000" type="Color" inisection="Display" ininame="WheelTextOutlineColor" description="Color of Wheel Text." />
+		<setting name="Info Text Color" default="ffffffff" type="Color" inisection="Display" ininame="InfoTextColor" description="Color of Info Text." />
+		<setting name="Info Text Outline Color" default="ff000000" type="Color" inisection="Display" ininame="InfoTextOutlineColor" description="Color of Info Text." />
+		<setting name="Filter Text Color" default="ffffffff" type="Color" inisection="Display" ininame="FilterTextColor" description="Color of Filter/Title Text." />
+		<setting name="Filter Text Outline Color" default="ff000000" type="Color" inisection="Display" ininame="FilterTextOutlineColor" description="Color of Filter/Title Text." />
+		<setting name="Menu Color" default="ffffa500" type="Color" inisection="Display" ininame="MenuColor" description="Color of selected menu items and information bar." />
+		<setting name="Backglass" type="Title" description="You can specify the backglass positioning here." />
+		<setting name="X" default="0" type="TextBox" inisection="BackGlass" ininame="x" description="" />
+		<setting name="Y" default="0" type="TextBox" inisection="BackGlass" ininame="y" description="" />
+		<setting name="Width" default="1280" type="TextBox" inisection="BackGlass" ininame="width" description="" />
+		<setting name="Height" default="1024" type="TextBox" inisection="BackGlass" ininame="height" description=" " />
+		<setting name="Real DMD" type="Title" description="Settings for real Pinball DMD displays" />
+		<setting name="Enable Color" default="No" type="ComboBox" inisection="RealDMD" ininame="EnableColor" description="If you have a PinDMD3 or Pin2DMD connected you can enable RGB mode">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="DMD Color" default="ffff1414" type="Color" inisection="RealDMD" ininame="Color" description="If you have a PinDMD3 or Pin2DMD connected and decide not to use RGB color mode you can specift the mono color of the dmd display" />
+		<setting name="DMD" type="Title" description="You can specify the DMD positioning here." />
+		<setting name="X" default="0" type="TextBox" inisection="DMD" ininame="x" description="" />
+		<setting name="Y" default="0" type="TextBox" inisection="DMD" ininame="y" description="" />
+		<setting name="Width" default="900" type="TextBox" inisection="DMD" ininame="width" description="" />
+		<setting name="Height" default="300" type="TextBox" inisection="DMD" ininame="height" description=" " />
+		<setting name="Topper" type="Title" description="You can specify the Topper positioning here." />
+		<setting name="Topper Enabled" default="No" type="ComboBox" inisection="Topper" ininame="Enabled" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Topper Display" default="Display 4" type="ComboBox" inisection="Topper" ininame="Monitor" description="">
+			<option name="Display 1" ininame="0" />
+			<option name="Display 2" ininame="1" />
+			<option name="Display 3" ininame="2" />
+			<option name="Display 4" ininame="3" />
+			<option name="Display 5" ininame="4" />
+		</setting>
+		<setting name="X" default="0" type="TextBox" inisection="Topper" ininame="x" description="" />
+		<setting name="Y" default="0" type="TextBox" inisection="Topper" ininame="y" description="" />
+		<setting name="Width" default="1920" type="TextBox" inisection="Topper" ininame="width" description="" />
+		<setting name="Height" default="1080" type="TextBox" inisection="Topper" ininame="height" description=" " />
+		<setting name="Apron" type="Title" description="You can specify the Apron positioning here." />
+		<setting name="Apron Enabled" default="No" type="ComboBox" inisection="Apron" ininame="Enabled" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Apron Display" default="Display 5" type="ComboBox" inisection="Apron" ininame="Monitor" description="">
+			<option name="Display 1" ininame="0" />
+			<option name="Display 2" ininame="1" />
+			<option name="Display 3" ininame="2" />
+			<option name="Display 4" ininame="3" />
+			<option name="Display 5" ininame="4" />
+		</setting>
+		<setting name="X" default="0" type="TextBox" inisection="Apron" ininame="x" description="" />
+		<setting name="Y" default="0" type="TextBox" inisection="Apron" ininame="y" description="" />
+		<setting name="Width" default="1920" type="TextBox" inisection="Apron" ininame="width" description="" />
+		<setting name="Height" default="1080" type="TextBox" inisection="Apron" ininame="height" description=" " />
+	</section>
+	<section name="Audio Settings" description="Here you can set various audio settings of PinballX.">
+		<setting name="Stream Volume" default="90%" type="ComboBox" inisection="Audio" ininame="StreamVolume" description="Ambiance and startup sound volume.">
+			<option name="100%" ininame="100" />
+			<option name="90%" ininame="90" />
+			<option name="80%" ininame="80" />
+			<option name="70%" ininame="70" />
+			<option name="60%" ininame="60" />
+			<option name="50%" ininame="50" />
+			<option name="40%" ininame="40" />
+			<option name="30%" ininame="30" />
+			<option name="20%" ininame="20" />
+			<option name="10%" ininame="10" />
+			<option name="0%" ininame="0" />
+		</setting>
+		<setting name="Sample Volume" default="90%" type="ComboBox" inisection="Audio" ininame="SampleVolume" description="Navigation and sound fx volume.">
+			<option name="100%" ininame="100" />
+			<option name="90%" ininame="90" />
+			<option name="80%" ininame="80" />
+			<option name="70%" ininame="70" />
+			<option name="60%" ininame="60" />
+			<option name="50%" ininame="50" />
+			<option name="40%" ininame="40" />
+			<option name="30%" ininame="30" />
+			<option name="20%" ininame="20" />
+			<option name="10%" ininame="10" />
+			<option name="0%" ininame="0" />
+		</setting>
+		<setting name="Sound in Videos" default="Yes" type="ComboBox" inisection="Audio" ininame="PlaySoundInVideos" description="Play audio if in videos. Otherwise mute any sound in videos.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="GameEx Online" description="GameEx Online allows you to access your game collection online and remotely control PinballX from any web enabled device. This feature also enables the PinballX download service and allows searching and downloading of media in the game list manager.">
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="Login" ininame="Enabled" description="Enable GameEx Online.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Stream quality" default="0 - Lowest" type="ComboBox" inisection="Login" ininame="StreamQuality" description="Set the quality for streaming audio and video. Higher settings use more bandwidth.">
+			<option name="0 - Lowest" ininame="0" />
+			<option name="1" ininame="1" />
+			<option name="2" ininame="2" />
+			<option name="3" ininame="3" />
+			<option name="4" ininame="4" />
+			<option name="5" ininame="5" />
+			<option name="6" ininame="6" />
+			<option name="7" ininame="7" />
+			<option name="8" ininame="8" />
+			<option name="9" ininame="9" />
+			<option name="10 - Highest" ininame="10" />
+		</setting>
+		<setting name="Use Lite Media" default="No" type="ComboBox" inisection="Login" ininame="UseLiteMedia" description="Search for Lite media online when using the Game Manager.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="User ID" default="" type="CurrentUser" inisection="Software\\PinballX" ininame="U" description="" />
+		<setting name="Password" default="" type="CurrentUser" inisection="Software\\PinballX" ininame="pass" description="" />
+		<setting name="Links" type="Links" description="Relevant Links">
+			<option name="Privacy Policy" url="https://www.gameex.info/forums/privacy/" />
+			<option name="GameEx Online" url="http://online.gameex.com" />
+			<option name="Create an account" url="http://online.gameex.com/signup.aspx" />
+		</setting>
+	</section>
+	<section name="Startup Settings" description="Here you can set various startup settings of PinballX.">
+		<setting name="Enable Startup Sound" default="Yes" type="ComboBox" inisection="Startup" ininame="PlaySound" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Enable Startup Video" default="Yes" type="ComboBox" inisection="Startup" ininame="PlayVideo" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Run PinballX when Windows starts" type="Title" description="This setting will automatically set PinballX to launch when Windows starts up." />
+		<setting name="Start with Windows" type="LaunchFile" inisection="Startup" ininame="StartWithWindows" description="Set PinballX to launch when Windows starts.">
+			<option name="FileName" description="[APP]\ToggleStartWithWindows.exe" />
+		</setting>
+		<setting name="Run program on startup" type="Title" description="Launch a program on startup of PinballX" />
+		<setting name="Startup Program Enabled" default="No" type="ComboBox" inisection="StartupProgram" ininame="Enabled" description="Launch Application At Startup">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="" type="Folder" inisection="StartupProgram" ininame="WorkingPath" description="The working path for the program to launch on startup." />
+		<setting name="Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="StartupProgram" ininame="Executable" description="The executable file to launch at startup" />
+		<setting name="Parameters" default="" type="TextBox" inisection="StartupProgram" ininame="Parameters" description="The  parameters." />
+		<setting name="Wait For Exit" default="Yes" type="ComboBox" inisection="StartupProgram" ininame="WaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Hide Window" default="Yes" type="ComboBox" inisection="StartupProgram" ininame="HideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Keyboard Input Settings" description="Here you can set various input settings of PinballX.">
+		<setting name="Quit" default="27" type="VKKey" inisection="KeyCodes" ininame="Quit" description="Quit Key" />
+		<setting name="Left" default="37" type="VKKey" inisection="KeyCodes" ininame="Left" description="Left Key" />
+		<setting name="Right" default="39" type="VKKey" inisection="KeyCodes" ininame="Right" description="Right Key" />
+		<setting name="Select/Start" default="13" type="VKKey" inisection="KeyCodes" ininame="Select" description="Select Key" />
+		<setting name="Rotate" default="82" type="VKKey" inisection="KeyCodes" ininame="Rotate" description="Rotate Key" />
+		<setting name="Page/Nudge Left" default="33" type="VKKey" inisection="KeyCodes" ininame="PageLeft" description="PageLeft Key" />
+		<setting name="Page/Nudge Right" default="34" type="VKKey" inisection="KeyCodes" ininame="PageRight" description="PageRight Key" />
+		<setting name="Exit Emulator" default="81" type="VKKey" inisection="KeyCodes" ininame="ExitEmulator" description="ExitEmulator Key" />
+		<setting name="Grab Screenshots" default="83" type="VKKey" inisection="KeyCodes" ininame="Screenshot" description="Capture Screenshots Key" />
+		<setting name="Grab Videos" default="86" type="VKKey" inisection="KeyCodes" ininame="CaptureVideos" description="Capture Videos Key" />
+		<setting name="Pause/In Game" default="80" type="VKKey" inisection="KeyCodes" ininame="InGame" description="Pause Key" />
+		<setting name="Instructions" default="73" type="VKKey" inisection="KeyCodes" ininame="Instructions" description="Instructions Key" />
+		<setting name="Volume Down" default="109" type="VKKey" inisection="KeyCodes" ininame="VolumeDown" description="Volume Down Key" />
+		<setting name="Volume Up" default="107" type="VKKey" inisection="KeyCodes" ininame="VolumeUp" description="Volume Up Key" />
+		<setting name="Credit" default="53" type="VKKey" inisection="KeyCodes" ininame="Credit" description="Visual Pinball credit key" />
+		<setting name="Plunger" default="164" type="VKKey" inisection="KeyCodes" ininame="Plunger" description="Visual Pinball plunger key" />
+		<setting name="Launch" default="50" type="VKKey" inisection="KeyCodes" ininame="Launch" description="Launch Key. Bypasses info page" />
+	</section>
+	<section name="Joystick Input Settings" description="Here you can set various input settings of PinballX.">
+		<setting name="Quit" default="10" type="JoyButton" inisection="JoyCodes" ininame="Quit" description="Quit Button" />
+		<setting name="Left" default="0" type="JoyButton" inisection="JoyCodes" ininame="Left" description="Left Button" />
+		<setting name="Right" default="1" type="JoyButton" inisection="JoyCodes" ininame="Right" description="Right Button" />
+		<setting name="Select/Start" default="2" type="JoyButton" inisection="JoyCodes" ininame="Select" description="Select Button" />
+		<setting name="Rotate" default="11" type="JoyButton" inisection="JoyCodes" ininame="Rotate" description="Rotate Button" />
+		<setting name="Page/Nudge Left" default="3" type="JoyButton" inisection="JoyCodes" ininame="PageLeft" description="PageLeft Button" />
+		<setting name="Page/Nudge Right" default="4" type="JoyButton" inisection="JoyCodes" ininame="PageRight" description="PageRight Button" />
+		<setting name="Exit Emulator" default="12" type="JoyButton" inisection="JoyCodes" ininame="ExitEmulator" description="ExitEmulator Button" />
+		<setting name="Pause/In Game" default="13" type="JoyButton" inisection="JoyCodes" ininame="InGame" description="Pause Button" />
+		<setting name="Instructions" default="14" type="JoyButton" inisection="JoyCodes" ininame="Instructions" description="Instructions Button" />
+		<setting name="Credit" default="15" type="JoyButton" inisection="JoyCodes" ininame="Credit" description="Visual Pinball credit key" />
+		<setting name="Plunger" default="16" type="JoyButton" inisection="JoyCodes" ininame="Plunger" description="Visual Pinball plunger key" />
+		<setting name="Launch" default="17" type="JoyButton" inisection="JoyCodes" ininame="Launch" description="Launch button. Bypasses infor page" />
+	</section>
+	<section name="Text" description="Here you can set the various text settings of PinballX.">
+		<setting name="Line 1" default="Free Play" type="TextBox" inisection="Text" ininame="Line1" description="" />
+		<setting name="Line 2" default="Press Start" type="TextBox" inisection="Text" ininame="Line2" description="" />
+		<setting name="Featuring" default="Featuring" type="TextBox" inisection="Text" ininame="Featuring" description="" />
+		<setting name="Tables" default="Tables" type="TextBox" inisection="Text" ininame="Tables" description="" />
+		<setting name="All" default="All" type="TextBox" inisection="Text" ininame="All" description="" />
+		<setting name="Play Game" default="Play Game" type="TextBox" inisection="Text" ininame="PlayGame" description="" />
+		<setting name="Instructions" default="Instructions" type="TextBox" inisection="Text" ininame="Instructions" description="" />
+		<setting name="Information" default="Information" type="TextBox" inisection="Text" ininame="Information" description="" />
+		<setting name="Flyer" default="Flyer" type="TextBox" inisection="Text" ininame="Flyer" description="" />
+		<setting name="Gameplay" default="Gameplay" type="TextBox" inisection="Text" ininame="Gameplay" description="" />
+		<setting name="Tutorial" default="Tutorial" type="TextBox" inisection="Text" ininame="Tutorial" description="" />
+		<setting name="Promo" default="Promo" type="TextBox" inisection="Text" ininame="Promo" description="" />
+		<setting name="Exit Game" default="Exit Game" type="TextBox" inisection="Text" ininame="ExitGame" description="" />
+		<setting name="Return to Game" default="Return to Game" type="TextBox" inisection="Text" ininame="ReturnToGame" description="" />
+		<setting name="Return" default="Return" type="TextBox" inisection="Text" ininame="Return" description="" />
+		<setting name="Exit" default="Exit" type="TextBox" inisection="Text" ininame="Exit" description="" />
+		<setting name="Shutdown" default="Shutdown" type="TextBox" inisection="Text" ininame="Shutdown" description="" />
+		<setting name="Restart" default="Restart" type="TextBox" inisection="Text" ininame="Restart" description="" />
+		<setting name="Favorite" default="Favorite" type="TextBox" inisection="Text" ininame="Favorite" description="" />
+		<setting name="Favorites" default="Favorites" type="TextBox" inisection="Text" ininame="Favorites" description="" />
+		<setting name="Favorites Add" default="Add To Favorites" type="TextBox" inisection="Text" ininame="FavoritesAdd" description="" />
+		<setting name="Favorites Remove" default="Remove From Favorites" type="TextBox" inisection="Text" ininame="FavoritesRemove" description="" />
+		<setting name="Most Played" default="Most Played" type="TextBox" inisection="Text" ininame="MostPlayed" description="" />
+		<setting name="Last Played" default="Last Played" type="TextBox" inisection="Text" ininame="LastPlayed" description="" />
+		<setting name="Lists" default="Lists" type="TextBox" inisection="Text" ininame="Lists" description="" />
+		<setting name="Record Videos" default="Capturing videos. Please wait. This will take several minutes." type="TextBox" inisection="Text" ininame="CapturingVideos" description="" />
+		<setting name="Ratings" default="Ratings" type="TextBox" inisection="Text" ininame="Ratings" description="" />
+		<setting name="High Scores" default="High Scores" type="TextBox" inisection="Text" ininame="HighScores" description="" />
+		<setting name="Rate Table" default="Rate Table" type="TextBox" inisection="Text" ininame="RateTable" description="" />
+		<setting name="Not Rated" default="Not Rated" type="TextBox" inisection="Text" ininame="NotRated" description="" />
+		<setting name="Systems" default="Systems" type="TextBox" inisection="Text" ininame="Systems" description="" />
+		<setting name="Recently Added" default="Recently Added" type="TextBox" inisection="Text" ininame="RecentlyAdded" description="" />
+	</section>
+	<section name="Future Pinball" description="Here you can set the various Future Pinball settings of PinballX.">
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="Enabled" description="Enable Future Pinball">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="C:\Pinball\FuturePinball" type="Folder" inisection="FuturePinball" ininame="WorkingPath" description="The working path of Future Pinball." />
+		<setting name="Table Path" default="C:\Pinball\Tables" type="Folder" inisection="FuturePinball" ininame="TablePath" description="The table path of Future Pinball." />
+		<setting name="Executable" default="Future Pinball.exe" type="File" filter="Future Pinball Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="FuturePinball" ininame="Executable" description="The Future Pinball executable file. Usually 'Future Pinball.exe'" />
+		<setting name="Parameters" default="/open &quot;[TABLEPATH]\[TABLEFILE]&quot; /play /exit /arcaderender" type="TextBox" inisection="FuturePinball" ininame="Parameters" description="The Future Pinball parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="FPRAM Path" default="C:\Pinball\FuturePinball\fpram" type="Folder" inisection="FuturePinball" ininame="FPRAMPath" description="The Future Pinball FPRAM path. Required for high score support." />
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeEnabled" description="Launch Application Before Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="FuturePinball" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="FuturePinball" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="FuturePinball" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterEnabled" description="Launch Application After Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="FuturePinball" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="FuturePinball" ininame="LaunchAfterExecutable" description="The executable file to launch After the emulator" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="FuturePinball" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="FuturePinball" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Visual Pinball" description="Here you can set the various Visual Pinball settings of PinballX.">
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="Enabled" description="Enable Visual Pinball">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="C:\Pinball\VisualPinball" type="Folder" inisection="VisualPinball" ininame="WorkingPath" description="The working path of Visual Pinball." />
+		<setting name="Table Path" default="C:\Pinball\Tables" type="Folder" inisection="VisualPinball" ininame="TablePath" description="The table path of Visual Pinball." />
+		<setting name="Executable" default="VPinball_9_0_2.exe" type="File" filter="Visual Pinball Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="VisualPinball" ininame="Executable" description="The Visual Pinball executable file. Usually 'Future Pinball.exe'" />
+		<setting name="Parameters" default="/play -&quot;[TABLEPATH]\[TABLEFILE]&quot;" type="TextBox" inisection="VisualPinball" ininame="Parameters" description="The Visual Pinball parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Bypass Disclaimers" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="Bypass" description="Bypass ROM disclaimers by sending keys.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Auto Configure" default="No" type="ComboBox" inisection="VisualPinball" ininame="AutoConfigure" description="Auto configure the resolution and controls in Visual Pinball based on PinballX settings.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Full Screen Exclusive Hack" default="No" type="ComboBox" inisection="VisualPinball" ininame="EnableFullScreenExclusiveHack" description="Activate VP 10 window when it is running full screen exclusive.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Extra wait for show desktop" default="None" type="ComboBox" inisection="VisualPinball" ininame="ExtraWaitHide" description="Additional wait before showing desktop. Needed for bug tables on some systems">
+			<option name="None" ininame="0" />
+			<option name="5 seconds" ininame="5" />
+			<option name="10 seconds" ininame="10" />
+			<option name="15 seconds" ininame="15" />
+			<option name="20 seconds" ininame="20" />
+			<option name="25 seconds" ininame="25" />
+			<option name="30 seconds" ininame="30" />
+		</setting>
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeEnabled" description="Launch Application Before Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="VisualPinball" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="VisualPinball" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="VisualPinball" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterEnabled" description="Launch Application After Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="VisualPinball" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="VisualPinball" ininame="LaunchAfterExecutable" description="The executable file to launch After the emulator" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="VisualPinball" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="VisualPinball" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Zaccaria Pinball" description="Here you can set the various Zaccaria Pinball settings of PinballX.">
+		<setting name="Enabled" default="No" type="ComboBox" inisection="Zaccaria" ininame="Enabled" description="Enable Zaccaria">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="C:\Program Files (x86)\Steam" type="Folder" inisection="Zaccaria" ininame="WorkingPath" description="The working path of Steam or Zaccaria." />
+		<setting name="Executable" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="Zaccaria" ininame="Executable" description="The Steam or Zaccaria executable file. Usually 'Steam.exe'" />
+		<setting name="Parameters" default="-applaunch 444930" type="TextBox" inisection="Zaccaria" ininame="Parameters" description="The Zaccaria or Steam parameters. Use default for Steam. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" default="ZaccariaPinball.exe" type="TextBox" inisection="Zaccaria" ininame="Process" description="The Zaccaria executable process to monitor. Usually ZaccariaPinball.exe" />
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeEnabled" description="Launch Application Before Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="Zaccaria" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="Zaccaria" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="Zaccaria" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterEnabled" description="Launch Application After Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="Zaccaria" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="Zaccaria" ininame="LaunchAfterExecutable" description="The executable file to launch After the emulator" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="Zaccaria" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="Zaccaria" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball FX2" description="Here you can set the various Pinball FX2 settings of PinballX.">
+		<setting name="Enabled" default="No" type="ComboBox" inisection="PinballFX2" ininame="Enabled" description="Enable Pinball FX2">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballFX2" ininame="WorkingPath" description="The working path of Steam or Pinball FX2." />
+		<setting name="Executable" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballFX2" ininame="Executable" description="The Steam or Pinball FX2 executable file. Usually 'Steam.exe'" />
+		<setting name="Parameters" default="-applaunch 226980 &quot;[TABLEFILE]&quot;" type="TextBox" inisection="PinballFX2" ininame="Parameters" description="The Pinball FX2 or Steam parameters. Use default for Steam. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" default="Pinball FX2.exe" type="TextBox" inisection="PinballFX2" ininame="Process" description="The Pinball FX2 executable process to monitor. Usually Pinball FX2.exe" />
+		<setting name="Wait For" default="20 Seconds" type="ComboBox" inisection="PinballFX2" ininame="WaitFor" description="The time in seconds to wait before checking for the Pinball FX2 process and sending keys. On fast systems you may be able to reduce this value and on slower systems you might have to increase it. If using command line support with Pinball FX 2 set this to -1.">
+			<option name="11 Seconds" ininame="11" />
+			<option name="12 Seconds" ininame="12" />
+			<option name="13 Seconds" ininame="13" />
+			<option name="14 Seconds" ininame="14" />
+			<option name="15 Seconds" ininame="15" />
+			<option name="16 Seconds" ininame="16" />
+			<option name="17 Seconds" ininame="17" />
+			<option name="18 Seconds" ininame="18" />
+			<option name="19 Seconds" ininame="19" />
+			<option name="20 Seconds" ininame="20" />
+			<option name="21 Seconds" ininame="21" />
+			<option name="22 Seconds" ininame="22" />
+			<option name="23 Seconds" ininame="23" />
+			<option name="24 Seconds" ininame="24" />
+			<option name="25 Seconds" ininame="25" />
+			<option name="26 Seconds" ininame="26" />
+			<option name="27 Seconds" ininame="27" />
+			<option name="28 Seconds" ininame="28" />
+			<option name="29 Seconds" ininame="28" />
+		</setting>
+		<setting name="Rotate Display" default="No" type="ComboBox" inisection="PinballFX2" ininame="Rotate" description="The option to rotate the scren is not available in all versions of Pinball FX2. If you want PinballX to do it instead, selecte this option.">
+			<option name="No" ininame="False" />
+			<option name="Yes" ininame="True" />
+		</setting>
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeEnabled" description="Launch Application Before Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="PinballFX2" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX2" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="PinballFX2" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterEnabled" description="Launch Application After Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="PinballFX2" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX2" ininame="LaunchAfterExecutable" description="The executable file to launch After the emulator" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="PinballFX2" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="PinballFX2" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball FX3" description="Here you can set the various Pinball FX3 settings of PinballX.">
+		<setting name="Enabled" default="No" type="ComboBox" inisection="PinballFX3" ininame="Enabled" description="Enable Pinball FX3">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballFX3" ininame="WorkingPath" description="The working path of Steam or Pinball FX3." />
+		<setting name="Executable" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballFX3" ininame="Executable" description="The Steam or Pinball FX3 executable file. Usually 'Steam.exe'" />
+		<setting name="Parameters" default="-applaunch 226980 &quot;-table_[TABLEFILE]&quot;" type="TextBox" inisection="PinballFX3" ininame="Parameters" description="The Pinball FX3 or Steam parameters. Use default for Steam. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" default="Pinball FX3.exe" type="TextBox" inisection="PinballFX3" ininame="Process" description="The Pinball FX3 executable process to monitor. Usually Pinball FX3.exe" />
+		<setting name="Wait For" default="20 Seconds" type="ComboBox" inisection="PinballFX3" ininame="WaitFor" description="The time in seconds to wait before checking for the Pinball FX3 process and sending keys. On fast systems you may be able to reduce this value and on slower systems you might have to increase it. If using command line support with Pinball FX 2 set this to -1.">
+			<option name="11 Seconds" ininame="11" />
+			<option name="12 Seconds" ininame="12" />
+			<option name="13 Seconds" ininame="13" />
+			<option name="14 Seconds" ininame="14" />
+			<option name="15 Seconds" ininame="15" />
+			<option name="16 Seconds" ininame="16" />
+			<option name="17 Seconds" ininame="17" />
+			<option name="18 Seconds" ininame="18" />
+			<option name="19 Seconds" ininame="19" />
+			<option name="20 Seconds" ininame="20" />
+			<option name="21 Seconds" ininame="21" />
+			<option name="22 Seconds" ininame="22" />
+			<option name="23 Seconds" ininame="23" />
+			<option name="24 Seconds" ininame="24" />
+			<option name="25 Seconds" ininame="25" />
+			<option name="26 Seconds" ininame="26" />
+			<option name="27 Seconds" ininame="27" />
+			<option name="28 Seconds" ininame="28" />
+			<option name="29 Seconds" ininame="28" />
+		</setting>
+		<setting name="Rotate Display" default="No" type="ComboBox" inisection="PinballFX3" ininame="Rotate" description="The option to rotate the scren is not available in all versions of Pinball FX3. If you want PinballX to do it instead, selecte this option.">
+			<option name="No" ininame="False" />
+			<option name="Yes" ininame="True" />
+		</setting>
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeEnabled" description="Launch Application Before Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="PinballFX3" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX3" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="PinballFX3" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterEnabled" description="Launch Application After Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="PinballFX3" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballFX3" ininame="LaunchAfterExecutable" description="The executable file to launch After the emulator" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="PinballFX3" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="PinballFX3" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Pinball Arcade" description="Here you can set the various Pinball Arcade settings of PinballX.">
+		<setting name="Enabled" default="No" type="ComboBox" inisection="PinballArcade" ininame="Enabled" description="Enable Pinball Arcade">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Interface Version" default="V4 (Latest)" type="ComboBox" inisection="PinballArcade" ininame="InterfaceVersion" description="The pinball arcade user interface. This may change from time to time and did so in June 2016. Unless for some reson you are using an old version of Pinball Arcade select the latest.">
+			<option name="V4 (Latest)" ininame="4" />
+			<option name="V3" ininame="3" />
+			<option name="V2" ininame="2" />
+			<option name="V1" ininame="0" />
+		</setting>
+		<setting name="Working Path" default="C:\Program Files (x86)\Steam" type="Folder" inisection="PinballArcade" ininame="WorkingPath" description="The working path of Steam or Pinball Arcade." />
+		<setting name="Executable" default="steam.exe" type="File" filter="Executable (*.exe).|*.exe|All files (*.*)|*.*" inisection="PinballArcade" ininame="Executable" description="The Steam or Pinball Arcade executable file. Usually 'Steam.exe'" />
+		<setting name="Parameters" default="-applaunch 238260" type="TextBox" inisection="PinballArcade" ininame="Parameters" description="The Pinball Arcade or Steam parameters. Use default for Steam. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" default="PinballArcade.exe" type="TextBox" inisection="PinballArcade" ininame="Process" description="The Pinball Arcade executable process to monitor. Usually PinballArcade.exe" />
+		<setting name="Wait For" default="12 Seconds" type="ComboBox" inisection="PinballArcade" ininame="WaitFor" description="The time in seconds to wait before checking for the Pinball Arcade process and sending keys. On fast systems you may be able to reduce this value and on slower systems you might have to increase it. ">
+			<option name="5 Seconds" ininame="5" />
+			<option name="6 Seconds" ininame="6" />
+			<option name="7 Seconds" ininame="7" />
+			<option name="8 Seconds" ininame="8" />
+			<option name="9 Seconds" ininame="9" />
+			<option name="10 Seconds" ininame="10" />
+			<option name="11 Seconds" ininame="11" />
+			<option name="12 Seconds" ininame="12" />
+			<option name="13 Seconds" ininame="13" />
+			<option name="14 Seconds" ininame="14" />
+			<option name="15 Seconds" ininame="15" />
+			<option name="16 Seconds" ininame="16" />
+			<option name="17 Seconds" ininame="17" />
+			<option name="18 Seconds" ininame="18" />
+			<option name="19 Seconds" ininame="19" />
+			<option name="20 Seconds" ininame="20" />
+			<option name="21 Seconds" ininame="21" />
+			<option name="22 Seconds" ininame="22" />
+			<option name="23 Seconds" ininame="23" />
+			<option name="24 Seconds" ininame="24" />
+			<option name="25 Seconds" ininame="25" />
+			<option name="26 Seconds" ininame="26" />
+			<option name="27 Seconds" ininame="27" />
+			<option name="28 Seconds" ininame="28" />
+			<option name="29 Seconds" ininame="28" />
+		</setting>
+		<setting name="Table Select Delay" default="Short" type="ComboBox" inisection="PinballArcade" ininame="WaitForSelect" description="The delay to wait after sending the down key to select the table. For Free Cam Mod or DirectX 11 with big back buffer set to Long or Very Long.">
+			<option name="Short" ininame="50" />
+			<option name="Medium" ininame="100" />
+			<option name="Long" ininame="150" />
+			<option name="Very Long" ininame="200" />
+		</setting>
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeEnabled" description="Launch Application Before Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="PinballArcade" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballArcade" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="PinballArcade" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterEnabled" description="Launch Application After Emulator">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="PinballArcade" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="PinballArcade" ininame="LaunchAfterExecutable" description="The executable file to launch After the emulator" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="PinballArcade" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="PinballArcade" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Other Systems" type="SystemSetup" description="Here you can set the other system settings of PinballX. Note that MAME compatible game lists can be created with GameEx and are available in the DATA\PinballX folder after updating the list.">
+		<setting name="Select System" type="SystemSetup" description="Select the system." />
+		<setting name="Name/Folder" type="TextBox" inisection="System_" ininame="Name" description="The name of the System and the Folder to use." />
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="System_" ininame="Enabled" description="Enable Other System">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="System Type" default="Custom" type="ComboBox" inisection="System_" ininame="SystemType" description="Specify a system type. If other than Custom, PinballX will treat it as the specified in built system and allow features such as high score support.">
+			<option name="Custom" ininame="0" />
+			<option name="Visual Pinball" ininame="1" />
+			<option name="Future Pinball" ininame="2" />
+			<option name="Custom - EXE files" ininame="4" />
+		</setting>
+		<setting name="Working Path" default="" type="Folder" inisection="System_" ininame="WorkingPath" description="The working path of Other System." />
+		<setting name="Table Path" default="" type="Folder" inisection="System_" ininame="TablePath" description="The table path of Other System." />
+		<setting name="Executable" default="" type="File" filter="Other System Exe (*.exe).|*.exe|All files (*.*)|*.*" inisection="System_" ininame="Executable" description="The Other System executable file. Usually 'Future Pinball.exe'" />
+		<setting name="Parameters" default="" type="TextBox" inisection="System_" ininame="Parameters" description="The Other System parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Process to monitor" default="" type="TextBox" inisection="System_" ininame="WaitForProcess" description="An optional additional executable to monitor for exit and to kill on exit." />
+		<setting name="Launch Before" type="Title" description="You can specify a program to launch before the system." />
+		<setting name="Enable Launch Before" default="No" type="ComboBox" inisection="System_" ininame="LaunchBeforeEnabled" description="Launch Application Before System">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Working Path" default="" type="Folder" inisection="System_" ininame="LaunchBeforeWorkingPath" description="The working path for the program to launch before." />
+		<setting name="Launch Before Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="System_" ininame="LaunchBeforeExecutable" description="The executable file to launch before the emulator" />
+		<setting name="Launch Before Parameters" default="" type="TextBox" inisection="System_" ininame="LaunchBeforeParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch Before Wait For Exit" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchBeforeWaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch Before Hide Window" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchBeforeHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After" type="Title" description="You can specify a program to launch after the system." />
+		<setting name="Enable Launch After" default="No" type="ComboBox" inisection="System_" ininame="LaunchAfterEnabled" description="Launch Application After System">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Working Path" default="" type="Folder" inisection="System_" ininame="LaunchAfterWorkingPath" description="The working path for the program to launch After." />
+		<setting name="Launch After Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="System_" ininame="LaunchAfterExecutable" description="The executable file to launch After the system" />
+		<setting name="Launch After Parameters" default="" type="TextBox" inisection="System_" ininame="LaunchAfterParameters" description="The  parameters. The following tags are supported and will be replaced with values - [TABLEPATH], [TABLEFILE], [TABLEFILEWOEXT], [MANUFACTURER], [YEAR], [SYSTEM], [RATING], [DESCRIPTION]." />
+		<setting name="Launch After Wait For Exit" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchAfterWaitForExit" description="Wait for execution of the application to complete After proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Launch After Hide Window" default="Yes" type="ComboBox" inisection="System_" ininame="LaunchAfterHideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Links" type="Links" description="Relevant Links">
+			<option name="GameEx" url="https://www.gameex.com" />
+		</setting>
+	</section>
+	<section name="Video Recording" description="Settings for video recording of games to automatically create your front end media. Configure the hot key under keyboard input. In order to work this feature requires that ffmpeg.exe be present in the PinballX application folder.">
+		<setting name="Video Quality" default="21" type="ComboBox" inisection="VideoCapture" ininame="crf" description="Video quality (CRF).">
+			<option name="26 (Lowest)" ininame="26" />
+			<option name="25" ininame="25" />
+			<option name="24" ininame="24" />
+			<option name="23" ininame="23" />
+			<option name="22" ininame="22" />
+			<option name="21" ininame="21" />
+			<option name="20" ininame="20" />
+			<option name="19" ininame="19" />
+			<option name="18 (Best)" ininame="18" />
+		</setting>
+		<setting name="Seconds to record" default="45 seconds" type="ComboBox" inisection="VideoCapture" ininame="Seconds" description="Length in seconds of each recorded video">
+			<option name="20 seconds" ininame="20" />
+			<option name="25 seconds" ininame="25" />
+			<option name="30 seconds" ininame="30" />
+			<option name="45 seconds" ininame="45" />
+			<option name="1 minute" ininame="60" />
+			<option name="1 minute 30 seconds" ininame="90" />
+			<option name="2 minutes" ininame="120" />
+			<option name="2 minutes 30 seconds" ininame="150" />
+			<option name="3 minutes" ininame="180" />
+			<option name="3 minutes 30 seconds" ininame="210" />
+			<option name="4 minutes" ininame="240" />
+		</setting>
+		<setting name="Use H265" default="No" type="ComboBox" inisection="VideoCapture" ininame="UseH265" description="Use HVEC h265 encoding instead of h264.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Use GPU driver capture" default="No" type="ComboBox" inisection="VideoCapture" ininame="UseGPU" description="Use graphics card driver capture such as Geforce experience.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Driver record start key" default="164|120" type="MultiVKKey" inisection="VideoCapture" ininame="KeysStartRecord" description="If GPU driver capture enabled - dhe driver (such as gefore experience) hot key to start recording." />
+		<setting name="Driver record stop key" default="164|120" type="MultiVKKey" inisection="VideoCapture" ininame="KeysEndRecord" description="If GPU driver capture enabled - dhe driver (such as gefore experience) hot key to stop recording." />
+		<setting name="Driver save path" default="C:\video recordings" type="Folder" inisection="VideoCapture" ininame="SavePath" description="The path where the driver saves videos. This path will be scanned." />
+	</section>
+	<section name="Attract Mode" description="Here you can set the various attract mode settings of PinballX.">
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="AttractMode" ininame="Enabled" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Mute Audio" default="No" type="ComboBox" inisection="AttractMode" ininame="MuteAudio" description="Mute audio when attract mode is running.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Show high scores" default="Yes" type="ComboBox" inisection="AttractMode" ininame="EnableAttractModeHighScores" description="If available show high scores on the DMD.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Timer" default="1 Minute" type="ComboBox" inisection="AttractMode" ininame="Timer" description="">
+			<option name="1 Minute" ininame="1" />
+			<option name="2 Minutes" ininame="2" />
+			<option name="3 Minutes" ininame="3" />
+			<option name="5 Minutes" ininame="5" />
+			<option name="10 Minutes" ininame="10" />
+			<option name="15 Minutes" ininame="15" />
+			<option name="30 Minutes" ininame="30" />
+			<option name="60 Minutes" ininame="60" />
+		</setting>
+		<setting name="Show Game For" default="15 Seconds" type="ComboBox" inisection="AttractMode" ininame="ShowFor" description="">
+			<option name="5 Seconds" ininame="5" />
+			<option name="10 Seconds" ininame="10" />
+			<option name="15 Seconds" ininame="15" />
+			<option name="30 Seconds" ininame="30" />
+			<option name="45 Seconds" ininame="45" />
+			<option name="1 Minute" ininame="60" />
+			<option name="90 Seconds" ininame="90" />
+			<option name="2 Minutes" ininame="120" />
+		</setting>
+	</section>
+	<section name="Auto Exit" description="You can exit launched games automatically after a period of input inactivity. If enabled and no controls are pressed for the time specified the game will exit and return to the main interface.">
+		<setting name="Enabled" default="No" type="ComboBox" inisection="AutoExit" ininame="Enabled" description="">
+			<option name="No" ininame="False" />
+			<option name="Yes" ininame="True" />
+		</setting>
+		<setting name="Exit After" default="10 Minutes" type="ComboBox" inisection="AutoExit" ininame="Minutes" description="">
+			<option name="5 Minutes" ininame="5" />
+			<option name="10 Minutes" ininame="10" />
+			<option name="15 Minutes" ininame="15" />
+			<option name="30 Minutes" ininame="30" />
+			<option name="45 Minutes" ininame="45" />
+			<option name="60 Minutes" ininame="60" />
+		</setting>
+	</section>
+	<section name="Exit Screen" description="Here you can set the various Exit Screen settings of PinballX.">
+		<setting name="Enabled" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="Enabled" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Enable Exit" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableExit" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Enable Shutdown" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableShutdown" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Enable Restart" default="Yes" type="ComboBox" inisection="ExitScreen" ininame="EnableRestart" description="">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Hold key to exit emulator" default="No" type="ComboBox" inisection="ExitScreen" ininame="ConfirmExitGameTimer" description="Require exit emulator key to be held down for 6 seconds to exit game. A countdown timer will be shown on screen.">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Exit Program" description="Here you can set a program to launch on Exit.">
+		<setting name="Exit Program Enabled" default="No" type="ComboBox" inisection="ExitProgram" ininame="Enabled" description="Launch Application At Exit">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Working Path" default="" type="Folder" inisection="ExitProgram" ininame="WorkingPath" description="The working path for the program to launch on Exit." />
+		<setting name="Executable" default="" type="File" filter="Executable Files (*.exe)|*.exe|Batch Files (*.bat)|*.bat|All files (*.*)|*.*" inisection="ExitProgram" ininame="Executable" description="The executable file to launch at Exit" />
+		<setting name="Parameters" default="" type="TextBox" inisection="ExitProgram" ininame="Parameters" description="The  parameters." />
+		<setting name="Wait For Exit" default="Yes" type="ComboBox" inisection="ExitProgram" ininame="WaitForExit" description="Wait for execution of the application to complete before proceeding">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+		<setting name="Hide Window" default="Yes" type="ComboBox" inisection="ExitProgram" ininame="HideWindow" description="Launch the application with a hidden window">
+			<option name="Yes" ininame="True" />
+			<option name="No" ininame="False" />
+		</setting>
+	</section>
+	<section name="Verify Setup" type="VerifySetup" mode="All" description="This part of setup allows you to verify your file paths are correct." />
+	<section name="Finished Setup Wizard" mode="All" description="That is all there is to it. Thank you for choosing PinballX!">
+		<setting name="Donate" type="Label" description="To support continued development and availability of all the PinballX sites and future enhancements, you can make a most welcome donation by clicking below." />
+		<setting name="PinballX Links" type="Links" description="Relevant Links">
+			<option name="PinballX Main Site" url="http://www.pinballx.net" />
+			<option name="PinballX Forum" url="http://gameex.info/" />
+			<option name="Donate" url="http://www.pinballx.net/donate.aspx" />
+		</setting>
+	</section>
+</config>
