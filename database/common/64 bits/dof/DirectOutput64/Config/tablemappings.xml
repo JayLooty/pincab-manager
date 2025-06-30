@@ -212,7 +212,7 @@
 		<RomName>dracula</RomName>
 	</Mapping>
 	<Mapping>
-		<TableName>Dragon</TableName>
+		<TableName>Dragon (Gottlieb)</TableName>
 		<RomName>dragon</RomName>
 	</Mapping>
 	<Mapping>
@@ -3532,7 +3532,7 @@
 		<RomName>polar</RomName>
 	</Mapping>
 	<Mapping>
-		<TableName>Bronco (Gottlieb)</TableName>
+		<TableName>Bronco (Gottlieb_1977)</TableName>
 		<RomName>bronco_1977</RomName>
 	</Mapping>
 	<Mapping>
@@ -4196,7 +4196,7 @@
 		<RomName>RackABall_1962</RomName>
 	</Mapping>
 	<Mapping>
-		<TableName>Rancho</TableName>
+		<TableName>Rancho (Gottlieb 1965)</TableName>
 		<RomName>Rancho_1965</RomName>
 	</Mapping>
 	<Mapping>
@@ -5052,7 +5052,7 @@
 		<RomName>bigdeal1977</RomName>
 	</Mapping>
 	<Mapping>
-		<TableName>Rancho (1976)</TableName>
+		<TableName>Rancho (Williams 1976)</TableName>
 		<RomName>rancho1976</RomName>
 	</Mapping>
 	<Mapping>
@@ -5569,7 +5569,7 @@
 	</Mapping>
 	<Mapping>
 		<TableName>Daredevil and The Defenders</TableName>
-		<RomName>Daredevil_Pinball</RomName>
+		<RomName>Daredevil</RomName>
 	</Mapping>
 	<Mapping>
 		<TableName>DAFT PUNK Interstella 5555</TableName>
@@ -5632,7 +5632,7 @@
 		<RomName>nightmarebc</RomName>
 	</Mapping>
 	<Mapping>
-		<TableName>Thunder Man</TableName>
+		<TableName>Thunder Man (When Using Pinchamp Rom See Pinball Champ Game for DOF)</TableName>
 		<RomName>thndrman</RomName>
 	</Mapping>
 	<Mapping>
@@ -5700,10 +5700,6 @@
 		<RomName>AnimalCrossing</RomName>
 	</Mapping>
 	<Mapping>
-		<TableName>TombRaider</TableName>
-		<RomName>Tomb Raider (original 2025)</RomName>
-	</Mapping>
-	<Mapping>
 		<TableName>Captain Spaulding</TableName>
 		<RomName>CAPTAINSPAULDING1</RomName>
 	</Mapping>
@@ -5741,7 +5737,7 @@
 	</Mapping>
 	<Mapping>
 		<TableName>Freddy&apos;s Nightmares</TableName>
-		<RomName>Freddy&#039;s Nightmares</RomName>
+		<RomName>Freddy&#039;s_Nightmares</RomName>
 	</Mapping>
 	<Mapping>
 		<TableName>Superman and The Justice League</TableName>
@@ -5761,10 +5757,206 @@
 	</Mapping>
 	<Mapping>
 		<TableName>Punk Park</TableName>
-		<RomName>No Rom</RomName>
+		<RomName>Punk_Park</RomName>
 	</Mapping>
 	<Mapping>
 		<TableName>Spooky Wednesday Pro</TableName>
 		<RomName>SpookyWednesdayPro</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Mach 2.0 Two (Spinball 1995)</TableName>
+		<RomName>mach2</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Star Ship (Bally 1976)</TableName>
+		<RomName>starship</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Dark Chaos</TableName>
+		<RomName>darkchaos</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>GEEGA</TableName>
+		<RomName>geega</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Rush LE Tribute</TableName>
+		<RomName>rush_le</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>The Big Lebowski</TableName>
+		<RomName>no rom v</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Fun Fest</TableName>
+		<RomName>FunFest_1973</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>On Beam</TableName>
+		<RomName>onbeam</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Mustang (Gottlieb 1977)</TableName>
+		<RomName>Mustang_1977</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>War Of The Worlds (Jeff Wayne&apos;s Musical Version)</TableName>
+		<RomName>waroftheworlds</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Sound Stage (Chicago Coin 1976)</TableName>
+		<RomName>soundstage</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>J</TableName>
+		<RomName>K</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Carnaval no Rio (LTD do Brasil 1977)</TableName>
+		<RomName>carnavalnorio</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Black Magic 4 (Recel 1980)</TableName>
+		<RomName>blackmagic4</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Clown (Playmatic 1971)</TableName>
+		<RomName>Clown-Playmatic</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Champions League (Season 18) St Pauli</TableName>
+		<RomName>uefa_cl18</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>TOTEM (EM Brasil 1979 )</TableName>
+		<RomName>TotemEM</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>FleetJr</TableName>
+		<RomName>FleetJr</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Silver Cup</TableName>
+		<RomName>SilverCup</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Stranger Things 4 Premium</TableName>
+		<RomName>StrangerThings4_Premium</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Baby Leland</TableName>
+		<RomName>Baby_Leland</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Horseshoe (A.B.T. Manufacturing 1933)</TableName>
+		<RomName>Horseshoe</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Vampire (Bally 1971)</TableName>
+		<RomName>Vampire</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Royal Flush (Gottlieb 1957)</TableName>
+		<RomName>RoyalFlush_1957</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Knight Rider</TableName>
+		<RomName>Knight_Rider</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Gun Men (Staal 1979)</TableName>
+		<RomName>GunMen1979</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Flip Flop</TableName>
+		<RomName>FlipFlop</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Heat Ray Heist</TableName>
+		<RomName>Heat</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Op-Pop-Pop</TableName>
+		<RomName>Op-Pop-Pop</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Cactus Canjon</TableName>
+		<RomName>CC_13</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>City Hunter</TableName>
+		<RomName>City_Hunter</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Loony Labyrinth (LittleWing 1994)</TableName>
+		<RomName>loonylab</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>STEELPANTHERPUP</TableName>
+		<RomName>STEELPANTHERPUP</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>SUBLIME</TableName>
+		<RomName>SUBLIME</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>ParadiseJP</TableName>
+		<RomName>ParadiseJP</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>all</TableName>
+		<RomName>all</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>frank</TableName>
+		<RomName>kobben</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Pinball Frank</TableName>
+		<RomName>Bar</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Gridiron (Gottlieb 1977) NFL Mod</TableName>
+		<RomName>gridiron_1977_mod</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Tiro&apos;s</TableName>
+		<RomName>tiros</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>led+</TableName>
+		<RomName>2</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>tze</TableName>
+		<RomName>test</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Skyscraper</TableName>
+		<RomName>Skyscraper</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Shangri-La</TableName>
+		<RomName>ShangriLa1967</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>Love Bug</TableName>
+		<RomName>LoveBug_1971</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>alien</TableName>
+		<RomName>alien</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>2001:A Space Odyssey (Original 2025)</TableName>
+		<RomName>HAL9000</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>JAWS 50Th Anniversary</TableName>
+		<RomName>JAWS_50Th_Anniversary</RomName>
+	</Mapping>
+	<Mapping>
+		<TableName>King Of The Hill</TableName>
+		<RomName>kingofthehill</RomName>
 	</Mapping>
 </TableNameMappings>
