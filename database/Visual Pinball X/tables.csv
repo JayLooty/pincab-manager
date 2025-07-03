@@ -1,5 +1,5 @@
 AVAILABLE,VERSION,NAME,ID,ALT_EXE,ALT_RUN_MODE,ROM,VIDEOS_PATH,WEBLINK_URL,WEBLINK2_URL
-YES,2.1,24,24 (Stern 2009),VPinballX10_8_0_directx_64bit.exe,None,twenty4_150,None,https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr,None
+YES,2.2,24,24 (Stern 2009),VPinballX10_8_0_directx_64bit.exe,None,twenty4_150,None,https://vpuniverse.com/files/file/20448-24-stern-2009-v21-dt-fs-fss-vr,None
 YES,1.13,ACDC,ACDC LUCI (Stern 2013) VPW,VPinballX10_8_0_directx_64bit.exe,None,acd_170h,acd_170h,https://vpuniverse.com/files/file/12471-acdc-luci-stern-2013-vpw-mod,None
 YES,2.4.41,Addams Family,Addams Family (Bally1992),VPinballX10_8_0_directx_64bit.exe,None,TAF_L7,TAF_L7,https://vpuniverse.com/files/file/20654-the-addams-family-bally-1992-2441vpx,None
 YES,1.02,Aerosmith,Aerosmith (Stern 2017),VPinballX10_8_0_directx_64bit.exe,None,None,aerosmith,https://vpuniverse.com/files/file/13403-aerosmith-pro-sterntribute-2017-v102zip-with-vr/,None
@@ -7,7 +7,7 @@ YES,2.1.4,Apollo 13,Apollo 13 (Sega 1995),VPinballX10_8_0_directx_64bit.exe,None
 YES,3.2,Asterix les 12 travaux,Asterix les 12 travaux (Original 2022),VPinballX10_7_3_32bit.exe,None,None,Asterix the Twelve Tasks,https://vpuniverse.com/files/file/9938-asterix-the-twelve-tasks-original-2022-v32,None
 YES,1.3.11,Attack from Mars,Attack from Mars (Bally 1995),VPinballX10_8_0_directx_64bit.exe,None,afm_113b,afm_113b,https://vpuniverse.com/files/file/16113-attack-from-mars-bally-1995-g5k-1311vpx/,None
 YES,1.0.3,Austin Powers,Austin Powers (Stern 2001) VPW,VPinballX10_7_3_32bit.exe,None,austin,austin,https://vpuniverse.com/files/file/6522-austin-powers-stern-2001-vpw-mod/,None
-YES,3.0,Avatar,Avatar (Stern 2010),VPinballX10_8_0_directx_64bit.exe,None,avr_200,avr_200,https://www.vpforums.org/index.php?app=downloads&showfile=14294,None
+YES,3.2,Avatar,Avatar (Stern 2010),VPinballX10_8_0_directx_64bit.exe,None,avr_200,avr_200,https://www.vpforums.org/index.php?app=downloads&showfile=14294,None
 YES,1.05,Back To The Future 1,Back To The Future (Data East 1990),VPinballX10_8_0_directx_64bit.exe,None,bttf_a27,bttf_a27,https://vpuniverse.com/files/file/19188-back-to-the-future-the-pinball-data-east-1990/,None
 YES,2.0,Back To The Future 2,Back To The Future trilogie ver 2.0,VPinballX10_8_0_directx_64bit.exe,None,bttf_a28,bttf_a28,https://vpuniverse.com/files/file/10454-bttf-trilogy-20/,None
 YES,3.1,Bad Cats,Bad Cats (williams 1989) VPW,VPinballX10_8_0_directx_64bit.exe,None,bcats_l5,None,https://vpuniverse.com/files/file/6529-bad-cats-williams-1989-vpw-mod/,None
@@ -75,6 +75,7 @@ YES,1.2,Hellraiser,Hellraiser,VPinballX10_8_0_directx_64bit.exe,None,HellRaiser,
 YES,1.0.0,Home Alone,Home Alone,VPinballX10_8_0_directx_64bit.exe,None,None,HomeAlone,https://vpuniverse.com/files/file/8506-home-alone-table-vr-room-and-puppack/,None
 YES,1.0,Hook,Hook (Data East 1992) VPW,VPinballX10_7_3_32bit.exe,None,Hook_501,Hook_501,https://vpuniverse.com/files/file/5931-hook-data-east-1992-vpw-mod/,None
 YES,2,Hurricane,Hurricane (Williams 1991),VPinballX10_8_0_directx_64bit.exe,None,hurr_l2,None,https://vpuniverse.com/files/file/9089-hurricane-1991-balutito-mod/,None
+YES,1.0.0,IT Pinball Madness,IT,VPinballX10_8_0_directx_64bit.exe,None,it_pinball_madness,IT PUP fr,https://vpuniverse.com/files/file/15528-it-pinball-madness/,None
 YES,latest,Independence Day,Independence Day,VPinballX10_7_3_32bit.exe,None,id4,id4,None,None
 YES,1.1,Indiana Jones,Indiana Jones The Pinball Adventure (Williams 1993) VPW,VPinballX10_8_0_directx_64bit.exe,None,ij_l7,ij_l7,https://vpuniverse.com/files/file/8568-indiana-jones-the-pinball-adventure-williams-1993-vpwmod/,None
 YES,1.0.12,Iron Maiden,Iron Maiden (Stern 2022) VPW,VPinballX10_7_3_32bit.exe,None,None,IM_LOTB,https://vpuniverse.com/files/file/12603-iron-maiden-legacy-of-the-beast-original-2022-vpw/,None
@@ -87,7 +88,7 @@ YES,1.1,Judge Dredd,Judge Dredd (Bally 1993),VPinballX10_8_0_directx_64bit.exe,N
 YES,1.83,Junk Yard,Junk Yard (Williams 1995),VPinballX10_8_0_directx_64bit.exe,None,jy_12,None,https://vpuniverse.com/files/file/12322-junk-yard-williams-1996/,None
 YES,latest,Jurassic Park 1,Jurassic Park (Data East 1993) VPW,VPinballX10_7_3_32bit.exe,None,jupk_513,jupk_513,None,None
 YES,latest,Jurassic Park 2,Jurassic Park2 - the Lost World (Sega 1987),VPinballX10_7_3_32bit.exe,None,jplstw22,jplstw22,None,None
-YES,1.3,Jurassik Park 3,Jurassik Park 2023,VPinballX10_8_0_directx_64bit.exe,None,JP30LE,JP30LE,https://vpuniverse.com/files/file/20485-jurassic-park-30th-le-stern-2023-tribute/,None
+YES,2.0,Jurassik Park 3,Jurassik Park 2023,VPinballX10_8_0_directx_64bit.exe,None,JP30LE,JP30LE,https://vpuniverse.com/files/file/20485-jurassic-park-30th-le-stern-2023-tribute/,None
 YES,4.2,Jurassik Park 4,Jurassik Park Pro,VPinballX10_8_0_directx_64bit.exe,None,None,jurassic Pro,https://vpuniverse.com/files/file/20502-jurassic-park-pro-le/,None
 YES,1.3.0.1,KISS,KISS (2015),VPinballX10_8_0_directx_64bit.exe,None,None,kiss_original_2016,https://vpuniverse.com/files/file/19137-kiss-stern-2015-13-vr/,None
 YES,1.3,Killer Instinct,Killer Instinct,VPinballX10_8_0_directx_64bit.exe,None,None,KillerInstinct,https://vpuniverse.com/files/file/20523-killer-instinct-tablepupdof/,None
@@ -110,7 +111,7 @@ YES,latest,Metallica,Metallica Premium Monsters (Stern 2013) VPW,VPinballX10_8_0
 YES,1.0.0,Monopoly WOW,Monopoly WOW,VPinballX10_8_0_directx_64bit.exe,None,monopoly,monopoly,https://vpuniverse.com/files/file/21614-monopoly-warcraft-vr-2024-ready-visual-reality-pinball-game/,None
 YES,1.0,Monster Bash,Monster Bash (Williams 1998) VPW,VPinballX10_8_0_directx_64bit.exe,None,mb_106b,mb_106b,https://vpuniverse.com/files/file/9091-monster-bash-williams-1998-vpwmod/,None
 YES,1.27,Mustang,Mustang (Stern 2014),VPinballX10_8_0_directx_64bit.exe,None,mt_145h,mt_145h,https://vpuniverse.com/files/file/16314-mustang-stern-2014/,None
-YES,2.0,NBA 1,NBA (Stern 2009),VPinballX10_8_0_directx_64bit.exe,None,nba_802,nba_802,https://www.vpforums.org/index.php?app=downloads&showfile=16745,None
+YES,3.0,NBA 1,NBA (Stern 2009),VPinballX10_8_0_directx_64bit.exe,None,nba_802,nba_802,https://www.vpforums.org/index.php?app=downloads&showfile=16745,None
 YES,1.3,NBA 2,NBA Fastbreak (Bally 1997) VPW,VPinballX10_8_0_directx_64bit.exe,None,nbaf_31,nbaf_31,https://vpuniverse.com/files/file/6524-nba-fastbreak-bally-1997-vpw-mod/,None
 YES,1.0.0,No Fear Dangerous Sports,No Fear Dangerous Sports (Williams 1995),VPinballX10_8_0_directx_64bit.exe,None,nf_23x,nf_23x,https://vpuniverse.com/files/file/16258-no-fear-dangerous-sports-williams-1995/,None
 YES,2.1,No Good Gofers,No Good Gofers (Williams 1997),VPinballX10_7_3_32bit.exe,None,ngg_13,ngg_13,https://www.vpforums.org/index.php?app=downloads&showfile=16148,None
@@ -146,7 +147,7 @@ YES,3.02,Star Wars 2,Star Wars Bounty Hunter,VPinballX10_8_0_directx_64bit.exe,N
 YES,1.1,Star Wars 3,Star Wars Trilogy,VPinballX10_8_0_directx_64bit.exe,None,swtril43,swtril43,https://vpuniverse.com/files/file/11447-star-wars-trilogy-siggis-mod/,None
 NO,1.0.0,Stargate,Stargate (Gottlieb 1995),VPinballX10_8_0_directx_64bit.exe,None,stargat5,stargat5,https://vpuniverse.com/files/file/6027-stargate-minimal-vr-room-gottlieb-1995/,None
 YES,2.0,Starship Troopers,Starship Troopers (1997),VPinballX10_8_0_directx_64bit.exe,None,startrp2,startrp2,https://vpuniverse.com/files/file/13893-starship-troopers-sega-1997-vpw-mod/,None
-YES,3.0,Stranger Things,Stranger Things 1,VPinballX10_8_0_directx_64bit.exe,None,None,StrangerThings4_Premium,https://vpuniverse.com/files/file/12254-stranger-things-4-lpe-10-limited-pro-edition/page/2/,None
+YES,3.1,Stranger Things,Stranger Things 1,VPinballX10_8_0_directx_64bit.exe,None,Stranger Things,StrangerThings4_Premium,https://vpuniverse.com/files/file/12254-stranger-things-4-lpe-10-limited-pro-edition/page/2/,None
 YES,1.0.0,Street Fighter 2,Street Fighter 2,VPinballX10_8_0_directx_64bit.exe,None,sfight2,sfight2,https://vpuniverse.com/files/file/6581-street-fighter-2-puppack-vpx-hursty-mod-table/,None
 YES,1.1,Super Mario Bros,Super Mario Bros,VPinballX10_7_3_32bit.exe,None,smb3,smb3,https://vpuniverse.com/files/file/10223-super-mario-brothers-mod-nfozzy-fleep-sounds-lut/,None
 YES,1.5,Swamp Thing,Swamp Thing,VPinballX10_7_3_32bit.exe,None,None,None,https://vpuniverse.com/files/file/20396-swamp-thing-clairvius-2024/,None
