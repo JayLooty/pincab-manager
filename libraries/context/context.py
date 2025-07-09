@@ -435,9 +435,6 @@ class Context:
         match(Context.get_selected_category()):
             case Category.TABLES:
                 return Path(os.path.join(
-                    Context.get_data_path(),
-                    Constants.CONFIGS_PATH,
-                    Constants.PINCAB_MANAGER_PATH,
                     Constants.BDD_PATH,
                     Context.get_selected_emulator().value,
                     'tables.csv'
@@ -445,9 +442,6 @@ class Context:
 
             case Category.PLAYLISTS:
                 return Path(os.path.join(
-                    Context.get_data_path(),
-                    Constants.CONFIGS_PATH,
-                    Constants.PINCAB_MANAGER_PATH,
                     Constants.BDD_PATH,
                     Constants.COMMON_PATH,
                     'playlists.csv'

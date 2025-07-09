@@ -87,7 +87,6 @@ class Constants:
     SETUP_PATH = 'setup'
     BDD_PATH = 'database'
     CACHE_PATH = 'cache'
-    PINCAB_MANAGER_PATH = 'pincab-manager'
     CONFIGS_PATH = 'configs'
     COMMON_PATH = 'common'
 
