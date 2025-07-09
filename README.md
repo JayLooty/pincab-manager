@@ -1,5 +1,9 @@
 # pincab-manager
 
+<p align="center">
+  <img src="resources/img/pincab_manager.png" alt="Pincab Manager" width="480"/>
+</p>
+
 Project to manage my Pincab
 
 ## Install
