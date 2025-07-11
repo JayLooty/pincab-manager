@@ -1,7 +1,9 @@
 name: Create Release from CHANGELOG version
 
 on:
-  workflow_dispatch:  # manuel
+  push:
+    branches:
+      - main
 
 jobs:
   release:
