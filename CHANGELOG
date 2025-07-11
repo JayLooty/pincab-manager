@@ -1,4 +1,4 @@
-R0.10.0 - 07/??/2025
+R0.10.0 - 07/11/2025
 - feat(package): Build EXE with PyInstaller and include version in name
 - feat(configs): Use configs for files and regedit
 
