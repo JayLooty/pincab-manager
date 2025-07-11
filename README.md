@@ -9,7 +9,9 @@ Project to manage my Pincab
 ## Packaging
 
 ```bash
-pyinstaller --onefile --noconsole --icon=resources/img/pincab.ico pincab-manager.py --add-data "libvlccore.dll:." --add-data "libvlc.dll:." --add-data "plugins:plugins" --add-data "resources:resources" --add-data "binaries:binaries" --add-data "CHANGELOG:." ; rm -Rf build ; rm pincab-manager.spec
+raw_version=$(head -n 1 CHANGELOG | awk '{print $1}')
+version="${raw_version#R}"
+pyinstaller --name "pincab-manager-${version}" --onefile --noconsole --icon=resources/img/pincab.ico pincab-manager.py --add-data "libvlccore.dll:." --add-data "libvlc.dll:." --add-data "plugins:plugins" --add-data "resources:resources" --add-data "binaries:binaries" --add-data "CHANGELOG:." ; rm -Rf build ; rm pincab-manager-*.spec
 ```
 
 ## Install
