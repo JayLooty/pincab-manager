@@ -752,7 +752,7 @@ class TablesEditorDialog:
 
         # Retrieve the version path
         self.__current_version_path = os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'tables',
             Context.get_selected_emulator().value,
             self.__current_item_id,
@@ -761,7 +761,7 @@ class TablesEditorDialog:
 
         # Retrieve the videos path
         self.__current_videos_path = os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'tables',
             Context.get_selected_emulator().value,
             self.__current_item_id,
@@ -1136,7 +1136,7 @@ class TablesEditorDialog:
 
                 # Retrieve new table folder
                 new_table_folder = os.path.join(
-                    Context.get_data_path(),
+                    Context.get_working_path(),
                     'tables',
                     Context.get_selected_emulator().value,
                     self.info_id_entry_var.get()
@@ -1145,7 +1145,7 @@ class TablesEditorDialog:
                 # Move the folder
                 FileHelper.move_folder(
                     source_folder_path=os.path.join(
-                        Context.get_data_path(),
+                        Context.get_working_path(),
                         'tables',
                         Context.get_selected_emulator().value,
                         csv_item[Constants.CSV_COL_ID]
@@ -1360,7 +1360,7 @@ class TablesEditorDialog:
 
         # Retrieve the table's folder
         self.table_folder = os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'tables',
             Context.get_selected_emulator().value,
             self.new_table_id
@@ -1426,7 +1426,7 @@ class TablesEditorDialog:
         # Delete the folder
         FileHelper.delete_folder(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id
@@ -1491,14 +1491,14 @@ class TablesEditorDialog:
         # Copy folder to the new version
         FileHelper.copy_folder(
             source_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id,
                 self.info_current_version_combo.get()
             ),
             destination_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id,
@@ -1578,14 +1578,14 @@ class TablesEditorDialog:
         # Move folder to the new version
         FileHelper.move_folder(
             source_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id,
                 self.info_current_version_combo.get()
             ),
             destination_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id,
@@ -1681,7 +1681,7 @@ class TablesEditorDialog:
         # Delete the folder
         FileHelper.delete_folder(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id,
@@ -1785,7 +1785,7 @@ class TablesEditorDialog:
         # Retrieve all versions and current version
         all_versions = FileHelper.list_sub_directories(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 self.__current_item_id

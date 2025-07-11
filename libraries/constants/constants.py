@@ -84,10 +84,6 @@ class Constants:
     RESOURCES_PATH = 'resources'
     PLAYLISTS_PATH = 'playlists'
     TABLES_PATH = 'tables'
-    SETUP_PATH = 'setup'
-    BDD_PATH = 'database'
-    CACHE_PATH = 'cache'
-    PINCAB_MANAGER_PATH = 'pincab-manager'
     CONFIGS_PATH = 'configs'
     COMMON_PATH = 'common'
 
@@ -111,7 +107,6 @@ class Constants:
     # Constants for setup
     SETUP_LANG_CODE = 'lang_code'
     SETUP_VPINBALL_PATH = 'vpinball_path'
-    SETUP_DATA_PATH = 'data_path'
     SETUP_MONITOR = 'monitor'
     SETUP_SIMULATED = 'simulated'
     SETUP_AUTO_REFRESH = 'auto_refresh'

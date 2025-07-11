@@ -8,6 +8,8 @@ import tkinter as tk
 from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
 
+from libraries.context.context import Context
+
 
 class LoggingHelper:
     """Class to help usage of logging"""
@@ -22,8 +24,8 @@ class LoggingHelper:
         """Initialize __info_logger"""
 
         # Create the logs directory if it doesn't exist
-        if not os.path.exists('logs'):
-            os.makedirs('logs')
+        if not os.path.exists(Context.get_logs_path()):
+            os.makedirs(Context.get_logs_path())
 
         # Get the current date to use in log file names
         current_date = datetime.now().strftime("%Y-%m-%d")
@@ -32,7 +34,7 @@ class LoggingHelper:
         LoggingHelper.__info_logger = logging.getLogger('info_logger')
         LoggingHelper.__info_logger.setLevel(logging.INFO)
         info_handler = TimedRotatingFileHandler(
-            f'logs/{current_date}_info.log', when='midnight', interval=1, backupCount=30)
+            f'{Context.get_logs_path()}/{current_date}_info.log', when='midnight', interval=1, backupCount=30)
         info_handler.suffix = "%Y-%m-%d"  # Suffix for rotating logs with the date
         info_handler.setLevel(logging.INFO)
         info_formatter = logging.Formatter(
@@ -45,8 +47,8 @@ class LoggingHelper:
         """Initialize __warning_logger"""
 
         # Create the logs directory if it doesn't exist
-        if not os.path.exists('logs'):
-            os.makedirs('logs')
+        if not os.path.exists(Context.get_logs_path()):
+            os.makedirs(Context.get_logs_path())
 
         # Get the current date to use in log file names
         current_date = datetime.now().strftime("%Y-%m-%d")
@@ -55,7 +57,7 @@ class LoggingHelper:
         LoggingHelper.__warning_logger = logging.getLogger('warning_logger')
         LoggingHelper.__warning_logger.setLevel(logging.WARNING)
         warning_handler = TimedRotatingFileHandler(
-            f'logs/{current_date}_warning.log', when='midnight', interval=1, backupCount=30)
+            f'{Context.get_logs_path()}/{current_date}_warning.log', when='midnight', interval=1, backupCount=30)
         warning_handler.suffix = "%Y-%m-%d"  # Suffix for rotating logs with the date
         warning_handler.setLevel(logging.WARNING)
         warning_formatter = logging.Formatter(
@@ -68,8 +70,8 @@ class LoggingHelper:
         """Initialize __error_logger"""
 
         # Create the logs directory if it doesn't exist
-        if not os.path.exists('logs'):
-            os.makedirs('logs')
+        if not os.path.exists(Context.get_logs_path()):
+            os.makedirs(Context.get_logs_path())
 
         # Get the current date to use in log file names
         current_date = datetime.now().strftime("%Y-%m-%d")
@@ -78,7 +80,7 @@ class LoggingHelper:
         LoggingHelper.__error_logger = logging.getLogger('error_logger')
         LoggingHelper.__error_logger.setLevel(logging.ERROR)
         error_handler = TimedRotatingFileHandler(
-            f'logs/{current_date}_error.log', when='midnight', interval=1, backupCount=30)
+            f'{Context.get_logs_path()}/{current_date}_error.log', when='midnight', interval=1, backupCount=30)
         error_handler.suffix = "%Y-%m-%d"  # Suffix for rotating logs with the date
         error_handler.setLevel(logging.ERROR)
         error_formatter = logging.Formatter(

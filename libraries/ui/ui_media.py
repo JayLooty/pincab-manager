@@ -10,12 +10,13 @@ from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import simpledialog
 from typing import List, Optional
+
 import vlc
 
 from dialogs.waiting.waiting_dialog import WaitingDialog
 from libraries.cmd.cmd_helper import CmdHelper
-from libraries.constants.constants import Constants
 from libraries.context.context import Context
+from libraries.constants.constants import Constants
 from libraries.file.file_helper import FileHelper
 from libraries.logging.logging_helper import LoggingHelper
 
@@ -464,21 +465,13 @@ class UIMedia(tk.LabelFrame):
         command = 'start cmd /c'
         command += ' "'
         command += f'cd /d "{self.__destination_path}" && '
-        command += os.path.join(
-            Context.get_data_path(),
-            'configs',
-            'pincab-manager',
-            'binaries',
-            'yt-dlp.exe'
-        )
+        command += Context.get_yt_dlp_path()
         command += ' -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]"'
         # Merge using ffmpeg if no separation audio/video
         if not self.__separate_audio_video:
             command += ' --ffmpeg-location "'
             command += os.path.join(
-                Context.get_vpinball_path(),
-                'PinUPSystem',
-                'Recordings',
+                Context.get_binaries_path(),
                 'ffmpeg.exe'
             )
             command += '"'
@@ -744,12 +737,7 @@ class UIMedia(tk.LabelFrame):
                                 track.type == vlc.TrackType.audio:
 
                             # Execute ffmpeg in a subprocess
-                            command = os.path.join(
-                                Context.get_vpinball_path(),
-                                'PinUPSystem',
-                                'Recordings',
-                                'ffmpeg.exe'
-                            )
+                            command = Context.get_ffmpeg_path()
                             command += f' -i "{file_path}" '
                             command += '-af volumedetect -f null /dev/null'
                             ffmpeg_result = CmdHelper.retrieve_cmd_result(
@@ -824,12 +812,7 @@ class UIMedia(tk.LabelFrame):
         )
         command = 'start cmd /c'
         command += ' "'
-        command += os.path.join(
-            Context.get_vpinball_path(),
-            'PinUPSystem',
-            'Recordings',
-            'ffmpeg.exe'
-        )
+        command += Context.get_ffmpeg_path()
         command += f' -i "{self.__current_file_path}"'
         command += f' {self.__transform_options}'
         command += f' "{temporary_output_path}"'
@@ -1079,6 +1062,7 @@ class UIMedia(tk.LabelFrame):
         else:
             audio_icon_file_name = 'audio_off.png'
         audio_icon_path = os.path.join(
+            Context.get_base_path(),
             Constants.RESOURCES_PATH,
             'img',
             audio_icon_file_name
@@ -1103,6 +1087,7 @@ class UIMedia(tk.LabelFrame):
         else:
             photo_video_icon_file_name = 'video_off.png'
         photo_video_icon_path = os.path.join(
+            Context.get_base_path(),
             Constants.RESOURCES_PATH,
             'img',
             photo_video_icon_file_name

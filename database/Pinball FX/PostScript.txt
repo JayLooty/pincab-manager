@@ -1,7 +1,0 @@
-"[STARTDIR]LAUNCH\PUPCLOSER.EXE" WINTIT "PinballFX" 4 1
-timeout 1
-taskkill /f /im epicgameslauncher.exe
-taskkill /f /IM ffplay.exe
-
-REM Stop DofLinx
-taskkill /f /im "DofLinx.exe"

@@ -36,7 +36,7 @@ class PlaylistsExecutor(AbstractExecutor):
         """Get data media path"""
 
         return Path(os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'playlists',
             playlist_id,
             playlist_version,

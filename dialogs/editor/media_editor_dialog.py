@@ -683,7 +683,7 @@ class MediaEditorDialog:
         match(Context.get_selected_category()):
             case Category.TABLES:
                 media_path = Path(os.path.join(
-                    Context.get_data_path(),
+                    Context.get_working_path(),
                     'tables',
                     Context.get_selected_emulator().value,
                     item_id,
@@ -693,7 +693,7 @@ class MediaEditorDialog:
 
             case Category.PLAYLISTS:
                 media_path = Path(os.path.join(
-                    Context.get_data_path(),
+                    Context.get_working_path(),
                     'playlists',
                     item_id,
                     item_version,

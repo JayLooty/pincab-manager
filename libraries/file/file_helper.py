@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """File Helper"""
 
+import sys
 import os
 import fnmatch
 import shutil

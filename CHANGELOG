@@ -1,2 +1,9 @@
+R0.10.0 - 07/??/2025
+- feat(package): Build EXE with PyInstaller and include version in name
+- feat(configs): Use configs for files and regedit
+
+R0.9.1 - 06/30/2025
+- feat(upgrade_dof_config): Upgrade to DOF Config 5160
+
 R0.9.0 - 06/19/2025
-- feat(pincab-manager): Create application to manage Pincab
+- feat(pincab_manager): Create application to manage Pincab

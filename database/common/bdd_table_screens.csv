@@ -1,5 +1,0 @@
-ScreenID,ScreenName,ScreenDisplay,POSx,POSy,ScreenWidth,ScreenHeight,WindowState,FullScreen,Visible,VerifyPOS,Rotation,MonitorNum,ScreenType,RotateThumbs,ThumbWidth,ThumbHeight,AlphaBlend
-1,Table,Table,0,0,1920,1080,1,0,1,0,180,0,None,None,None,None,None
-2,BackGlass,Back Glass,1920,0,1000,1000,1,0,1,0,0,0,None,None,None,None,None
-3,DMD,DMD,3000,0,1000,200,1,0,1,0,0,0,None,None,None,None,None
-4,Topper,Topper,4000,500,1000,200,1,0,1,0,0,0,None,None,None,None,None
