@@ -3,6 +3,7 @@
 
 import atexit
 import json
+import sys
 import os
 from pathlib import Path
 import re
@@ -14,8 +15,10 @@ from selenium import webdriver
 
 from libraries.constants.constants import Action, Category, Component, Emulator, Constants, Media
 
-# pylint: disable=unnecessary-comprehension, too-many-public-methods
+# pylint: disable=unnecessary-comprehension
+# pylint: disable=too-many-public-methods
 # pylint: disable=too-many-branches
+# pylint: disable=protected-access
 
 
 class Context:
@@ -44,6 +47,8 @@ class Context:
     __available_media = []
     __screen_number_by_media = {}
     __selenium_web_browser = None
+    __working_path = None
+    __base_path = None
 
     @staticmethod
     def init():
@@ -57,9 +62,23 @@ class Context:
         # Retrieve hostname
         Context.__hostname = socket.gethostname().lower()
 
+        # Define working path
+        if os.path.isfile(f'P:\\setup\\{Context.__hostname}.cfg'):
+            Context.__working_path = 'P:\\'
+        elif os.path.isfile(f'Z:\\setup\\{Context.__hostname}.cfg'):
+            Context.__working_path = 'Z:\\'
+        else:
+            Context.__working_path = os.getcwd()
+
+        # Define base path depending on DEV or package
+        try:
+            Context.__base_path = sys._MEIPASS
+        except AttributeError:
+            Context.__base_path = os.getcwd()
+
         # Retrieve application's version
         try:
-            with open('CHANGELOG', 'r', encoding='utf-8') as file:
+            with open(Context.__base_path + '/CHANGELOG', 'r', encoding='utf-8') as file:
                 first_line = file.readline().strip()
                 match = re.search(r'R(\d+\.\d+\.\d+)', first_line)
                 if not match:
@@ -119,6 +138,24 @@ class Context:
             Context.init()
 
         return Context.__hostname
+
+    @staticmethod
+    def get_working_path() -> str:
+        """Get working path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Context.__working_path
+
+    @staticmethod
+    def get_base_path() -> str:
+        """Get base path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Context.__base_path
 
     @staticmethod
     def get_app_version() -> str:
@@ -333,7 +370,7 @@ class Context:
         file_name += '_'
         file_name += Context.get_selected_action().value.split('_')[1].lower()
         return Path(os.path.join(
-            Constants.CACHE_PATH,
+            Context.get_cache_path(),
             f'{file_name}.csv'
         ))
 
@@ -375,13 +412,13 @@ class Context:
         if Component.SYSTEM_32_BITS in components:
             component_path = '32 bits'
             paths.append(Path(os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 Constants.CONFIGS_PATH,
                 component_path,
                 config_path
             )))
             paths.append(Path(os.path.join(
-                Constants.BDD_PATH,
+                Context.get_bdd_path(),
                 Constants.COMMON_PATH,
                 component_path,
                 config_path
@@ -390,13 +427,13 @@ class Context:
         if Component.SYSTEM_64_BITS in components:
             component_path = '64 bits'
             paths.append(Path(os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 Constants.CONFIGS_PATH,
                 component_path,
                 config_path
             )))
             paths.append(Path(os.path.join(
-                Constants.BDD_PATH,
+                Context.get_bdd_path(),
                 Constants.COMMON_PATH,
                 component_path,
                 config_path
@@ -421,8 +458,81 @@ class Context:
             Context.init()
 
         return Path(os.path.join(
-            Constants.SETUP_PATH,
+            Context.get_working_path(),
+            'setup',
             f'{Context.get_hostname()}.cfg'
+        ))
+
+    @staticmethod
+    def get_logs_path() -> Path:
+        """Get logs path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Path(os.path.join(
+            Context.get_working_path(),
+            'logs'
+        ))
+
+    @staticmethod
+    def get_cache_path():
+        """Get cache path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Path(os.path.join(
+            Context.get_working_path(),
+            'cache'
+        ))
+
+    @staticmethod
+    def get_bdd_path():
+        """Get database path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Path(os.path.join(
+            Context.get_working_path(),
+            'database'
+        ))
+
+    @staticmethod
+    def get_binaries_path() -> Path:
+        """Get binaries path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Path(os.path.join(
+            Context.get_base_path(),
+            'binaries'
+        ))
+
+    @staticmethod
+    def get_ffmpeg_path() -> Path:
+        """Get ffmpeg path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Path(os.path.join(
+            Context.get_binaries_path(),
+            'ffmpeg.exe'
+        ))
+
+    @staticmethod
+    def get_yt_dlp_path() -> Path:
+        """Get yt dlp path"""
+
+        if not Context.__initialized:
+            Context.init()
+
+        return Path(os.path.join(
+            Context.get_binaries_path(),
+            'yt-dlp.exe'
         ))
 
     @staticmethod
@@ -435,14 +545,14 @@ class Context:
         match(Context.get_selected_category()):
             case Category.TABLES:
                 return Path(os.path.join(
-                    Constants.BDD_PATH,
+                    Context.get_bdd_path(),
                     Context.get_selected_emulator().value,
                     'tables.csv'
                 ))
 
             case Category.PLAYLISTS:
                 return Path(os.path.join(
-                    Constants.BDD_PATH,
+                    Context.get_bdd_path(),
                     Constants.COMMON_PATH,
                     'playlists.csv'
                 ))
@@ -613,11 +723,6 @@ class Context:
                     Constants.SETUP_VPINBALL_PATH
                 ])
 
-            if Constants.SETUP_DATA_PATH in setup_items:
-                Context.__data_path = Path(setup_items[
-                    Constants.SETUP_DATA_PATH
-                ])
-
             if Constants.SETUP_SIMULATED in setup_items:
                 Context.__simulated = setup_items[
                     Constants.SETUP_SIMULATED
@@ -654,6 +759,7 @@ class Context:
         # Retrieve texts properties from lang's code
         texts_properties = configparser.ConfigParser()
         lang_path = os.path.join(
+            Context.get_base_path(),
             Constants.RESOURCES_PATH,
             'lang',
             f'messages_{Context.__lang_code}.properties'

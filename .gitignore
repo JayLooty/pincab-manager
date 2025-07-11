@@ -10,3 +10,8 @@
 # Specific
 logs/
 cache/
+
+# Package
+build
+dist
+app.spec

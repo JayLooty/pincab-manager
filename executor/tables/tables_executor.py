@@ -30,7 +30,7 @@ class TablesExecutor(AbstractExecutor):
         """Get data emulator path"""
 
         return Path(os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'tables',
             Context.get_selected_emulator().value,
             table_id,
@@ -46,7 +46,7 @@ class TablesExecutor(AbstractExecutor):
         """Get data media path"""
 
         return Path(os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'tables',
             Context.get_selected_emulator().value,
             table_id,
@@ -63,7 +63,7 @@ class TablesExecutor(AbstractExecutor):
 
         if Context.get_selected_emulator() == Emulator.VISUAL_PINBALL_X:
             return Path(os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 table_id,
@@ -83,7 +83,7 @@ class TablesExecutor(AbstractExecutor):
         """Get data pinup video path"""
 
         return Path(os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'tables',
             Context.get_selected_emulator().value,
             table_id,
@@ -101,7 +101,7 @@ class TablesExecutor(AbstractExecutor):
 
         if Context.get_selected_emulator() == Emulator.VISUAL_PINBALL_X:
             return Path(os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 table_id,

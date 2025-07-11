@@ -68,7 +68,7 @@ class Verifier:
         # Retrieve sub directories to identify if unique version
         sub_directories = FileHelper.list_sub_directories(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 csv_table_id
@@ -136,7 +136,7 @@ class Verifier:
         # Retrieve sub directories to identify if unique version
         sub_directories = FileHelper.list_sub_directories(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 csv_playlist_id
             )
@@ -159,7 +159,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -177,7 +177,7 @@ class Verifier:
             )
 
             file2_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -237,7 +237,7 @@ class Verifier:
 
         for relative_path in relative_paths:
             file1_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -293,7 +293,7 @@ class Verifier:
 
             for relative_path in relative_paths:
                 file1_path = os.path.join(
-                    Context.get_data_path(),
+                    Context.get_working_path(),
                     'tables',
                     Context.get_selected_emulator().value,
                     bdd_table_id,
@@ -350,7 +350,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -388,7 +388,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -415,7 +415,7 @@ class Verifier:
             )
 
             file2_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -482,7 +482,7 @@ class Verifier:
                 continue
 
             file1_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -537,7 +537,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -578,7 +578,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 csv_table_id,
@@ -617,7 +617,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -646,7 +646,7 @@ class Verifier:
             )
 
             file2_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -720,7 +720,7 @@ class Verifier:
                 continue
 
             file1_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -783,7 +783,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 bdd_table_id,
@@ -836,7 +836,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Context.get_selected_emulator().value,
                 csv_table_id,
@@ -869,7 +869,7 @@ class Verifier:
                 return None
 
             file_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 csv_table_id,
@@ -923,7 +923,7 @@ class Verifier:
                 return True
 
             file_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 bdd_table_id,
@@ -966,7 +966,7 @@ class Verifier:
                 return None
 
             file_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 bdd_table_id,
@@ -1010,7 +1010,7 @@ class Verifier:
                 return None
 
             file_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 csv_table_id,
@@ -1060,7 +1060,7 @@ class Verifier:
                 return True
 
             file_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 bdd_table_id,
@@ -1103,7 +1103,7 @@ class Verifier:
                 return None
 
             file_path = os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'tables',
                 Emulator.VISUAL_PINBALL_X.value,
                 bdd_table_id,
@@ -1155,7 +1155,7 @@ class Verifier:
 
         return len(FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 bdd_playlist_id,
                 bdd_playlist_version,
@@ -1189,7 +1189,7 @@ class Verifier:
 
         relative_paths = FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 csv_playlist_id,
                 csv_playlist_version,
@@ -1223,7 +1223,7 @@ class Verifier:
 
         return len(FileHelper.list_relative_paths(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 bdd_playlist_id,
                 bdd_playlist_version

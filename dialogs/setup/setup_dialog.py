@@ -100,7 +100,6 @@ class SetupDialog:
         if self.combo_lang.get() == Context.get_text('lang_fr'):
             lang_code = 'fr'
         vpinball_path = self.entry_vpinball_path.get()
-        data_path = self.entry_data_path.get()
         simulated = self.simulation_boolean_var.get()
         auto_refresh = self.auto_refresh_boolean_var.get()
         monitor = int(self.combo_monitor.get()) - 1
@@ -173,7 +172,6 @@ class SetupDialog:
         setup['DEFAULT'] = {
             Constants.SETUP_LANG_CODE: lang_code,
             Constants.SETUP_VPINBALL_PATH: vpinball_path,
-            Constants.SETUP_DATA_PATH: data_path,
             Constants.SETUP_MONITOR: monitor,
             Constants.SETUP_SIMULATED: simulated,
             Constants.SETUP_AUTO_REFRESH: auto_refresh,
@@ -215,8 +213,7 @@ class SetupDialog:
 
         if len(self.entry_vpinball_path_var.get()) > 0 and \
                 len(self.entry_vpinball_path_var.get()) > 0 and \
-                Path(self.entry_vpinball_path_var.get()).exists() and \
-                Path(self.entry_data_path_var.get()).exists():
+                Path(self.entry_vpinball_path_var.get()).exists():
             self.button_validate.config(state=tk.NORMAL)
         else:
             self.button_validate.config(state=tk.DISABLED)
@@ -307,49 +304,6 @@ class SetupDialog:
             command=lambda: self.__browse_folder(self.entry_vpinball_path)
         )
         button_browse_vpinball.pack(
-            side=tk.LEFT,
-            padx=Constants.UI_PAD_SMALL
-        )
-
-        # Create folder data selection
-        data_path_frame = tk.Frame(general_frame)
-        data_path_frame.pack(
-            side=tk.TOP,
-            fill=tk.X,
-            pady=Constants.UI_PAD_SMALL
-        )
-        label_data_path = tk.Label(
-            data_path_frame,
-            text=Context.get_text('data_path')
-        )
-        label_data_path.pack(
-            side=tk.LEFT,
-            padx=Constants.UI_PAD_SMALL
-        )
-        self.entry_data_path_var = tk.StringVar()
-        self.entry_data_path_var.trace_add(
-            "write",
-            self.__on_entry_changed
-        )
-        self.entry_data_path = tk.Entry(
-            data_path_frame,
-            textvariable=self.entry_data_path_var,
-            width=40
-        )
-        self.entry_data_path.insert(
-            0,
-            Context.get_data_path()
-        )
-        self.entry_data_path.pack(
-            side=tk.LEFT,
-            padx=Constants.UI_PAD_SMALL
-        )
-        button_browse_data = tk.Button(
-            data_path_frame,
-            text=Context.get_text('browse'),
-            command=lambda: self.__browse_folder(self.entry_data_path)
-        )
-        button_browse_data.pack(
             side=tk.LEFT,
             padx=Constants.UI_PAD_SMALL
         )

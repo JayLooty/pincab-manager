@@ -22,7 +22,7 @@ class BDDTablesExecutor(AbstractExecutor):
         """Get CSV path"""
 
         return Path(os.path.join(
-            Constants.BDD_PATH,
+            Context.get_bdd_path(),
             Constants.COMMON_PATH,
             f'bdd_table_{bdd_table_name.lower()}.csv'
         ))
@@ -39,7 +39,7 @@ class BDDTablesExecutor(AbstractExecutor):
                 emulator_name = emulator.value
 
         return os.path.join(
-            Constants.BDD_PATH,
+            Context.get_bdd_path(),
             emulator_name,
             f'{script_name}.txt'
         )
@@ -50,7 +50,7 @@ class BDDTablesExecutor(AbstractExecutor):
     ):
         """Get common script path"""
         return os.path.join(
-            Constants.BDD_PATH,
+            Context.get_bdd_path(),
             Constants.COMMON_PATH,
             f'{script_name}.txt'
         )

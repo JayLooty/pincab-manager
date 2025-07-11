@@ -505,7 +505,7 @@ class PlaylistsEditorDialog:
 
                 # Retrieve new playlist folder
                 new_playlist_folder = os.path.join(
-                    Context.get_data_path(),
+                    Context.get_working_path(),
                     'playlists',
                     self.info_id_entry_var.get()
                 )
@@ -513,7 +513,7 @@ class PlaylistsEditorDialog:
                 # Move the folder
                 FileHelper.move_folder(
                     source_folder_path=os.path.join(
-                        Context.get_data_path(),
+                        Context.get_working_path(),
                         'playlists',
                         csv_item[Constants.CSV_COL_ID]
                     ),
@@ -667,7 +667,7 @@ class PlaylistsEditorDialog:
 
         # Retrieve the playlist's folder
         self.playlist_folder = os.path.join(
-            Context.get_data_path(),
+            Context.get_working_path(),
             'playlists',
             self.new_playlist_id
         )
@@ -732,7 +732,7 @@ class PlaylistsEditorDialog:
         # Delete the folder
         FileHelper.delete_folder(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id
             )
@@ -796,13 +796,13 @@ class PlaylistsEditorDialog:
         # Copy folder to the new version
         FileHelper.copy_folder(
             source_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id,
                 self.info_current_version_combo.get()
             ),
             destination_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id,
                 self.new_version
@@ -876,13 +876,13 @@ class PlaylistsEditorDialog:
         # Move folder to the new version
         FileHelper.move_folder(
             source_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id,
                 self.info_current_version_combo.get()
             ),
             destination_folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id,
                 self.new_version
@@ -973,7 +973,7 @@ class PlaylistsEditorDialog:
         # Delete the folder
         FileHelper.delete_folder(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id,
                 self.info_current_version_combo.get()
@@ -1037,7 +1037,7 @@ class PlaylistsEditorDialog:
 
         FileHelper.explore_folder(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id,
                 self.info_current_version_combo.get()
@@ -1056,7 +1056,7 @@ class PlaylistsEditorDialog:
         # Retrieve all versions and current version
         all_versions = FileHelper.list_sub_directories(
             folder_path=os.path.join(
-                Context.get_data_path(),
+                Context.get_working_path(),
                 'playlists',
                 self.__current_item_id
             )

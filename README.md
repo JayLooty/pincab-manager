@@ -6,6 +6,12 @@
 
 Project to manage my Pincab
 
+## Packaging
+
+```bash
+pyinstaller --onefile --noconsole --icon=resources/img/pincab.ico pincab-manager.py --add-data "libvlccore.dll:." --add-data "libvlc.dll:." --add-data "plugins:plugins" --add-data "resources:resources" --add-data "binaries:binaries" --add-data "CHANGELOG:." ; rm -Rf build ; rm pincab-manager.spec
+```
+
 ## Install
 
 Install :
@@ -30,7 +36,7 @@ To analyze your code, use  `find . -iname "*.py" -not -path "./.venv/*" | xargs 
 To show the menu, type following command:
 
 ```bash
-python3 app.py
+python3 pincab-manager.py
 ```
 
 Use the arguments -s or --simulated to activate simulation for the application
@@ -65,7 +71,7 @@ Use the arguments -s or --simulated to activate simulation for the application
     - **WEBLINK_URL**: First link to retrieve the table
     - **WEBLINK2_URL**: Second link to retrieve the table
 - Go to the directory **Z:/data/configs/pincab-manager** then type the command **git pull**
-- Install the specific table using the command **python3 app.py**
+- Install the specific table using the command **python3 pincab-manager.py**
 - Save a copy of the CSV files with the commands **git add**, **git commit** and **git push**
 
 **N.B.**: For the emulator **Visual Pinball X**, you can use the command **"<visual_pinball_exe>" -Minimized -ExtractVBS "<vpx_file_path>"** to generate the script where you can extract the rom's name in the variable **cGameName** and the videos path in the variable **cPuPPack** (or **cGameName** if this variable doesn't exist)
