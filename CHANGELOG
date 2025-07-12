@@ -1,6 +1,8 @@
+R0.11.0 - 07/??/2025
+- feat(configs): Use configs for files and regedit
+
 R0.10.0 - 07/11/2025
 - feat(package): Build EXE with PyInstaller and include version in name
-- feat(configs): Use configs for files and regedit
 
 R0.9.1 - 06/30/2025
 - feat(upgrade_dof_config): Upgrade to DOF Config 5160

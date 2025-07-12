@@ -65,8 +65,6 @@ class Context:
         # Define working path
         if os.path.isfile(f'P:\\setup\\{Context.__hostname}.cfg'):
             Context.__working_path = 'P:\\'
-        elif os.path.isfile(f'Z:\\setup\\{Context.__hostname}.cfg'):
-            Context.__working_path = 'Z:\\'
         else:
             Context.__working_path = os.getcwd()
 
