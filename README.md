@@ -12,7 +12,7 @@ Des vidéos tutoriels seront bientôt disponibles sur ma chaîne YouTube :
 🎥 [Lien de ma chaîne](https://www.youtube.com/@jaylooty_official)
 
 Si tu apprécies ce projet, tu peux me soutenir ici :  
-❤️ [Faire un don](https://tonlien.own3d.tv)
+❤️ [Faire un don](https://own3d.pro/fr/u/jay_looty/tip)
 
 ---
 
@@ -30,4 +30,4 @@ Tutorial videos will be available soon on my YouTube channel:
 🎥 [Visit my channel](https://www.youtube.com/@jaylooty_official)
 
 If you enjoy this project, you can support me here:  
-❤️ [Donate](https://tonlien.own3d.tv)
+❤️ [Donate](https://own3d.pro/fr/u/jay_looty/tip)
